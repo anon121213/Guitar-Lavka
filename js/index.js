@@ -23,7 +23,7 @@ prevSliderButton.addEventListener('click', event => {
 
     scrolOffset -= window.innerWidth
 
-    if(scrolOffset < -6399){
+    if(scrolOffset < -window.innerWidth * 3){
         scrolOffset = 0
     }
 
