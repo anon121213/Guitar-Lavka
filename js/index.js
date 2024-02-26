@@ -5,13 +5,14 @@ const prevSliderButton = document.querySelector('.prev-button')
 const slides = document.querySelector('.slides')
 
 let scrolOffset = 0
+const maxLeftOffset = -window.innerWidth * 3
 
 nextSliderButton.addEventListener('click', event => {
 
-    scrolOffset += 1400
+    scrolOffset += window.innerWidth
 
     if(scrolOffset > 0){
-        scrolOffset = -4200
+        scrolOffset = -scrolOffset * 3
     }
 
     slides.style.left = `${scrolOffset}px`
@@ -20,9 +21,9 @@ nextSliderButton.addEventListener('click', event => {
 
 prevSliderButton.addEventListener('click', event => {
 
-    scrolOffset -= 1400
+    scrolOffset -= window.innerWidth
 
-    if(scrolOffset < -4200){
+    if(scrolOffset < -6399){
         scrolOffset = 0
     }
 
@@ -68,4 +69,32 @@ secondRightButton.addEventListener('click', event => {
     secondSlides.style.left = `${secondScrollOffset}px`
     indicates[secondIdSlide].classList.add('active')   
 })
+
+//scroll button
+
+const BackToStartPage = document.querySelector('.BackToStartPage')
+
+BackToStartPage.addEventListener('click', event => {
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    })
+
+})
+
+addEventListener('scroll', event => {
+
+    let scrollY = window.scrollY
+
+    if(scrollY > 600){
+        BackToStartPage.style.right = 100 + 'px'
+    }
+    else if(scrollY <= 600){
+        BackToStartPage.style.right = -120 + 'px'
+    }
+})
+
+
 

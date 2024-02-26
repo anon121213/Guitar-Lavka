@@ -3,6 +3,7 @@
 $blue-bg: #131218;
 $orange-bg: #CC7408;
 $product-bg: #3B3A40;
+$white: rgb(196, 196, 196);
 
 .abhaya-libre-bold {
     font-family: "Abhaya Libre", serif;
@@ -55,10 +56,18 @@ $product-bg: #3B3A40;
     font-weight: 400;
     font-style: italic;
 }
-  
+
 .container{
     max-width: 1070px;
     margin: 0 auto;
+}
+
+.BackToStartPage{
+    position: fixed;
+    bottom: 20px;
+    right: -120px;
+    z-index: 10;
+    transition: 0.5s ease;
 }
 
 .header{
@@ -73,8 +82,9 @@ $product-bg: #3B3A40;
 
         margin: 0 auto;
         width: 100%;
-        max-width: 1400px;
-        padding-bottom: 4px;
+        // max-width: 1400px;
+        padding-bottom: 1vh;
+        padding-top: 1vh;
 
 
         &__between{
@@ -216,7 +226,7 @@ $product-bg: #3B3A40;
             
             &__logo{               
                 position: absolute;
-                top: 0;
+                top: 1vh;
             }
         }
 
@@ -267,8 +277,6 @@ $product-bg: #3B3A40;
 
     .container_slider{
         margin: 0 auto;
-        max-width: 1400px;
-        
     }
 
     .slider{
@@ -283,15 +291,48 @@ $product-bg: #3B3A40;
             position: relative;
             left: 0;
 
+            .slide1{
+                width: 100vw;
+
+                img{
+                    width: 100vw;
+                }
+            }
+
+            .slide2{
+                width: 100vw;
+
+                img{
+                    width: 100vw;
+                }
+            }
+
+            .slide3{
+                width: 100vw;
+
+                img{
+                    width: 100vw;
+                }
+            }
+
+            .slide4{
+                width: 100vw;
+
+                img{
+                    width: 100vw;
+                }
+            }
+
         }
 
         &__buttons{
 
-            top: 168px;
+            top: 50%;
             position: absolute;
             display: flex;
             justify-content: center;
             width: 100%;
+            transform: translate(0, -50%);
             
 
             &__img{
@@ -343,7 +384,14 @@ $product-bg: #3B3A40;
                         background-repeat: no-repeat; 
                         height: 100%;
                         max-height: 296px; 
-                        filter: brightness(50%);                       
+                        filter: brightness(50%);  
+                        
+                        button{
+                            width: 100%;
+                            height: 100%;
+                            max-width: 520px;
+                            max-height: 296px;
+                        }
                     }                
                     .content{
                         top: 50%;
@@ -371,6 +419,13 @@ $product-bg: #3B3A40;
                         height: 100%;
                         max-height: 296px; 
                         filter: brightness(50%);
+
+                        button{
+                            width: 100%;
+                            height: 100%;
+                            max-width: 520px;
+                            max-height: 296px;
+                        }
                     }
                     
                     .content{
@@ -399,6 +454,13 @@ $product-bg: #3B3A40;
                         height: 100%;
                         max-height: 296px; 
                         filter: brightness(50%);
+
+                        button{
+                            width: 100%;
+                            height: 100%;
+                            max-width: 520px;
+                            max-height: 296px;
+                        }
                     }
                     
                     .content{
@@ -427,6 +489,13 @@ $product-bg: #3B3A40;
                         height: 100%;
                         max-height: 296px; 
                         filter: brightness(50%);
+
+                        button{
+                            width: 100%;
+                            height: 100%;
+                            max-width: 520px;
+                            max-height: 296px;
+                        }
                     }
                     
                     .content{
@@ -747,6 +816,22 @@ $product-bg: #3B3A40;
 .sec5{
     
     background-color: $blue-bg;
+    padding-bottom: 134px;
+
+    .plates-container{
+        max-width: 938px;
+        margin: 0 auto;
+    }
+
+    .sec5-container{
+        max-width: 1152px;
+        margin: 0 auto;
+    }
+
+    .BackToStartPage{
+        display: flex;
+        justify-content: end;
+    }
 
     h2{
         display: flex;
@@ -775,69 +860,626 @@ $product-bg: #3B3A40;
         display: flex;
         justify-content: space-between;
 
+        .hidden{
+            display: none;
+        }
+
         .plates1{
 
-            background: url(../img/section5/Studing-bg.png);
-            background-size: cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background: url(../img/section5/Studing-bg.png);        
             background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+            max-height: 400px;
             
-            button{
-                display: flex;
-                justify-content: center;
-                padding-top: 302px;
-                margin-left: 87px;
-                margin-right: 87px;
-                color: rgb(255, 255, 255);
-                font-family: "ABeeZee";
-                font-size: 1.5rem;
-                font-weight: 400;
-                line-height: 2.19rem;
+            .button{
+                max-width: 300px;
+                width: 100%;
+
+                button{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 304px;
+                    max-width: 300px;
+                    width: 100%;
+                    padding: 30px 0px;
+                    color: rgb(255, 255, 255);
+                    font-family: "ABeeZee";
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    line-height: 2.19rem;
+                    background: rgba(19, 18, 24, 0.8);
+                }
             }
             
+            .content{
+
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                max-width: 300px;
+                max-height: 400px;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+
+                .bg{
+                    position: absolute;
+                    background: rgba(19, 18, 24, 0.8);
+                    width: 100%;
+                    height: 100%;
+                    max-width: 300px;
+                    max-height: 310px;
+                }
+    
+                p{  
+                    position: absolute;
+                    left: 32px;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 12.50rem;
+                    max-height: 14.75rem;
+                    color: rgb(255, 255, 255);
+                    font-family: "ABeeZee";
+                    font-size: 1.13rem;
+                    font-weight: 400;
+                    line-height: 1.88rem;
+                    margin-top: 17px;
+                }
+    
+                button{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 310px;
+                    width: 100%;
+                    max-width: 300px;            
+                    padding: 30px 0;
+                    color: $orange-bg;
+                    color: rgb(234, 131, 5);
+                    background: rgba(19, 18, 24, 0.8);
+                    font-family: "ABeeZee";
+                    font-size: 1.13rem;
+                    font-weight: 200;
+                    line-height: 1.88rem;               
+                }
+            }
+            
+        
         }
 
         .plates2{
 
+            display: flex;
+            justify-content: center;
             background: url(../img/section5/Service.png);
-            background-size: cover;
             background-repeat: no-repeat;
-
-            p{  
-                max-width: 14.63rem;
-                max-height: 14.75rem;
-                color: rgb(255, 255, 255);
-                font-family: "ABeeZee";
-                font-size: 1.13rem;
-                font-weight: 400;
-                line-height: 1.88rem;
-                margin-top: 17px;
-                margin-left: 32px;
-            }
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+            max-height: 400px;
+            position: relative;
 
             .button{
-                display: flex;
-                justify-content: center;
-                margin-top: 80px;
-                margin-bottom: 38px;
+                max-width: 300px;
+                width: 100%;
 
                 button{
-                    color: $orange-bg;
-                    color: rgb(234, 131, 5);
-                    font-family: "Roboto";
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 304px;
+                    max-width: 300px;
+                    width: 100%;
+                    padding: 30px 0px;
+                    color: rgb(255, 255, 255);
+                    font-family: "ABeeZee";
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    line-height: 2.19rem;
+                    background: rgba(19, 18, 24, 0.8);
+                }
+            }
+            
+            .content{
+
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                max-width: 300px;
+                max-height: 400px;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+
+                .bg{
+                    position: absolute;
+                    background: rgba(19, 18, 24, 0.8);
+                    width: 100%;
+                    height: 100%;
+                    max-width: 300px;
+                    max-height: 310px;
+                }
+    
+                p{  
+                    position: absolute;
+                    left: 32px;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 12.50rem;
+                    max-height: 14.75rem;
+                    color: rgb(255, 255, 255);
+                    font-family: "ABeeZee";
                     font-size: 1.13rem;
                     font-weight: 400;
                     line-height: 1.88rem;
+                    margin-top: 17px;
+                }
+    
+                button{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 310px;
+                    width: 100%;
+                    max-width: 300px;            
+                    padding: 30px 0;
+                    color: $orange-bg;
+                    color: rgb(234, 131, 5);
+                    background: rgba(19, 18, 24, 0.8);
+                    font-family: "ABeeZee";
+                    font-size: 1.13rem;
+                    font-weight: 200;
+                    line-height: 1.88rem;               
                 }
             }
         }
 
         .plates3{
 
+            display: flex;
+            justify-content: center;
             background: url(../img/section5/Fix.png);
-            background-size: cover;
             background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+            max-height: 400px;
             
+            .button{
+                max-width: 300px;
+                width: 100%;
 
+                button{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 304px;
+                    max-width: 300px;
+                    width: 100%;
+                    padding: 30px 0px;
+                    color: rgb(255, 255, 255);
+                    font-family: "ABeeZee";
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    line-height: 2.19rem;
+                    background: rgba(19, 18, 24, 0.8);
+                }
+            }
+            
+            .content{
+
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                max-width: 300px;
+                max-height: 400px;
+                visibility: hidden;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+
+                .bg{
+                    position: absolute;
+                    background: rgba(19, 18, 24, 0.8);
+                    width: 100%;
+                    height: 100%;
+                    max-width: 300px;
+                    max-height: 310px;
+                }
+    
+                p{  
+                    position: absolute;
+                    left: 32px;
+                    width: 100%;
+                    height: 100%;
+                    max-width: 12.50rem;
+                    max-height: 14.75rem;
+                    color: rgb(255, 255, 255);
+                    font-family: "ABeeZee";
+                    font-size: 1.13rem;
+                    font-weight: 400;
+                    line-height: 1.88rem;
+                    margin-top: 17px;
+                }
+    
+                button{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 310px;
+                    width: 100%;
+                    max-width: 300px;            
+                    padding: 30px 0;
+                    color: $orange-bg;
+                    color: rgb(234, 131, 5);
+                    background: rgba(19, 18, 24, 0.8);
+                    font-family: "ABeeZee";
+                    font-size: 1.13rem;
+                    font-weight: 200;
+                    line-height: 1.88rem;               
+                }
+            }
+        }
+
+        .plates1:hover .content{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .plates1:hover .button{
+            visibility: hidden;
+        }
+
+        .plates2:hover .content{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .plates2:hover .button{
+            visibility: hidden;
+        }
+
+        .plates3:hover .content{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .plates3:hover .button{
+            visibility: hidden;
         }
     }
+}
+
+.sec6{
+
+    position: relative;
+    background: $blue-bg;
+    position: relative;
+    padding-bottom: 141px;
+
+    .bg{
+        margin-left: -150px;
+        position: relative;
+        
+        .filter{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .sec6-container{
+        max-width: 1152px;
+        margin: 0 auto;    
+        display: flex;
+        justify-content: end;
+        
+        form{
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            top: 43px;         
+            width: 100%;
+            height: 100%;
+            max-width: 620px; 
+            height: 258px;  
+            background-color: #FCF7F2;
+            border-radius: 20px 20px;
+
+            .name{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 36px;
+
+                .p1{
+                    color: rgb(59, 58, 64);
+                    font-family: "Roboto";
+                    font-size: 1.13rem;
+                    font-weight: 600;
+                    line-height: 1.44rem;
+                }
+
+                h2{
+                    margin-top: -10px;
+                    color: rgb(204, 116, 8);
+                    font-family: "Doppio One";
+                    font-size: 3rem;
+                    font-weight: 400;
+                    line-height: 3.75rem;
+                }
+
+                .p2{
+                    margin-top: -10px;
+                    color: rgb(191, 185, 177);
+                    font-family: "Roboto";
+                    font-size: .95rem;
+                    font-weight: 400;
+                    line-height: 1.13rem;
+                    letter-spacing: 0%;
+                }
+            }
+
+            .input{
+
+                display: flex;
+                justify-content: center;
+
+                .inp{
+
+                    margin-right: 11px;
+
+                    input{
+                        width: 100%;
+                        height: 100%;
+                        max-width: 452px;
+                        height: 43px;
+                        border: 0;
+                        border-radius: 0.31rem;
+                        box-shadow: inset 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+                        background: rgb(242, 234, 224);
+                        
+                        text-indent: 20px;
+                        font-family: "Doppio One";
+                        font-size: 1.13rem;
+                        font-weight: 400;
+                    }
+
+                    p{
+                        color: rgb(225, 220, 213);
+                        font-family: "ABeeZee";
+                        font-weight: 400;
+                        font-style: italic;
+                        margin-top: 6px;
+                    }
+                }
+
+                
+    
+                button{
+                    width: 77px;
+                    max-height: 43px;
+                    background-color: $orange-bg;
+                    border-radius: 0.31rem;
+                }
+
+            }
+        }
+    }   
+}
+
+footer{
+
+    background: $blue-bg;
+    padding-top: 31px;
+    border-top:0.13rem solid rgb(36, 36, 36);;
+
+    .content{
+        display: flex;
+        justify-content: space-between;
+
+        .leftSide{
+
+            .main{
+
+                margin-bottom: 54px;
+
+                img{
+                    margin-left: -13px;
+                }
+
+                p{
+                    color: white;
+                    font-family: "Roboto";
+                    font-size: 1.13rem;
+                    font-weight: 400;
+                    line-height: 1.44rem;
+                    letter-spacing: 0%;
+                }
+            }
+
+            .quetions{
+                padding-bottom: 20px;
+
+                .tel{
+
+                    padding-bottom: 40px;
+
+                    p{
+                        color: $white;
+                        font-family: "Roboto";
+                        font-size: 1.13rem;
+                        font-weight: 400;
+                        line-height: 0rem;
+                        letter-spacing: 0%;
+                        padding-bottom: 20px;
+                    }
+
+                    a{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.13rem;
+                        font-weight: 600;
+                        line-height: 0rem;
+                        letter-spacing: 3px;
+                    }
+                }
+
+                .schedule{
+                    p{
+                        color: $white;
+                        font-family: "Roboto";
+                        font-size: 1.13rem;
+                        font-weight: 400;
+                        line-height: 0rem;
+                        letter-spacing: 0%;
+                        padding-bottom: 15px;
+                    }
+
+                    a{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.13rem;
+                        font-weight: 400;
+                        line-height: 0rem;
+                        
+                    }
+                }
+            }
+
+            .Media{
+                ul{
+                    display: flex;
+                    margin-bottom: 32px;
+                    align-items: center;
+
+                    li{
+                        margin-right: 20px;
+                        filter: brightness(70%);
+                    }
+                }
+            }
+
+            .payment{
+
+                padding-bottom: 167px;
+
+                p{
+                    color: $white;
+                    font-family: "Roboto";
+                    font-size: 1.13rem;
+                    font-weight: 400;
+                    line-height: 0rem;
+                    letter-spacing: 0%;
+                    padding-bottom: 15px;
+                }
+                ul{
+                    display: flex;
+                    margin-bottom: 32px;
+                    align-items: center;
+
+                    .otstup{
+                        margin-right: 2px;
+                    }
+                }
+            }
+
+            .confid{
+                max-width: 24.75rem;
+                p{
+                    color: $white;
+                    font-family: "ABeeZee";
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .RightSide{
+
+            display: flex;
+            flex-direction: column;
+            
+            .top{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 92px;
+
+                .catalog{
+                    margin-right: 45px;
+
+                    h2{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        padding-bottom: 10px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: rgb(196, 196, 196);
+                                font-family: "ABeeZee";
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.31rem;
+                            }                         
+                        }
+                    }
+                }
+                
+                .service{
+
+                    margin-right: 63px;
+
+                    h2{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        padding-bottom: 10px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: rgb(196, 196, 196);
+                                font-family: "ABeeZee";
+                                ffont-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.31rem;
+                            }                         
+                        }
+                    }
+                }
+
+                .services{
+                    h2{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        padding-bottom: 10px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: rgb(196, 196, 196);
+                                font-family: "ABeeZee";
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.31rem;
+                            }                         
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

@@ -80,6 +80,14 @@ button {
   margin: 0 auto;
 }
 
+.BackToStartPage {
+  position: fixed;
+  bottom: 20px;
+  right: -120px;
+  z-index: 10;
+  transition: 0.5s ease;
+}
+
 .header {
   width: 100%;
   background-color: #131218;
@@ -89,8 +97,8 @@ button {
 .header__headerContainer {
   margin: 0 auto;
   width: 100%;
-  max-width: 1400px;
-  padding-bottom: 4px;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
 }
 .header__headerContainer__between {
   width: 100%;
@@ -195,7 +203,7 @@ button {
 }
 .sec1 .center__up__logo {
   position: absolute;
-  top: 0;
+  top: 1vh;
 }
 .sec1 .center__bottom {
   position: relative;
@@ -233,7 +241,6 @@ button {
 }
 .sec2 .container_slider {
   margin: 0 auto;
-  max-width: 1400px;
 }
 .sec2 .slider {
   overflow: hidden;
@@ -245,12 +252,37 @@ button {
   position: relative;
   left: 0;
 }
+.sec2 .slider .slides .slide1 {
+  width: 100vw;
+}
+.sec2 .slider .slides .slide1 img {
+  width: 100vw;
+}
+.sec2 .slider .slides .slide2 {
+  width: 100vw;
+}
+.sec2 .slider .slides .slide2 img {
+  width: 100vw;
+}
+.sec2 .slider .slides .slide3 {
+  width: 100vw;
+}
+.sec2 .slider .slides .slide3 img {
+  width: 100vw;
+}
+.sec2 .slider .slides .slide4 {
+  width: 100vw;
+}
+.sec2 .slider .slides .slide4 img {
+  width: 100vw;
+}
 .sec2 .slider__buttons {
-  top: 168px;
+  top: 50%;
   position: absolute;
   display: flex;
   justify-content: center;
   width: 100%;
+  transform: translate(0, -50%);
 }
 .sec2 .slider__buttons__img {
   width: 100%;
@@ -296,6 +328,12 @@ button {
   max-height: 296px;
   filter: brightness(50%);
 }
+.sec3 .blue-bg .part1 .tabs .tab1 .bg button {
+  width: 100%;
+  height: 100%;
+  max-width: 520px;
+  max-height: 296px;
+}
 .sec3 .blue-bg .part1 .tabs .tab1 .content {
   top: 50%;
   left: 50%;
@@ -319,6 +357,12 @@ button {
   height: 100%;
   max-height: 296px;
   filter: brightness(50%);
+}
+.sec3 .blue-bg .part1 .tabs .tab2 .bg button {
+  width: 100%;
+  height: 100%;
+  max-width: 520px;
+  max-height: 296px;
 }
 .sec3 .blue-bg .part1 .tabs .tab2 .content {
   top: 50%;
@@ -344,6 +388,12 @@ button {
   max-height: 296px;
   filter: brightness(50%);
 }
+.sec3 .blue-bg .part1 .tabs .tab3 .bg button {
+  width: 100%;
+  height: 100%;
+  max-width: 520px;
+  max-height: 296px;
+}
 .sec3 .blue-bg .part1 .tabs .tab3 .content {
   top: 50%;
   left: 50%;
@@ -367,6 +417,12 @@ button {
   height: 100%;
   max-height: 296px;
   filter: brightness(50%);
+}
+.sec3 .blue-bg .part1 .tabs .tab4 .bg button {
+  width: 100%;
+  height: 100%;
+  max-width: 520px;
+  max-height: 296px;
 }
 .sec3 .blue-bg .part1 .tabs .tab4 .content {
   top: 50%;
@@ -611,6 +667,19 @@ button {
 
 .sec5 {
   background-color: #131218;
+  padding-bottom: 134px;
+}
+.sec5 .plates-container {
+  max-width: 938px;
+  margin: 0 auto;
+}
+.sec5 .sec5-container {
+  max-width: 1152px;
+  margin: 0 auto;
+}
+.sec5 .BackToStartPage {
+  display: flex;
+  justify-content: end;
 }
 .sec5 h2 {
   display: flex;
@@ -634,30 +703,62 @@ button {
   display: flex;
   justify-content: space-between;
 }
-.sec5 .plates .plates1 {
-  background: url(../img/section5/Studing-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+.sec5 .plates .hidden {
+  display: none;
 }
-.sec5 .plates .plates1 button {
+.sec5 .plates .plates1 {
+  position: relative;
   display: flex;
   justify-content: center;
-  padding-top: 302px;
-  margin-left: 87px;
-  margin-right: 87px;
+  background: url(../img/section5/Studing-bg.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 400px;
+}
+.sec5 .plates .plates1 .button {
+  max-width: 300px;
+  width: 100%;
+}
+.sec5 .plates .plates1 .button button {
+  display: flex;
+  justify-content: center;
+  margin-top: 304px;
+  max-width: 300px;
+  width: 100%;
+  padding: 30px 0px;
   color: rgb(255, 255, 255);
   font-family: "ABeeZee";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.19rem;
+  background: rgba(19, 18, 24, 0.8);
 }
-.sec5 .plates .plates2 {
-  background: url(../img/section5/Service.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+.sec5 .plates .plates1 .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 400px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
-.sec5 .plates .plates2 p {
-  max-width: 14.63rem;
+.sec5 .plates .plates1 .content .bg {
+  position: absolute;
+  background: rgba(19, 18, 24, 0.8);
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 310px;
+}
+.sec5 .plates .plates1 .content p {
+  position: absolute;
+  left: 32px;
+  width: 100%;
+  height: 100%;
+  max-width: 12.5rem;
   max-height: 14.75rem;
   color: rgb(255, 255, 255);
   font-family: "ABeeZee";
@@ -665,24 +766,453 @@ button {
   font-weight: 400;
   line-height: 1.88rem;
   margin-top: 17px;
-  margin-left: 32px;
 }
-.sec5 .plates .plates2 .button {
+.sec5 .plates .plates1 .content button {
   display: flex;
   justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 38px;
-}
-.sec5 .plates .plates2 .button button {
+  margin-top: 310px;
+  width: 100%;
+  max-width: 300px;
+  padding: 30px 0;
   color: #CC7408;
   color: rgb(234, 131, 5);
-  font-family: "Roboto";
+  background: rgba(19, 18, 24, 0.8);
+  font-family: "ABeeZee";
+  font-size: 1.13rem;
+  font-weight: 200;
+  line-height: 1.88rem;
+}
+.sec5 .plates .plates2 {
+  display: flex;
+  justify-content: center;
+  background: url(../img/section5/Service.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 400px;
+  position: relative;
+}
+.sec5 .plates .plates2 .button {
+  max-width: 300px;
+  width: 100%;
+}
+.sec5 .plates .plates2 .button button {
+  display: flex;
+  justify-content: center;
+  margin-top: 304px;
+  max-width: 300px;
+  width: 100%;
+  padding: 30px 0px;
+  color: rgb(255, 255, 255);
+  font-family: "ABeeZee";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.19rem;
+  background: rgba(19, 18, 24, 0.8);
+}
+.sec5 .plates .plates2 .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 400px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.sec5 .plates .plates2 .content .bg {
+  position: absolute;
+  background: rgba(19, 18, 24, 0.8);
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 310px;
+}
+.sec5 .plates .plates2 .content p {
+  position: absolute;
+  left: 32px;
+  width: 100%;
+  height: 100%;
+  max-width: 12.5rem;
+  max-height: 14.75rem;
+  color: rgb(255, 255, 255);
+  font-family: "ABeeZee";
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 1.88rem;
+  margin-top: 17px;
+}
+.sec5 .plates .plates2 .content button {
+  display: flex;
+  justify-content: center;
+  margin-top: 310px;
+  width: 100%;
+  max-width: 300px;
+  padding: 30px 0;
+  color: #CC7408;
+  color: rgb(234, 131, 5);
+  background: rgba(19, 18, 24, 0.8);
+  font-family: "ABeeZee";
+  font-size: 1.13rem;
+  font-weight: 200;
+  line-height: 1.88rem;
 }
 .sec5 .plates .plates3 {
+  display: flex;
+  justify-content: center;
   background: url(../img/section5/Fix.png);
-  background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 400px;
+}
+.sec5 .plates .plates3 .button {
+  max-width: 300px;
+  width: 100%;
+}
+.sec5 .plates .plates3 .button button {
+  display: flex;
+  justify-content: center;
+  margin-top: 304px;
+  max-width: 300px;
+  width: 100%;
+  padding: 30px 0px;
+  color: rgb(255, 255, 255);
+  font-family: "ABeeZee";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.19rem;
+  background: rgba(19, 18, 24, 0.8);
+}
+.sec5 .plates .plates3 .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 400px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.sec5 .plates .plates3 .content .bg {
+  position: absolute;
+  background: rgba(19, 18, 24, 0.8);
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 310px;
+}
+.sec5 .plates .plates3 .content p {
+  position: absolute;
+  left: 32px;
+  width: 100%;
+  height: 100%;
+  max-width: 12.5rem;
+  max-height: 14.75rem;
+  color: rgb(255, 255, 255);
+  font-family: "ABeeZee";
+  font-size: 1.13rem;
+  font-weight: 400;
+  line-height: 1.88rem;
+  margin-top: 17px;
+}
+.sec5 .plates .plates3 .content button {
+  display: flex;
+  justify-content: center;
+  margin-top: 310px;
+  width: 100%;
+  max-width: 300px;
+  padding: 30px 0;
+  color: #CC7408;
+  color: rgb(234, 131, 5);
+  background: rgba(19, 18, 24, 0.8);
+  font-family: "ABeeZee";
+  font-size: 1.13rem;
+  font-weight: 200;
+  line-height: 1.88rem;
+}
+.sec5 .plates .plates1:hover .content {
+  visibility: visible;
+  opacity: 1;
+}
+.sec5 .plates .plates1:hover .button {
+  visibility: hidden;
+}
+.sec5 .plates .plates2:hover .content {
+  visibility: visible;
+  opacity: 1;
+}
+.sec5 .plates .plates2:hover .button {
+  visibility: hidden;
+}
+.sec5 .plates .plates3:hover .content {
+  visibility: visible;
+  opacity: 1;
+}
+.sec5 .plates .plates3:hover .button {
+  visibility: hidden;
+}
+
+.sec6 {
+  position: relative;
+  background: #131218;
+  position: relative;
+  padding-bottom: 141px;
+}
+.sec6 .bg {
+  margin-left: -150px;
+  position: relative;
+}
+.sec6 .bg .filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.sec6 .sec6-container {
+  max-width: 1152px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: end;
+}
+.sec6 .sec6-container form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 43px;
+  width: 100%;
+  height: 100%;
+  max-width: 620px;
+  height: 258px;
+  background-color: #FCF7F2;
+  border-radius: 20px 20px;
+}
+.sec6 .sec6-container form .name {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 36px;
+}
+.sec6 .sec6-container form .name .p1 {
+  color: rgb(59, 58, 64);
+  font-family: "Roboto";
+  font-size: 1.13rem;
+  font-weight: 600;
+  line-height: 1.44rem;
+}
+.sec6 .sec6-container form .name h2 {
+  margin-top: -10px;
+  color: rgb(204, 116, 8);
+  font-family: "Doppio One";
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3.75rem;
+}
+.sec6 .sec6-container form .name .p2 {
+  margin-top: -10px;
+  color: rgb(191, 185, 177);
+  font-family: "Roboto";
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.13rem;
+  letter-spacing: 0%;
+}
+.sec6 .sec6-container form .input {
+  display: flex;
+  justify-content: center;
+}
+.sec6 .sec6-container form .input .inp {
+  margin-right: 11px;
+}
+.sec6 .sec6-container form .input .inp input {
+  width: 100%;
+  height: 100%;
+  max-width: 452px;
+  height: 43px;
+  border: 0;
+  border-radius: 0.31rem;
+  box-shadow: inset 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+  background: rgb(242, 234, 224);
+  text-indent: 20px;
+  font-family: "Doppio One";
+  font-size: 1.13rem;
+  font-weight: 400;
+}
+.sec6 .sec6-container form .input .inp p {
+  color: rgb(225, 220, 213);
+  font-family: "ABeeZee";
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 6px;
+}
+.sec6 .sec6-container form .input button {
+  width: 77px;
+  max-height: 43px;
+  background-color: #CC7408;
+  border-radius: 0.31rem;
+}
+
+footer {
+  background: #131218;
+  padding-top: 31px;
+  border-top: 0.13rem solid rgb(36, 36, 36);
+}
+footer .content {
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .leftSide .main {
+  margin-bottom: 54px;
+}
+footer .content .leftSide .main img {
+  margin-left: -13px;
+}
+footer .content .leftSide .main p {
+  color: white;
+  font-family: "Roboto";
+  font-size: 1.13rem;
+  font-weight: 400;
+  line-height: 1.44rem;
+  letter-spacing: 0%;
+}
+footer .content .leftSide .quetions {
+  padding-bottom: 20px;
+}
+footer .content .leftSide .quetions .tel {
+  padding-bottom: 40px;
+}
+footer .content .leftSide .quetions .tel p {
+  color: rgb(196, 196, 196);
+  font-family: "Roboto";
+  font-size: 1.13rem;
+  font-weight: 400;
+  line-height: 0rem;
+  letter-spacing: 0%;
+  padding-bottom: 20px;
+}
+footer .content .leftSide .quetions .tel a {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1.13rem;
+  font-weight: 600;
+  line-height: 0rem;
+  letter-spacing: 3px;
+}
+footer .content .leftSide .quetions .schedule p {
+  color: rgb(196, 196, 196);
+  font-family: "Roboto";
+  font-size: 1.13rem;
+  font-weight: 400;
+  line-height: 0rem;
+  letter-spacing: 0%;
+  padding-bottom: 15px;
+}
+footer .content .leftSide .quetions .schedule a {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1.13rem;
+  font-weight: 400;
+  line-height: 0rem;
+}
+footer .content .leftSide .Media ul {
+  display: flex;
+  margin-bottom: 32px;
+  align-items: center;
+}
+footer .content .leftSide .Media ul li {
+  margin-right: 20px;
+  filter: brightness(70%);
+}
+footer .content .leftSide .payment {
+  padding-bottom: 167px;
+}
+footer .content .leftSide .payment p {
+  color: rgb(196, 196, 196);
+  font-family: "Roboto";
+  font-size: 1.13rem;
+  font-weight: 400;
+  line-height: 0rem;
+  letter-spacing: 0%;
+  padding-bottom: 15px;
+}
+footer .content .leftSide .payment ul {
+  display: flex;
+  margin-bottom: 32px;
+  align-items: center;
+}
+footer .content .leftSide .payment ul .otstup {
+  margin-right: 2px;
+}
+footer .content .leftSide .confid {
+  max-width: 24.75rem;
+}
+footer .content .leftSide .confid p {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+footer .content .RightSide {
+  display: flex;
+  flex-direction: column;
+}
+footer .content .RightSide .top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 92px;
+}
+footer .content .RightSide .top .catalog {
+  margin-right: 45px;
+}
+footer .content .RightSide .top .catalog h2 {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  padding-bottom: 10px;
+}
+footer .content .RightSide .top .catalog ul li a {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.31rem;
+}
+footer .content .RightSide .top .service {
+  margin-right: 63px;
+}
+footer .content .RightSide .top .service h2 {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  padding-bottom: 10px;
+}
+footer .content .RightSide .top .service ul li a {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  ffont-size: 1rem;
+  font-weight: 400;
+  line-height: 1.31rem;
+}
+footer .content .RightSide .top .services h2 {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+  padding-bottom: 10px;
+}
+footer .content .RightSide .top .services ul li a {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.31rem;
 }/*# sourceMappingURL=index.css.map */
