@@ -57,6 +57,10 @@ $white: rgb(196, 196, 196);
     font-style: italic;
 }
 
+.hidden{
+    display: none !important;
+}
+
 .container{
     max-width: 1070px;
     margin: 0 auto;
@@ -76,7 +80,6 @@ $white: rgb(196, 196, 196);
     background-color: $blue-bg;
     display: flex;
     border-bottom: 0.06rem solid rgb(36, 36, 36);;
-    
     
     &__headerContainer{
 
@@ -179,6 +182,10 @@ $white: rgb(196, 196, 196);
 .sec1{
 
     background-color: $blue-bg;
+
+    .mobile{
+        display: none;
+    }
 
     .content{
 
@@ -359,7 +366,7 @@ $white: rgb(196, 196, 196);
             
             .tabs{
                 
-                margin-top: 146px;
+                margin-top: 60px;
                 position: absolute;
                 display: grid;
                 grid-template-columns: minmax(0, 520px) minmax(0, 520px);
@@ -379,6 +386,7 @@ $white: rgb(196, 196, 196);
                     position: relative;
 
                     .bg{
+                        border-radius: 20px;
                         background: url(../img/section3/tabs/tab1-bg.png);
                         background-size: cover;
                         background-repeat: no-repeat; 
@@ -388,6 +396,7 @@ $white: rgb(196, 196, 196);
                         filter: brightness(50%);  
                         
                         button{
+                            border-radius: 20px;
                             width: 100%;
                             height: 100%;
                             max-width: 520px;
@@ -414,6 +423,7 @@ $white: rgb(196, 196, 196);
                     position: relative;
 
                     .bg{
+                        border-radius: 20px;
                         background: url(../img/section3/tabs/tab2-bg.png);
                         background-size: cover;
                         background-repeat: no-repeat; 
@@ -423,6 +433,7 @@ $white: rgb(196, 196, 196);
                         filter: brightness(50%);
 
                         button{
+                            border-radius: 20px;
                             width: 100%;
                             height: 100%;
                             max-width: 520px;
@@ -450,6 +461,7 @@ $white: rgb(196, 196, 196);
                     position: relative;
 
                     .bg{
+                        border-radius: 20px;
                         background: url(../img/section3/tabs/tab3-bg.png);
                         background-size: cover;
                         background-repeat: no-repeat;
@@ -459,6 +471,7 @@ $white: rgb(196, 196, 196);
                         filter: brightness(50%);
 
                         button{
+                            border-radius: 20px;
                             width: 100%;
                             height: 100%;
                             max-width: 520px;
@@ -486,6 +499,7 @@ $white: rgb(196, 196, 196);
                     position: relative;
 
                     .bg{
+                        border-radius: 20px;
                         background: url(../img/section3/tabs/tab4-bg.png);
                         background-size: cover;
                         background-repeat: no-repeat;
@@ -495,6 +509,7 @@ $white: rgb(196, 196, 196);
                         filter: brightness(50%);
 
                         button{
+                            border-radius: 20px;
                             width: 100%;
                             height: 100%;
                             max-width: 520px;
@@ -524,7 +539,7 @@ $white: rgb(196, 196, 196);
     .orange-bg{
 
         background: $orange-bg;
-        padding-top: 217px;
+        padding-top: 150px;
 
         .marcks{
             display: grid;
@@ -534,6 +549,10 @@ $white: rgb(196, 196, 196);
             grid-template-rows: 113px 155px;
             align-items: center;
             justify-content: space-between;
+        }
+
+        .mobileMarcks{
+            display: none;
         }
     }
 }
@@ -857,6 +876,10 @@ $white: rgb(196, 196, 196);
             border-bottom: 0.13rem solid rgb(216, 119, 0);
             
         }      
+    }
+
+    .mobile-Plates{
+        display: none;
     }
 
     .plates{
@@ -1281,6 +1304,10 @@ footer{
     padding-top: 31px;
     border-top:0.13rem solid rgb(36, 36, 36);;
 
+    .mobileContent{
+        display: none;
+    }
+
     .content{
         display: flex;
         justify-content: space-between;
@@ -1454,7 +1481,7 @@ footer{
                             a{
                                 color: rgb(196, 196, 196);
                                 font-family: "ABeeZee";
-                                ffont-size: 1rem;
+                                font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
                             }                         
@@ -1542,9 +1569,39 @@ footer{
     }
 
     .sec3{
-        .marcks{
-            grid-template-columns: 158px 305px 125px 145px !important;
-            grid-template-rows: 91px 166px 60px 160px !important;
+
+        .blue-bg{
+            .container{
+                .part1{
+                    .tabs{
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+
+        .orange-bg{
+            padding-top: 90px;
+            .marcks{         
+                grid-template-columns: minmax(0, 190px) minmax(0, 85px) minmax(0, 195px) !important;
+                grid-template-rows: minmax(0, 132px) minmax(0, 127px) minmax(0, 111px) !important;
+    
+                .lastGrid{
+                    display: none;
+                }
+            }
+        }     
+    }
+
+    .sec4{
+        .container{
+            max-width: 800px;
+
+            .slider{
+                .over-hidden{
+                    max-width: 700px;
+                }
+            }
         }
     }
 
@@ -1646,41 +1703,939 @@ footer{
         }
     }
 
-    
+    .container{
+        max-width: 580px;
+    }
 
-    footer{
+    .sec4{
         .container{
-            max-width: 550px;
-    
-            .content{
-    
-                display: block;
+            max-width: 650px;
+
+            .slider{
+                .over-hidden{
+                    max-width: 460px;
+                }
+            }
+        }
+    }
+
+    .sec5{
+
+        .sec5-container{
+
+            min-width: 380px;
+            max-width: 580px;
+
+            .plates{
+                display: none !important;
+            }
+
+            .mobile-Plates{
+
+                display: flex;
+                justify-content: space-between;
     
                 .leftSide{
-                    .main{
     
-                        margin-bottom: 200px;
+                    width: 100%;
     
-                        p{
-                            display: none;
+                    .plates1{
+    
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin-bottom: 15px;
+    
+                        button{
+                            background: url("../img/section5/mobile/Servises-bg.png");
+                            filter: brightness(50%);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            max-width: 280px;
+                            height: 170px;
+                            border-radius: 10px;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }
+                        
+                    }
+
+                    .plates2{
+    
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+    
+                        button{
+                            background: url("../img/section5/mobile/Servises-bg.png");
+                            filter: brightness(50%);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            max-width: 280px;
+                            height: 170px;
+                            border-radius: 10px;
+                        }
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }
+                    }
+    
+                }
+
+                .rightSide{
+    
+                    width: 100%;
+                    margin-top: 50px;
+    
+                    .plates3{
+    
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        margin-bottom: 15px;
+    
+                        button{
+                            background: url("../img/section5/mobile/Servises-bg.png");
+                            filter: brightness(50%);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            max-width: 280px;
+                            height: 170px;
+                            border-radius: 10px;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }
+                    }
+
+                    .plates4{
+    
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+    
+                        button{
+                            background: url("../img/section5/mobile/Servises-bg.png");
+                            filter: brightness(50%);
+                            background-size: cover;
+                            background-repeat: no-repeat;
+                            width: 100%;
+                            max-width: 280px;
+                            height: 170px;
+                            border-radius: 10px;
+                        }
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }
+                    }  
+                }
+            }
+        }
+    }
+
+    footer{
+        border-top: unset;
+        
+        .content{
+            display: none !important;
+        }
+
+        .mobileContent{
+            display: unset !important;
+        }
+
+        .container{
+            max-width: 580px;
+
+            .main{
+                margin-left: -5px;
+                margin-bottom: 10px;
+            }
+
+            .list{
+                display: flex;
+                justify-content: space-between;
+
+                .catalog{
+
+                    h2{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        padding-bottom: 5px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: rgba(255, 255, 255, 0.3);
+                                font-family: "ABeeZee";
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.31rem;
+                            }                         
                         }
                     }
                 }
-    
-                .RightSide{
-    
-                    .top{
-                        justify-content: unset;
-                        margin-top: -650px;
+                
+                .service{
+
+                    h2{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        padding-bottom: 5px;
                     }
-    
-                    .iphone{
+                    ul{
+                        li{
+                            a{
+                                color: rgba(255, 255, 255, 0.3);
+                                font-family: "ABeeZee";
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.31rem;
+                            }                         
+                        }
+                    }
+                }
+
+                .services{
+                    h2{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        padding-bottom: 5px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: rgba(255, 255, 255, 0.3);
+                                font-family: "ABeeZee";
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.31rem;
+                            }                         
+                        }
+                    }
+                }
+            }
+
+            .quetions{
+                margin-top: 30px;
+                padding-bottom: 20px;
+
+                .tel{
+
+                    padding-bottom: 40px;
+
+                    p{
+                        color: $white;
+                        font-family: "Roboto";
+                        font-size: .85rem;
+                        font-weight: 400;
+                        padding-bottom: 5px;
+                    }
+
+                    a{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1rem;
+                        font-weight: 600;
+                        line-height: 0rem;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                .schedule{
+                    p{
+                        color: $white;
+                        font-family: "Roboto";
+                        font-size: .85rem;
+                        font-weight: 400;
+                        padding-bottom: 5px;
+                    }
+
+                    a{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 0rem;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .Media{
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 30px;
+
+                ul{          
+                    width: 14.56rem;         
+                    display: flex;   
+                    justify-content: space-between;               
+                }
+            }
+        }       
+    }
+
+}
+
+@media (max-width: 600px){
+
+    .container{
+        max-width: 430px;
+    }
+
+    .header{
+        &__headerContainer{  
+            max-width: 430px;
+            &__between{    
+
+                display: flex;
+                align-items: center;
+
+                &__left{
+                    margin: unset ;
+                    .your_city{              
+                        display: none !important;
+                    }
+
+                    .city{
+                        color: rgba(255, 255, 255, 0.3);
+                    }
+                }
+
+                &__right{
+                    margin: unset;
+
+                    p{
+                        
                         display: none;
+                    }
+
+                    a{
+                        margin: unset;
+                        color: rgba(255, 255, 255, 0.3);
+                        margin-top: 3px;
+                    }
+                }   
+            }   
+        }             
+    }
+    
+
+    .sec1{
+
+        .default{
+            display: none !important;
+        }
+
+        .mobile{
+            display: unset !important;
+
+            .container{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .rightSide{
+                    display: flex;
+                    align-items: center;
+
+                    button{
+                        margin-right: 10px;
+                    }
+
+                    a{
+                        margin-right: 10px;
+                    }
+                }
+            }           
+        }
+    }
+
+
+    .sec2{
+        .slider{
+            &__buttons{
+                &__img{
+                    max-width: 350px;
+
+                    .next-button{
+                        img{
+                            max-width: 10px;
+                        }
+                    }
+
+                    .prev-button{
+                        img{
+                            max-width: 10px;
+                        }
                     }
                 }
             }
         }
     }
 
+    .sec3{
+        .blue-bg{   
+            padding-bottom: 255px;
+
+            .part1{
+                .tabs{
+
+                    margin-top: 30px;
+                    grid-template-columns: minmax(0, 200px) minmax(0, 180px);
+                    grid-template-rows: 102px 102px;
+                    row-gap: 33.35px;
+                    -moz-column-gap: 19px;
+                    column-gap: 19px;
+
+                    .tab1{
+                        height: 120px;
+                        width: 180px;
+
+                        .content{
+                            button{
+                                margin: unset;
+                                img{
+                                    margin: unset;
+                                    width: 60px;
+                                    height: 50px;  
+                                }
+
+                                p{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .tab2{
+                        height: 120px;
+                        width: 180px;
+
+                        .content{
+                            button{
+                                margin: unset;
+                                img{
+                                    margin: unset;
+                                    width: 60px;
+                                    height: 50px;  
+                                }
+
+                                p{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .tab3{
+                        height: 120px;
+                        width: 180px;
+
+                        .content{
+                            button{
+                                margin: unset;
+                                img{
+                                    margin: unset;
+                                    width: 60px;
+                                    height: 50px;  
+                                }
+
+                                p{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+
+                    .tab4{
+                        height: 120px;
+                        width: 180px;
+
+                        .content{
+                            button{
+                                margin: unset;
+                                img{
+                                    margin: unset;
+                                    width: 60px;
+                                    height: 50px;  
+                                }
+
+                                p{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }  
+
+        .orange-bg{
+            padding-top: 50px;
+
+            .container{
+                max-width: 380px;
+            }
+
+            .marcks{
+                display: none !important;
+            }
+
+            .mobileMarcks{
+                padding-bottom: 20px;
+                display: grid;
+                grid-auto-flow: column;
+                align-items: center;
+                justify-content: space-between;
+                grid-template-columns: minmax(0, 80px) minmax(0, 95px) minmax(0, 69px);
+                grid-template-rows: minmax(0, 52px) minmax(0, 33px) minmax(0, 22px);
+                row-gap: 20px;
+            }
+        }
+    }
+
+    .sec4{
+        .container{
+            max-width: 450px;
+
+            .slider{
+                .over-hidden{
+                    max-width: 220px;
+                }
+            }
+        }
+    }
+
+    .sec5{
+        padding-bottom: 50px;
+
+        .sec5-container{
+            max-width: 430px;
+
+            .mobile-Plates{    
+                .leftSide{   
+                    .plates1{    
+                        button{
+                            max-width: 200px;
+                            height: 150px;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: .8rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }                    
+                    }
+
+                    .plates2{    
+                        button{
+                            max-width: 200px;
+                            height: 150px;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: .8rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }                    
+                    }
+    
+                }
+
+                .rightSide{
+    
+                    width: 100%;
+                    margin-top: 50px;
+    
+                    .plates3{    
+                        button{
+                            max-width: 200px;
+                            height: 150px;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: .8rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }                    
+                    }
+
+                    .plates4{    
+                        button{
+                            max-width: 200px;
+                            height: 150px;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: .8rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }                    
+                    }
+                }
+            }
+        }
+
+    }
+
+    .sec6{
+        .bg{
+            margin-left: -850px;
+
+            .bgImg{
+                display: none;
+            }
+        }
+
+        .sec6-container{
+            justify-content: center;
+            form{
+                width: 21.25rem;
+                height: 14.94rem;
+
+                .name{
+                    margin-bottom: 10px;
+
+                    .p1{
+                        font-size: .8rem;
+                    }
+
+                    h2{
+                        font-size: 2rem;
+                    }
+
+                    .p2{
+                        display: flex;
+                        text-align: center;
+                        font-size: 0.75rem;
+                    }
+                }
+
+                .input{
+                    display: flex;
+                    justify-content: center;
+                    .inp{
+                        margin: unset;
+                        width: 191px;
+
+                        input{
+                            max-width: 191px;
+                        }
+
+                        p{
+                            text-align: center;
+                            font-size: 0.63rem;
+                            margin-right: -40px;
+                        }
+                    }          
+                    button{
+                        width: 45px;
+                    }        
+                }
+            }
+        }
+    }
+
+    footer{
+        padding-top: 300px;
+        border-top: unset;
+        
+        .container{
+            max-width: 350px;
+
+            .main{
+                margin-left: -5px;
+                margin-bottom: 10px;
+            }
+
+            .list{
+                display: flex;
+                justify-content: space-between;
+
+                .catalog{
+
+                    h2{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        padding-bottom: 5px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: rgba(255, 255, 255, 0.3);
+                                font-family: "ABeeZee";
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.31rem;
+                            }                         
+                        }
+                    }
+                }
+                
+                .service{
+
+                    h2{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        padding-bottom: 5px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: rgba(255, 255, 255, 0.3);
+                                font-family: "ABeeZee";
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.31rem;
+                            }                         
+                        }
+                    }
+                }
+
+                .services{
+                    h2{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.75rem;
+                        padding-bottom: 5px;
+                    }
+                    ul{
+                        li{
+                            a{
+                                color: rgba(255, 255, 255, 0.3);
+                                font-family: "ABeeZee";
+                                font-size: 1rem;
+                                font-weight: 400;
+                                line-height: 1.31rem;
+                            }                         
+                        }
+                    }
+                }
+            }
+
+            .quetions{
+                margin-top: 30px;
+                padding-bottom: 20px;
+
+                .tel{
+
+                    padding-bottom: 40px;
+
+                    p{
+                        color: $white;
+                        font-family: "Roboto";
+                        font-size: .85rem;
+                        font-weight: 400;
+                        padding-bottom: 5px;
+                    }
+
+                    a{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1rem;
+                        font-weight: 600;
+                        line-height: 0rem;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                .schedule{
+                    p{
+                        color: $white;
+                        font-family: "Roboto";
+                        font-size: .85rem;
+                        font-weight: 400;
+                        padding-bottom: 5px;
+                    }
+
+                    a{
+                        color: $white;
+                        font-family: "ABeeZee";
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 0rem;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            .Media{
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                padding-bottom: 30px;
+
+                ul{          
+                    width: 14.56rem;         
+                    display: flex;   
+                    justify-content: space-between;               
+                }
+            }
+        }       
+    }
 }
 
+@media (max-width: 450px) {
+    .container{
+        max-width: 360px;
+    }
+    .header{
+        &__headerContainer{  
+            max-width: 360px;
+        } 
+    }               
+    .sec3{
+        .orange-bg{
+            .container{
+                max-width: 320px;
+            }
+        }
+    }     
+    
+    .sec5{
+        padding-bottom: 50px;
+
+        .sec5-container{
+            max-width: 430px;
+
+            .mobile-Plates{    
+                .leftSide{   
+                    .plates1{    
+                        button{
+                            max-width: 141px;
+                            height: 102px;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: .8rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }                    
+                    }
+
+                    .plates2{    
+                        button{
+                            max-width: 141px;
+                            height: 102px;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: .8rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }                    
+                    }
+    
+                }
+
+                .rightSide{
+    
+                    width: 100%;
+                    margin-top: 50px;
+    
+                    .plates3{    
+                        button{
+                            max-width: 141px;
+                            height: 102px;;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: .8rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }                    
+                    }
+
+                    .plates4{    
+                        button{
+                            max-width: 141px;
+                            height: 102px;
+                        }   
+
+                        a{
+                            color: rgba(255, 255, 255, 0.6);;
+                            font-family: "ABeeZee";
+                            font-size: .8rem;
+                            font-weight: 400;
+                            line-height: 2.19rem;
+                        }                    
+                    }
+                }
+            }
+        }
+
+    }
+
+    footer{
+        .container{
+            max-width: 350px;   
+        }
+    }   
+}    
+    
