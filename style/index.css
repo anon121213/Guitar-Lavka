@@ -1354,7 +1354,6 @@ footer .content .RightSide .top .services ul li a {
     max-width: 460px;
   }
   .sec5 .sec5-container {
-    min-width: 380px;
     max-width: 580px;
   }
   .sec5 .sec5-container .plates {
@@ -1951,19 +1950,40 @@ footer .content .RightSide .top .services ul li a {
 }
 @media (max-width: 450px) {
   .container {
-    max-width: 360px;
+    max-width: 340px;
   }
   .header__headerContainer {
-    max-width: 360px;
+    max-width: 340px;
+  }
+  .sec2 .slider__buttons__img {
+    max-width: 325px;
+  }
+  .sec3 .blue-bg .tabs {
+    margin-left: 5px;
+  }
+  .sec3 .blue-bg .tabs .tab1 {
+    width: 150px !important;
+  }
+  .sec3 .blue-bg .tabs .tab2 {
+    width: 150px !important;
+  }
+  .sec3 .blue-bg .tabs .tab3 {
+    width: 150px !important;
+  }
+  .sec3 .blue-bg .tabs .tab4 {
+    width: 150px !important;
   }
   .sec3 .orange-bg .container {
     max-width: 320px;
+  }
+  .sec4 .container {
+    max-width: 340px;
   }
   .sec5 {
     padding-bottom: 50px;
   }
   .sec5 .sec5-container {
-    max-width: 430px;
+    max-width: 340px !important;
   }
   .sec5 .sec5-container .mobile-Plates .leftSide .plates1 button {
     max-width: 141px;

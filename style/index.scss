@@ -1723,7 +1723,6 @@ footer{
 
         .sec5-container{
 
-            min-width: 380px;
             max-width: 580px;
 
             .plates{
@@ -2537,14 +2536,43 @@ footer{
 
 @media (max-width: 450px) {
     .container{
-        max-width: 360px;
+        max-width: 340px;
     }
     .header{
         &__headerContainer{  
-            max-width: 360px;
+            max-width: 340px;
         } 
-    }               
+    }    
+    
+    .sec2{
+        .slider__buttons__img{
+            max-width: 325px;
+        }
+    }
+
     .sec3{
+
+        .blue-bg{
+            .tabs{
+                
+                margin-left: 5px;
+                // grid-template-columns: minmax(0, 200px) minmax(0, 152px) !important;
+
+                .tab1{
+                    width: 150px !important;
+                }
+                .tab2{
+                    width: 150px !important;
+                }
+                .tab3{
+                    width: 150px !important;
+                }
+                .tab4{
+                    width: 150px !important;
+                }
+            }
+        }
+
         .orange-bg{
             .container{
                 max-width: 320px;
@@ -2552,11 +2580,17 @@ footer{
         }
     }     
     
+    .sec4{
+        .container{
+            max-width: 340px;
+        }
+    }
+
     .sec5{
         padding-bottom: 50px;
 
         .sec5-container{
-            max-width: 430px;
+            max-width: 340px !important;
 
             .mobile-Plates{    
                 .leftSide{   
