@@ -421,6 +421,29 @@ $white: rgb(196, 196, 196);
             }
         }
     }
+
+    .mobile{
+        display: none;
+        justify-content: center;
+
+        .detalid{
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+
+            button{
+                width: 40vw;
+                height: 22px;
+                border-radius: 0.31rem;
+                background: rgba(216, 119, 0, 0.74);
+                color: rgb(255, 255, 255);
+                font-family: "Sansation";
+                font-size: 0.69rem;
+                font-weight: 400;
+                line-height: 0.75rem;
+            }
+        }
+    }
 }
 
 .sec3{
@@ -2186,6 +2209,10 @@ footer{
                     }
                 }
             }
+        }
+
+        .mobile{            
+            display: flex !important;          
         }
     }
 
