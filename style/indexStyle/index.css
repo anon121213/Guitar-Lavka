@@ -487,6 +487,7 @@ button {
 }
 .sec3 .blue-bg .part1 .tabs .tab1 {
   position: relative;
+  transition: 0.2s ease;
 }
 .sec3 .blue-bg .part1 .tabs .tab1 .bg {
   border-radius: 20px;
@@ -518,8 +519,13 @@ button {
 .sec3 .blue-bg .part1 .tabs .tab1 .content img {
   margin-bottom: 35px;
 }
+.sec3 .blue-bg .part1 .tabs .tab1:hover {
+  z-index: 1;
+  transform: scale(1.1);
+}
 .sec3 .blue-bg .part1 .tabs .tab2 {
   position: relative;
+  transition: 0.2s ease;
 }
 .sec3 .blue-bg .part1 .tabs .tab2 .bg {
   border-radius: 20px;
@@ -551,8 +557,13 @@ button {
 .sec3 .blue-bg .part1 .tabs .tab2 .content img {
   margin-bottom: 35px;
 }
+.sec3 .blue-bg .part1 .tabs .tab2:hover {
+  z-index: 1;
+  transform: scale(1.1);
+}
 .sec3 .blue-bg .part1 .tabs .tab3 {
   position: relative;
+  transition: 0.2s ease;
 }
 .sec3 .blue-bg .part1 .tabs .tab3 .bg {
   border-radius: 20px;
@@ -584,8 +595,13 @@ button {
 .sec3 .blue-bg .part1 .tabs .tab3 .content img {
   margin-bottom: 35px;
 }
+.sec3 .blue-bg .part1 .tabs .tab3:hover {
+  z-index: 1;
+  transform: scale(1.1);
+}
 .sec3 .blue-bg .part1 .tabs .tab4 {
   position: relative;
+  transition: 0.2s ease;
 }
 .sec3 .blue-bg .part1 .tabs .tab4 .bg {
   border-radius: 20px;
@@ -616,6 +632,10 @@ button {
 }
 .sec3 .blue-bg .part1 .tabs .tab4 .content img {
   margin-bottom: 35px;
+}
+.sec3 .blue-bg .part1 .tabs .tab4:hover {
+  z-index: 1;
+  transform: scale(1.1);
 }
 .sec3 .orange-bg {
   background: #CC7408;

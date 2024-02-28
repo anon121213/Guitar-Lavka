@@ -582,6 +582,7 @@ $white: rgb(196, 196, 196);
 
                 .tab1{   
                     position: relative;
+                    transition: 0.2s ease;
 
                     .bg{
                         border-radius: 20px;
@@ -617,8 +618,14 @@ $white: rgb(196, 196, 196);
                     }                 
                 }
 
+                .tab1:hover{
+                    z-index: 1;
+                    transform: scale(1.1);                
+                }
+
                 .tab2{
                     position: relative;
+                    transition: 0.2s ease;
 
                     .bg{
                         border-radius: 20px;
@@ -655,8 +662,14 @@ $white: rgb(196, 196, 196);
                     }
                 }
 
+                .tab2:hover{
+                    z-index: 1;
+                    transform: scale(1.1);                
+                }
+
                 .tab3{                    
                     position: relative;
+                    transition: 0.2s ease;
 
                     .bg{
                         border-radius: 20px;
@@ -693,8 +706,14 @@ $white: rgb(196, 196, 196);
                     }
                 }
 
+                .tab3:hover{
+                    z-index: 1;
+                    transform: scale(1.1);                
+                }
+
                 .tab4{
                     position: relative;
+                    transition: 0.2s ease;
 
                     .bg{
                         border-radius: 20px;
@@ -729,6 +748,11 @@ $white: rgb(196, 196, 196);
                             margin-bottom: 35px;
                         }
                     }                   
+                }
+
+                .tab4:hover{
+                    z-index: 1;
+                    transform: scale(1.1);                
                 }
             }
         }
