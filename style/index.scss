@@ -371,33 +371,137 @@ $white: rgb(196, 196, 196);
 
             .slide1{
                 width: 100vw;
+                position: relative;
 
                 img{
                     width: 100vw;
+                }
+
+                .text{
+                    max-width: 200px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(0, -70%);
+
+                    h2{
+                        color: rgb(255, 255, 255);
+                        font-family: "Roboto";
+                        font-size: 3rem;
+                        font-weight: 700;
+                        line-height: 2.5rem;
+                        margin-bottom: 40px;
+                    }
+
+                    p{
+                        color: rgba(255, 255, 255, 0.9);
+                        font-family: "Roboto";
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
                 }
             }
 
             .slide2{
                 width: 100vw;
+                position: relative;
 
                 img{
                     width: 100vw;
+                }
+
+                .text{
+                    max-width: 325px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(0, -60%);
+
+                    h2{
+                        color: rgb(255, 255, 255);
+                        font-family: "Roboto";
+                        font-size: 3rem;
+                        font-weight: 700;
+                        line-height: 2.5rem;
+                        letter-spacing: 0%;
+                        margin-bottom: 35px;
+                    }
+
+                    p{
+                        color: rgba(255, 255, 255, 0.9);
+                        font-family: "Roboto";
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
                 }
             }
 
             .slide3{
                 width: 100vw;
+                position: relative;
 
                 img{
                     width: 100vw;
+                }
+
+                .text{
+                    max-width: 480px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(0, -60%);
+
+                    h2{
+                        color: rgb(255, 255, 255);
+                        font-family: "Roboto";
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        line-height: 2.5rem;
+                        letter-spacing: 0%;
+                        margin-bottom: 35px;
+                    }
+
+                    p{
+                        color: rgba(255, 255, 255, 0.9);
+                        font-family: "Roboto";
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
                 }
             }
 
             .slide4{
                 width: 100vw;
+                position: relative;
 
                 img{
                     width: 100vw;
+                }
+
+                .text{
+                    max-width: 325px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(0, -60%);
+
+                    h2{
+                        color: rgb(255, 255, 255);
+                        font-family: "Roboto";
+                        font-size: 3rem;
+                        font-weight: 700;
+                        line-height: 2.5rem;
+                        letter-spacing: 0%;
+                        margin-bottom: 35px;
+                        margin-top: 5px;
+                    }
+
+                    p{
+                        color: rgba(255, 255, 255, 0.9);
+                        font-family: "Roboto";
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
                 }
             }
 
@@ -1660,6 +1764,66 @@ footer{
             max-width: 600px;
         }
 
+        .slides{
+            .slide1{
+                .text{
+                    h2{
+                        font-size: 2rem !important;
+                        margin-bottom: 10px !important;
+                    }
+    
+                    p{
+                        font-size: 1rem !important;
+                    }
+                }
+            }
+    
+            .slide2{
+                .text{   
+                    h2{
+                        font-size: 2rem !important;
+                        margin-bottom: 10px !important;
+                        line-height: 30px !important;
+                    }
+    
+                    p{
+                        font-size: 0.8rem !important;
+                    }
+                }
+            }
+    
+            .slide3{
+                .text{
+                    max-width: 250px !important;
+
+                    h2{
+                        font-size: 1.5rem !important;
+                        line-height: unset !important;
+                        margin-bottom: 10px !important;
+                    }
+    
+                    p{
+                        font-size: .8rem !important;
+                    }
+                }
+            }
+    
+            .slide4{
+                .text{
+                    max-width: 250px !important;
+
+                    h2{
+                        font-size: 1.5rem !important;
+                        line-height: unset !important;
+                        margin-bottom: 10px !important;
+                    }
+    
+                    p{
+                        font-size: .8rem !important;
+                    }
+                }
+            }
+        }
     }
 
     .sec3{
@@ -2192,6 +2356,67 @@ footer{
 
     .sec2{
         .slider{
+            .slides{
+                .slide1{
+                    .text{
+                        max-width: 100px;
+
+                        h2{
+                            font-size: 1rem !important;
+                            margin-bottom: -10px !important;
+                        }
+            
+                        p{
+                            font-size: .5rem !important;
+                        }
+                    }
+                }
+            
+                .slide2{
+                    .text{   
+                        max-width: 150px;
+
+                        h2{
+                            font-size: 1rem !important;
+                            
+                            line-height: 15px !important;
+                        }
+            
+                        p{
+                            font-size: .5rem !important;
+                        }
+                    }
+                }
+            
+                .slide3{
+                    .text{
+                        max-width: 100px;
+
+                        h2{
+                            font-size: .9rem !important;
+                        }
+            
+                        p{
+                            font-size: .5rem !important;
+                        }
+                    }
+                }
+            
+                .slide4{
+                    .text{
+                        max-width: 100px;
+
+                        h2{
+                            font-size: 1rem !important;
+                        }
+            
+                        p{
+                            font-size: .5rem !important;
+                        }
+                    }
+                }
+            }
+
             &__buttons{
                 &__img{
                     max-width: 350px;

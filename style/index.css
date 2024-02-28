@@ -310,27 +310,119 @@ button {
 }
 .sec2 .slider .slides .slide1 {
   width: 100vw;
+  position: relative;
 }
 .sec2 .slider .slides .slide1 img {
   width: 100vw;
 }
+.sec2 .slider .slides .slide1 .text {
+  max-width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -70%);
+}
+.sec2 .slider .slides .slide1 .text h2 {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  margin-bottom: 40px;
+}
+.sec2 .slider .slides .slide1 .text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 400;
+}
 .sec2 .slider .slides .slide2 {
   width: 100vw;
+  position: relative;
 }
 .sec2 .slider .slides .slide2 img {
   width: 100vw;
 }
+.sec2 .slider .slides .slide2 .text {
+  max-width: 325px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -60%);
+}
+.sec2 .slider .slides .slide2 .text h2 {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0%;
+  margin-bottom: 35px;
+}
+.sec2 .slider .slides .slide2 .text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 400;
+}
 .sec2 .slider .slides .slide3 {
   width: 100vw;
+  position: relative;
 }
 .sec2 .slider .slides .slide3 img {
   width: 100vw;
 }
+.sec2 .slider .slides .slide3 .text {
+  max-width: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -60%);
+}
+.sec2 .slider .slides .slide3 .text h2 {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0%;
+  margin-bottom: 35px;
+}
+.sec2 .slider .slides .slide3 .text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 400;
+}
 .sec2 .slider .slides .slide4 {
   width: 100vw;
+  position: relative;
 }
 .sec2 .slider .slides .slide4 img {
   width: 100vw;
+}
+.sec2 .slider .slides .slide4 .text {
+  max-width: 325px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -60%);
+}
+.sec2 .slider .slides .slide4 .text h2 {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto";
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  letter-spacing: 0%;
+  margin-bottom: 35px;
+  margin-top: 5px;
+}
+.sec2 .slider .slides .slide4 .text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Roboto";
+  font-size: 1rem;
+  font-weight: 400;
 }
 .sec2 .slider__buttons {
   top: 50%;
@@ -1339,6 +1431,43 @@ footer .content .RightSide .top .services ul li a {
   .sec2 .slider__buttons__img {
     max-width: 600px;
   }
+  .sec2 .slides .slide1 .text h2 {
+    font-size: 2rem !important;
+    margin-bottom: 10px !important;
+  }
+  .sec2 .slides .slide1 .text p {
+    font-size: 1rem !important;
+  }
+  .sec2 .slides .slide2 .text h2 {
+    font-size: 2rem !important;
+    margin-bottom: 10px !important;
+    line-height: 30px !important;
+  }
+  .sec2 .slides .slide2 .text p {
+    font-size: 0.8rem !important;
+  }
+  .sec2 .slides .slide3 .text {
+    max-width: 250px !important;
+  }
+  .sec2 .slides .slide3 .text h2 {
+    font-size: 1.5rem !important;
+    line-height: unset !important;
+    margin-bottom: 10px !important;
+  }
+  .sec2 .slides .slide3 .text p {
+    font-size: 0.8rem !important;
+  }
+  .sec2 .slides .slide4 .text {
+    max-width: 250px !important;
+  }
+  .sec2 .slides .slide4 .text h2 {
+    font-size: 1.5rem !important;
+    line-height: unset !important;
+    margin-bottom: 10px !important;
+  }
+  .sec2 .slides .slide4 .text p {
+    font-size: 0.8rem !important;
+  }
   .sec3 .blue-bg .container .part1 .tabs {
     margin-top: 30px;
   }
@@ -1702,6 +1831,44 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec1 .mobile .container .rightSide a {
     margin-right: 10px;
+  }
+  .sec2 .slider .slides .slide1 .text {
+    max-width: 100px;
+  }
+  .sec2 .slider .slides .slide1 .text h2 {
+    font-size: 1rem !important;
+    margin-bottom: -10px !important;
+  }
+  .sec2 .slider .slides .slide1 .text p {
+    font-size: 0.5rem !important;
+  }
+  .sec2 .slider .slides .slide2 .text {
+    max-width: 150px;
+  }
+  .sec2 .slider .slides .slide2 .text h2 {
+    font-size: 1rem !important;
+    line-height: 15px !important;
+  }
+  .sec2 .slider .slides .slide2 .text p {
+    font-size: 0.5rem !important;
+  }
+  .sec2 .slider .slides .slide3 .text {
+    max-width: 100px;
+  }
+  .sec2 .slider .slides .slide3 .text h2 {
+    font-size: 0.9rem !important;
+  }
+  .sec2 .slider .slides .slide3 .text p {
+    font-size: 0.5rem !important;
+  }
+  .sec2 .slider .slides .slide4 .text {
+    max-width: 100px;
+  }
+  .sec2 .slider .slides .slide4 .text h2 {
+    font-size: 1rem !important;
+  }
+  .sec2 .slider .slides .slide4 .text p {
+    font-size: 0.5rem !important;
   }
   .sec2 .slider__buttons__img {
     max-width: 350px;
