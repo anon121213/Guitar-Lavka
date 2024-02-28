@@ -814,6 +814,11 @@ $white: rgb(196, 196, 196);
                 border-top-right-radius: 30%;
                 border-top-left-radius: 30%;
 
+                &__img{
+                    width: 220px;
+                    height: 245px;
+                }
+
                 .content{
                     margin-left: 13px;
 
@@ -889,6 +894,10 @@ $white: rgb(196, 196, 196);
                 background-color: $product-bg;
                 border-top-right-radius: 30%;
                 border-top-left-radius: 30%;
+                &__img{
+                    width: 220px;
+                    height: 245px;
+                }
                 // margin-right: 20px;
 
                 .content{
@@ -1726,6 +1735,18 @@ footer{
             max-width: 900px;
         }
 
+    }
+    
+    .sec4{
+        .container{
+            max-width: 800px;
+
+            .slider{
+                .over-hidden{
+                    max-width: 700px;
+                }
+            }
+        }
     }
 
     .sec6{

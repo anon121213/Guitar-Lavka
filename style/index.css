@@ -684,6 +684,10 @@ button {
   border-top-right-radius: 30%;
   border-top-left-radius: 30%;
 }
+.sec4 .slider__slides .product__img {
+  width: 220px;
+  height: 245px;
+}
 .sec4 .slider__slides .product .content {
   margin-left: 13px;
 }
@@ -744,6 +748,10 @@ button {
   background-color: #3B3A40;
   border-top-right-radius: 30%;
   border-top-left-radius: 30%;
+}
+.sec4 .slider__slides .product-last__img {
+  width: 220px;
+  height: 245px;
 }
 .sec4 .slider__slides .product-last .content {
   margin-left: 13px;
@@ -1413,6 +1421,12 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec2 .slider__buttons__img {
     max-width: 900px;
+  }
+  .sec4 .container {
+    max-width: 800px;
+  }
+  .sec4 .container .slider .over-hidden {
+    max-width: 700px;
   }
   .sec6 .sec6-container {
     max-width: 880px;
