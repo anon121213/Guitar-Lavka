@@ -96,5 +96,25 @@ addEventListener('scroll', event => {
     }
 })
 
+//burger-menu
 
+const burgerMenu = document.querySelector('.burger')
+const burgerButton = document.querySelector('.showBurger')
+const closeBurger = document.querySelector('.hideBurgerButton')
+const hideBurger = document.querySelector('.hideBurger')
 
+burgerButton.addEventListener('click', event => {
+
+    burgerMenu.classList.remove('hidden')
+    hideBurger.classList.add('hidden')
+    console.log('afaf')
+
+})
+
+closeBurger.addEventListener('click', event => {
+
+    burgerMenu.classList.add('hidden')
+    hideBurger.classList.remove('hidden')
+    console.log('afaf')
+
+})

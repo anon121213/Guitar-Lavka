@@ -182,6 +182,55 @@ button {
 .sec1 .mobile {
   display: none;
 }
+.sec1 .mobile .burger__container {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+.sec1 .mobile .burger__container__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.sec1 .mobile .burger__container__top__left img {
+  margin-left: -5px;
+}
+.sec1 .mobile .burger__container__top__left P {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "ABeeZee";
+  font-size: 0.56rem;
+  font-weight: 400;
+  line-height: 0.69rem;
+}
+.sec1 .mobile .burger__container__bottom {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 287px;
+}
+.sec1 .mobile .burger__container__bottom__big_ul {
+  margin-bottom: 10px;
+}
+.sec1 .mobile .burger__container__bottom__big_ul li:first-child a {
+  color: rgb(234, 131, 5);
+  font-family: "ABeeZee";
+  font-size: 1.13rem;
+  font-weight: 400;
+  line-height: 1.31rem;
+}
+.sec1 .mobile .burger__container__bottom__big_ul li a {
+  color: rgb(255, 255, 255);
+  font-family: "ABeeZee";
+  font-size: 1.13rem;
+  font-weight: 400;
+  line-height: 1.31rem;
+}
+.sec1 .mobile .burger__container__bottom__small_ul li a {
+  color: rgb(255, 255, 255);
+  font-family: "ABeeZee";
+  font-size: 0.63rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+}
 .sec1 .content {
   display: flex;
   justify-content: space-between;

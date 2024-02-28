@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guitar-Lavka</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Abhaya+Libre:wght@400;500;600;700;800&family=Doppio+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Taprom&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@
     </header>
     <section class="sec1">
         <div class="mobile">
-            <div class="container">
+            <div class="container hideBurger">
                 <div class="leftSide">
                     <a href="#"><img src="../img/section1/mobile/mobileLogo.svg" alt="mobileLogo.svg"></a>
                 </div>
@@ -52,8 +52,35 @@
                     <button><img src="../img/section1/loop.svg" alt="loop.svg"></button>
                     <a href="#"><img src="../img/section1/mobile/bascket.svg" alt="bascket.svg"></a>
                     <a href="#"><img src="../img/section1/mobile/heart.svg" alt="heart.svg"></a>
-                    <button><img src="../img/section1/mobile/burger.svg" alt="burger.svg"></button>
+                    <button class="showBurger"><img src="../img/section1/mobile/burger.svg" alt="burger.svg"></button>
                 </div>            
+            </div>
+            <div class="burger hidden">
+                <div class="burger__container">
+                    <div class="burger__container__top">
+                        <div class="burger__container__top__left">
+                            <a href="#"><img src="../img/section1/mobile/mobileLogo.svg" alt="mobileLogo.svg"></a>
+                            <p>Главная / Меню</p>
+                        </div>
+                        <div class="burger__container__top__right">
+                            <button class="hideBurgerButton"><img src="../img/section1/mobile/cross.svg" alt="cross.svg"></button>
+                        </div>
+                    </div>
+                    <div class="burger__container__bottom">
+                        <ul class="burger__container__bottom__big_ul">
+                            <li><a href="#">Каталог</a></li>
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Опт</a></li>
+                        </ul>
+                        <ul class="burger__container__bottom__small_ul">
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Отзывы</a></li>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">О нас</a></li>
+                        </ul>
+                    </div>
+                </div>              
             </div>
         </div>
         <div class="default">
