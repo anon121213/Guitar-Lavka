@@ -5,9 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/catalogStyle/catalog.css">
-    <script src="../js/catalog.js"></script>
+    <script src="../js/catalog.js" defer></script>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header__headerContainer">
+            <div class="header__headerContainer__between">
+                <div class="header__headerContainer__between__left">
+                    <p class="your_city">Ваш город:</p>
+                    <p class="city">Самара</p>
+                </div>
+                <div class="header__headerContainer__between__right">
+                    <img src="../img/catalogImg/header/phoneTrubka.svg" alt="phone.svg" class="phone">
+                    <a href="tel:88001002680">8 (800) 100 26 80</a>
+                    <p class="everyDay">ЕЖЕДНЕВНО</p>
+                    <p>10:00-20:00</p>
+                </div>
+            </div>          
+            <div class="header_center">
+                <ul>
+                    <li class="whatsUp"><a href="#"><img src="../img/catalogImg/header/whatsUp.svg" alt="whatsUp"></a></li>
+                    <li class="tg"><a href="#"><img src="../img/catalogImg/header/telegramm.svg" alt="telegramm"></a></li>
+                    <li class="vk"><a href="#"><img src="../img/catalogImg/header/vk.svg" alt="vk"></a></li>
+                    <li class="viber"><a href="#"><img src="../img/catalogImg/header/viber.svg" alt="viber"></a></li>
+                    <li class="yt"><a href="#"><img src="../img/catalogImg/header/YT.svg" alt="YT"></a></li>
+                    <li class="inst"><a href="#"><img src="../img/catalogImg/header/inst.svg" alt="inst"></a></li>
+                </ul>
+            </div>
+        </div>      
+        <div class="BackToStartPage hidden">
+            <button id="BackToStartPageButton" class="BackToStartPageButton"><img src="../img/catalogImg/header/ArrowBackToStartPage.svg" alt="ArrowBackToStartPage.svg"></button>
+        </div>      
+    </header>        
+    <section class="sec1">
+        <div class="container">
+            <div class="content">
+                <a href="#"><img src="../img/catalogImg/section1/Logo.svg" alt="Logo.svg"></a>
+                <div class="input">
+                    <img src="../img/catalogImg/section1/loop.svg" alt="loop.svg">
+                    <input type="text" placeholder="Поиск...">
+                </div>         
+                <button class="heart"><img src="../img/catalogImg/section1/heart.svg" alt="heart.svg"></button>
+                <button><img src="../img/catalogImg/section1/bascket.svg" alt="bascket.svg"></button>
+            </div>         
+        </div>
+    </section>   
+    <section class="sec2">
+        <div class="sec2-container">
+            <div class="sec2-container__leftSide">
+                <div class="names">
+                    <h2 class="catalog">Каталог</h2>
+                    <h2 class="filters">Фильтры</h2>
+                </div>
+                <div class="filters">
+                    <div class="guitar-list">
+                        <div class="guitar-list__name">
+                            <button data-list="1" class="listButton">Гитары</button> 
+                            <img id="arrow-1" class="Arrow" src="../img/catalogImg/section2/arrowRight.svg" alt="arrowRight.svg">
+                        </div>                                                  
+                        <ul id="1" class="guitar-list__name__guitars list_name hidden">
+                            <li><a href="#">Акустические гитары</a></li>
+                            <li><a href="#">Электроакустические гитары</li>
+                            <li><a href="#">Полуакустические гитары</a></li>
+                            <li><a href="#">Классические гитары</a></li>
+                            <li><a href="#">Электрогитары</a></li>
+                            <li><a href="#">Б/У электрогитары</a></li>
+                            <li><a href="#">Тревел-гитары</a></li>
+                        </ul>
+                    </div>
+                    <div class="ukuleles-list">  
+                        <div class="ukuleles-list__name">
+                            <button data-list="2" class="listButton">Укулеле</button>
+                            <img id="arrow-2" class="Arrow" src="../img/catalogImg/section2/arrowRight.svg" alt="arrowRight.svg">
+                        </div>                                         
+                        <ul id="2" class="ukuleles-list__name__ukulele list_name hidden">
+                            <li><a href="#">Укулеле тенор</a></li>
+                            <li><a href="#">Укулеле сопрано</a></li>
+                            <li><a href="#">Укулеле концерт</a></li>
+                        </ul>
+                    </div>
+                    <div class="accessories-list">
+                        <div class="accessories-list__name">
+                            <button data-list="3" class="listButton">Аксессуары</button> 
+                            <img id="arrow-3" class="Arrow" src="../img/catalogImg/section2/arrowRight.svg" alt="arrowRight.svg">
+                        </div>                                     
+                        <ul id="3" class="accessories-list__name__accessories list_name hidden">
+                            <li><a href="#">Средства для ухода</a></li>
+                            <li><a href="#">Чехлы для укулеле</a></li>
+                            <li><a href="#">Чехлы для гитары</a></li>
+                            <li><a href="#">Ремни</a></li>
+                            <li><a href="#">Колки</a></li>
+                            <li><a href="#">Комбоусилители</a></li>
+                        </ul>
+                    </div>  
+                    <div class="strings-list">
+                        <div class="strings-list__name">
+                            <button data-list="4" class="listButton">Струны</button>
+                            <img id="arrow-4" class="Arrow" src="../img/catalogImg/section2/arrowRight.svg" alt="arrowRight.svg">
+                        </div>                  
+                        <ul id="4" class="strings-list__name__strings list_name hidden">
+                            <li><a href="#">Струны для гитары</a></li>
+                            <li><a href="#">Струны для бас-гитары</a></li>
+                            <li><a href="#">Струны для укулеле</a></li>
+                        </ul>
+                    </div>            
+                </div>
+            </div>
+            <div class="sec2-container__rightSide">
+
+            </div> 
+        </div>
+    </section>      
+</header>
 </body>
 </html>

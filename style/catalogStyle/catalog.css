@@ -22,4 +22,369 @@ button {
   cursor: pointer;
   border: 0;
   background: transparent;
+}
+
+@font-face {
+  font-family: "ABeeZeeItalic";
+  src: url("../../fonts/ABeeZee/ABeeZee-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "ABeeZee";
+  src: url("../../fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Abhaya Libre";
+  src: url("../../fonts/Abhaya/AbhayaLibre-Bold.ttf");
+}
+@font-face {
+  font-family: "DoppioOne";
+  src: url("../../fonts/DoppioOne/DoppioOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../../fonts/Sans/Sans-Regular.ttf");
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../../fonts/Sansation/Sansation_Regular.ttf");
+}
+@font-face {
+  font-family: "Taprom";
+  src: url("../../fonts/Taprom/Taprom-Regular.ttf");
+}
+.hidden {
+  display: none;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  transition: 0.2s ease;
+}
+
+.container {
+  max-width: 1070px;
+  margin: 0 auto;
+}
+
+.header {
+  width: 100%;
+  background-color: #131218;
+  display: flex;
+  border-bottom: 0.06rem solid rgb(36, 36, 36);
+}
+.header__headerContainer {
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+}
+.header__headerContainer__between {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header__headerContainer__between__left {
+  display: flex;
+  margin-left: 42px;
+  margin-top: 13px;
+}
+.header__headerContainer__between__left .your_city {
+  color: rgba(255, 255, 255, 0.13);
+  font-family: "ABeeZee";
+  font-size: 0.81rem;
+  font-weight: 400;
+  line-height: 0.94rem;
+  text-align: center;
+  margin-right: 10px;
+}
+.header__headerContainer__between__left .city {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "ABeeZee";
+  font-size: 0.81rem;
+  font-weight: 400;
+  line-height: 0.94rem;
+}
+.header__headerContainer__between__right {
+  display: flex;
+  align-items: center;
+  margin-right: 42px;
+  margin-top: 13px;
+}
+.header__headerContainer__between__right .phone {
+  margin-right: 6px;
+}
+.header__headerContainer__between__right a {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "ABeeZee";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+  margin-right: 14.5px;
+}
+.header__headerContainer__between__right p {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "ABeeZee";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+}
+.header__headerContainer__between__right .everyDay {
+  margin-right: 14.5px;
+}
+.header__headerContainer .header_center {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: -20px;
+}
+.header__headerContainer .header_center ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 262px;
+}
+.header__headerContainer .header_center ul li {
+  max-width: 262px;
+  align-items: center;
+}
+
+.sec1 {
+  background-color: #131218;
+}
+.sec1 .container .content {
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sec1 .container .content .input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sec1 .container .content .input img {
+  position: absolute;
+  left: 8px;
+}
+.sec1 .container .content .input input {
+  background: url("../../img/catalogImg/section1/loop.svg");
+  margin-right: 14px;
+  width: 100%;
+  max-width: 840px;
+  height: 40px;
+  border: 0;
+  border-radius: 0.31rem;
+  background: rgb(72, 71, 76);
+  text-indent: 36px;
+  font-family: "ABeeZee";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+  letter-spacing: 0%;
+}
+.sec1 .container .content input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.sec1 .container .content .heart {
+  margin-right: 14px;
+}
+
+.sec2 {
+  background-color: #131218;
+}
+.sec2 .sec2-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.sec2 .sec2-container__leftSide {
+  margin-left: 30px;
+  padding-bottom: 30px;
+}
+.sec2 .sec2-container__leftSide .names {
+  max-width: 250px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.sec2 .sec2-container__leftSide .names .catalog {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.19rem;
+}
+.sec2 .sec2-container__leftSide .names .filters {
+  color: #CC7408;
+  font-family: ABeeZee;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.19rem;
+}
+.sec2 .sec2-container__leftSide .filters .guitar-list {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.sec2 .sec2-container__leftSide .filters .guitar-list__name {
+  width: 100%;
+  max-width: 225px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec2 .sec2-container__leftSide .filters .guitar-list__name button {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+}
+.sec2 .sec2-container__leftSide .filters .guitar-list__name img {
+  max-width: 10px;
+  transition: 0.2s ease;
+  transform: rotate(0);
+}
+.sec2 .sec2-container__leftSide .filters .guitar-list__name__guitars {
+  margin-top: 5px;
+}
+.sec2 .sec2-container__leftSide .filters .guitar-list__name__guitars li {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.sec2 .sec2-container__leftSide .filters .guitar-list__name__guitars li a {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.88rem;
+}
+.sec2 .sec2-container__leftSide .filters .ukuleles-list {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.sec2 .sec2-container__leftSide .filters .ukuleles-list__name {
+  width: 100%;
+  max-width: 225px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec2 .sec2-container__leftSide .filters .ukuleles-list__name button {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+}
+.sec2 .sec2-container__leftSide .filters .ukuleles-list__name img {
+  max-width: 10px;
+  transition: 0.2s ease;
+  transform: rotate(0);
+}
+.sec2 .sec2-container__leftSide .filters .ukuleles-list__name__ukulele {
+  margin-top: 5px;
+}
+.sec2 .sec2-container__leftSide .filters .ukuleles-list__name__ukulele li {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.sec2 .sec2-container__leftSide .filters .ukuleles-list__name__ukulele li a {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.88rem;
+}
+.sec2 .sec2-container__leftSide .filters .accessories-list {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.sec2 .sec2-container__leftSide .filters .accessories-list__name {
+  width: 100%;
+  max-width: 225px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec2 .sec2-container__leftSide .filters .accessories-list__name button {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+}
+.sec2 .sec2-container__leftSide .filters .accessories-list__name img {
+  max-width: 10px;
+  transition: 0.2s ease;
+  transform: rotate(0);
+}
+.sec2 .sec2-container__leftSide .filters .accessories-list__name__accessories {
+  margin-top: 5px;
+}
+.sec2 .sec2-container__leftSide .filters .accessories-list__name__accessories li {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.sec2 .sec2-container__leftSide .filters .accessories-list__name__accessories li a {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.88rem;
+}
+.sec2 .sec2-container__leftSide .filters .strings-list {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.sec2 .sec2-container__leftSide .filters .strings-list__name {
+  width: 100%;
+  max-width: 225px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sec2 .sec2-container__leftSide .filters .strings-list__name button {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+}
+.sec2 .sec2-container__leftSide .filters .strings-list__name img {
+  max-width: 10px;
+  transition: 0.2s ease;
+  transform: rotate(0);
+}
+.sec2 .sec2-container__leftSide .filters .strings-list__name__strings {
+  margin-top: 5px;
+}
+.sec2 .sec2-container__leftSide .filters .strings-list__name__strings li {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.sec2 .sec2-container__leftSide .filters .strings-list__name__strings li a {
+  color: rgb(196, 196, 196);
+  font-family: "ABeeZee";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.88rem;
 }/*# sourceMappingURL=catalog.css.map */

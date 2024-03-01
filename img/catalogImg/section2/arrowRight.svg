@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="55" viewBox="0 -0.5 29 55">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="29" height="54"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-path)">
+    <image id="Слой_1" data-name="Слой 1" width="29" height="54" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAA2CAYAAAA7+JL6AAAEl0lEQVRYhbWYSU/jZhjHbaNMb4UDFDsbiIQ4kAJJWIJYhcQN+AS90RMfgEM/wlxmKNB2KlWzMF0OlbhFLHEWspA4Jg5ZKL31AhJbQYEKifi1XT0UqgxjgxjePFIOkeP89P/led/4fYjLy8sZVVVDqqomZVn+KZvNskNDQyRRzVJVlVNVdevmJciy/F4Uxbba2tqqgSmCID6reE9SFOXs7Oz8JhKJsAMDA9UBI4Seq6qarkj7f+JMJsP29fXhB8diMSNCaAFAWuBsNuvEzayJx+P/uN3uvMlkaqqpqTGD4ptrJEmS9Q0NDc6pqak/C4XC33t7e3jpkUjEfJNYS/XS1taWw+1241XtcDjIWCxmQggt6qheEkWRZRgGL9hms5EbGxuWcrmsmRgh9C6dTrM9PT1VaS5Q/Z0WWFGUd4IgONrb2/GC4QsrwB+phsSiKDqamprwguELo9GoRZKkRT3VPM87qrWOLQih73W6+i2ALRbLo8A1D31AEIQLt9udM5lMNoqijHfWcQNN086xsbGdaDR6dnJy8snhNCsej1slSdJsLoTQ23Q63VqVro7H4/eqTqVSrfX19Q+CH9RbWTzPX3g8nrzRaNRTzY6Pj++kUqmzo6Ojp2b8sBKJhBUh9MM9qu29vb34l9Pm5qblBqy1Zb4B1Xr3P0rvbZVKJSKTyVx0dXXlGYZp0VD9BU3TrZOTk7uCIJwdHh4+JePHlUgkmhBCr3RUv+F53ubxePCqttvtoNoqy/IrHdWveZ63V97zSXor6/T0FFSfezyeAk3TmqobGxtbJyYm/shkMmcHBwdPRX5YyWSyGSH0o846fp1KpVpcLhf55KSVlUwmS93d3bCOHRRF0XcTMwzD+ny+HFbo8fExbCDnXq93h2EY2ECYSjBFUY0Gg+EZhRMKVSwW1enp6b/Oz89/JwhCunOZlGXZjh3q8/nI5eXlL+vq6r4mCMJw57JqMBhyWIGjo6NkLpdzybL8m8by4cvl8ouVlRUaG7C5uZnM5/MuRVF+1QHOra+v4wMODw+Tu7u7kFALKEBCjuPwAQcHB0Fpuw4QEr70+/1GbECj0Xif0jQo5TiOwQaEpikUCu0IoV+0lF5dXb0MBAIM7M1YgCMjIwBsk2VZC5iWJGludXXVhAUGRdP0dcJ7gN+CUlCPBQizCGgahNDPOkrn1tbWTNie/Pv7+8nt7W2noihawOuEAMQCg7JarWSxWITfUDMhAEOhkBFbQhh2ZLPZNoTQe62EN0rNjz1a6JbX6yVFUbxP6TzHcfiUwvoqFApOGHboKJ0PBoMmOEhjAYJSSKintFwuzwcCATO2ZQGzB5gtKIqiCYTzajgcxqe0o6MD9lIWIbSko3QBgNiO/vCPDwl1gKB0geM4CxYYFLQ7jOQURdEEwrk0HA6bsQHhkT+XyzlghqCjdBEGWyzL4jsaiKLYCoMpvaYJBoP4lN6Woihax71rpZAQO5D4b8ic1HimAaUW7AOqCuhaZUIYWIVCIWtVYLdVKpW+UhRlVVXVmCRJz6PRqBn+VaoKnZmZeeb3+y37+/sts7Ozn2PtUq0iCOJfQe2ItWn15ysAAAAASUVORK5CYII="/>
+  </g>
+</svg>

@@ -1,61 +1,10 @@
 @import "reset.scss";
+@import "../fonts/fonts.scss";
 
 $blue-bg: #131218;
 $orange-bg: #CC7408;
 $product-bg: #3B3A40;
 $white: rgb(196, 196, 196);
-
-.abhaya-libre-bold {
-    font-family: "Abhaya Libre", serif;
-    font-weight: 700;   
-}
-
-.roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;   
-}
-
-  
-.roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;    
-}
-
-.roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;    
-}
-  
-.open-sans{
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;   
-}
-
-.roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;   
-}
-  
-.doppio-one-regular {
-    font-family: "Doppio One", sans-serif;
-    font-weight: 400;    
-}
-  
-.taprom-regular {
-    font-family: "Taprom", system-ui;
-    font-weight: 400;
-}
-  
-.abeezee-regular {
-    font-family: "ABeeZee", sans-serif;
-    font-weight: 400;    
-}
-  
-.abeezee-regular-italic {
-    font-family: "ABeeZee", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-}
 
 .hidden{
     display: none !important;
@@ -103,7 +52,7 @@ $white: rgb(196, 196, 196);
                 
                 .your_city{
                     color: rgba(255, 255, 255, 0.13);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 0.81rem;
                     font-weight: 400;
                     line-height: 0.94rem;
@@ -113,7 +62,7 @@ $white: rgb(196, 196, 196);
     
                 .city{
                     color: rgba(255, 255, 255, 0.6);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 0.81rem;
                     font-weight: 400;
                     line-height: 0.94rem;
@@ -133,7 +82,7 @@ $white: rgb(196, 196, 196);
 
                 a{
                     color: rgba(255, 255, 255, 0.6);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 0.88rem;
                     font-weight: 400;
                     line-height: 1.06rem;
@@ -142,7 +91,7 @@ $white: rgb(196, 196, 196);
 
                 p{
                     color: rgba(255, 255, 255, 0.6);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 0.88rem;
                     font-weight: 400;
                     line-height: 1.06rem;                  
@@ -205,7 +154,7 @@ $white: rgb(196, 196, 196);
 
                         P{
                             color: rgba(255, 255, 255, 0.3);
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: 0.56rem;
                             font-weight: 400;
                             line-height: 0.69rem;
@@ -224,7 +173,7 @@ $white: rgb(196, 196, 196);
                         li:first-child{
                             a{
                                 color: rgb(234, 131, 5);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1.13rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -234,7 +183,7 @@ $white: rgb(196, 196, 196);
                         li{
                             a{
                                 color: rgb(255, 255, 255);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1.13rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -246,7 +195,7 @@ $white: rgb(196, 196, 196);
                         li{
                             a{
                                 color: rgb(255, 255, 255);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 0.63rem;
                                 font-weight: 400;
                                 line-height: 0.75rem;
@@ -329,7 +278,7 @@ $white: rgb(196, 196, 196);
 
                     a{
                         color: rgb(255, 255, 255);
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 0.88rem;
                         font-weight: 400;
                         line-height: 1.06rem;
@@ -337,7 +286,7 @@ $white: rgb(196, 196, 196);
                     
                     button{
                         color: rgb(255, 255, 255);
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 0.88rem;
                         font-weight: 400;
                         line-height: 1.06rem;
@@ -848,7 +797,7 @@ $white: rgb(196, 196, 196);
 
                     .type{
                         color: rgb(255, 255, 255);
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 0.88rem;
                         font-weight: 400;
                         margin-bottom: 4px;
@@ -856,7 +805,7 @@ $white: rgb(196, 196, 196);
 
                     .name{
                         color: rgb(255, 255, 255);
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.5rem;
                         font-weight: 400;
                         margin-bottom: 20.15px;
@@ -872,7 +821,7 @@ $white: rgb(196, 196, 196);
                             .price{
                                 position: relative;
                                 color: rgba(255, 255, 255, 0.6);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 0.88rem;
                                 font-weight: 400;
                             }
@@ -892,7 +841,7 @@ $white: rgb(196, 196, 196);
 
                             .sale-price{
                                 color: rgb(255, 255, 255);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1.13rem;
                                 font-weight: 400;
                             }
@@ -929,7 +878,7 @@ $white: rgb(196, 196, 196);
 
                     .type{
                         color: rgb(255, 255, 255);
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 0.88rem;
                         font-weight: 400;
                         margin-bottom: 4px;
@@ -937,7 +886,7 @@ $white: rgb(196, 196, 196);
 
                     .name{
                         color: rgb(255, 255, 255);
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.5rem;
                         font-weight: 400;
                         margin-bottom: 20.15px;
@@ -952,7 +901,7 @@ $white: rgb(196, 196, 196);
                             .price{
                                 position: relative;
                                 color: rgba(255, 255, 255, 0.6);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 0.88rem;
                                 font-weight: 400;
                             }
@@ -972,7 +921,7 @@ $white: rgb(196, 196, 196);
 
                             .sale-price{
                                 color: rgb(255, 255, 255);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1.13rem;
                                 font-weight: 400;
                             }
@@ -1091,7 +1040,7 @@ $white: rgb(196, 196, 196);
         display: flex;
         justify-content: center;
         color: rgb(255, 255, 255);
-        font-family: "ABeeZee";
+        font-family: "Roboto";
         font-size: 2.25rem;
         font-weight: 400;
     }
@@ -1146,7 +1095,7 @@ $white: rgb(196, 196, 196);
                     width: 100%;
                     padding: 30px 0px;
                     color: rgb(255, 255, 255);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 1.5rem;
                     font-weight: 400;
                     line-height: 2.19rem;
@@ -1182,7 +1131,7 @@ $white: rgb(196, 196, 196);
                     max-width: 12.50rem;
                     max-height: 14.75rem;
                     color: rgb(255, 255, 255);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 1.13rem;
                     font-weight: 400;
                     line-height: 1.88rem;
@@ -1199,7 +1148,7 @@ $white: rgb(196, 196, 196);
                     color: $orange-bg;
                     color: rgb(234, 131, 5);
                     background: rgba(19, 18, 24, 0.8);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 1.13rem;
                     font-weight: 200;
                     line-height: 1.88rem;               
@@ -1233,7 +1182,7 @@ $white: rgb(196, 196, 196);
                     width: 100%;
                     padding: 30px 0px;
                     color: rgb(255, 255, 255);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 1.5rem;
                     font-weight: 400;
                     line-height: 2.19rem;
@@ -1269,7 +1218,7 @@ $white: rgb(196, 196, 196);
                     max-width: 12.50rem;
                     max-height: 14.75rem;
                     color: rgb(255, 255, 255);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 1.13rem;
                     font-weight: 400;
                     line-height: 1.88rem;
@@ -1286,7 +1235,7 @@ $white: rgb(196, 196, 196);
                     color: $orange-bg;
                     color: rgb(234, 131, 5);
                     background: rgba(19, 18, 24, 0.8);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 1.13rem;
                     font-weight: 200;
                     line-height: 1.88rem;               
@@ -1318,7 +1267,7 @@ $white: rgb(196, 196, 196);
                     width: 100%;
                     padding: 30px 0px;
                     color: rgb(255, 255, 255);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 1.5rem;
                     font-weight: 400;
                     line-height: 2.19rem;
@@ -1354,7 +1303,7 @@ $white: rgb(196, 196, 196);
                     max-width: 12.50rem;
                     max-height: 14.75rem;
                     color: rgb(255, 255, 255);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 1.13rem;
                     font-weight: 400;
                     line-height: 1.88rem;
@@ -1371,7 +1320,7 @@ $white: rgb(196, 196, 196);
                     color: $orange-bg;
                     color: rgb(234, 131, 5);
                     background: rgba(19, 18, 24, 0.8);
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 1.13rem;
                     font-weight: 200;
                     line-height: 1.88rem;               
@@ -1498,17 +1447,16 @@ $white: rgb(196, 196, 196);
                         border: 0;
                         border-radius: 0.31rem;
                         box-shadow: inset 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
-                        background: rgb(242, 234, 224);
-                        
+                        background: rgb(242, 234, 224);                   
                         text-indent: 20px;
-                        font-family: "Doppio One";
+                        font-family: "Roboto";
                         font-size: 1.13rem;
                         font-weight: 400;
                     }
 
                     p{
                         color: rgb(225, 220, 213);
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-weight: 400;
                         font-style: italic;
                         margin-top: 6px;
@@ -1582,7 +1530,7 @@ footer{
 
                     a{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.13rem;
                         font-weight: 600;
                         line-height: 0rem;
@@ -1603,7 +1551,7 @@ footer{
 
                     a{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.13rem;
                         font-weight: 400;
                         line-height: 0rem;
@@ -1653,7 +1601,7 @@ footer{
                 max-width: 24.75rem;
                 p{
                     color: $white;
-                    font-family: "ABeeZee";
+                    font-family: "Roboto";
                     font-size: 0.9rem;
                     font-weight: 400;
                     letter-spacing: 1px;
@@ -1676,7 +1624,7 @@ footer{
 
                     h2{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.5rem;
                         font-weight: 400;
                         line-height: 1.75rem;
@@ -1686,7 +1634,7 @@ footer{
                         li{
                             a{
                                 color: rgb(196, 196, 196);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -1701,7 +1649,7 @@ footer{
 
                     h2{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.5rem;
                         font-weight: 400;
                         line-height: 1.75rem;
@@ -1711,7 +1659,7 @@ footer{
                         li{
                             a{
                                 color: rgb(196, 196, 196);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -1723,7 +1671,7 @@ footer{
                 .services{
                     h2{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.5rem;
                         font-weight: 400;
                         line-height: 1.75rem;
@@ -1733,7 +1681,7 @@ footer{
                         li{
                             a{
                                 color: rgb(196, 196, 196);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -2063,7 +2011,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: 1.5rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -2092,7 +2040,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: 1.5rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -2128,7 +2076,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: 1.5rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -2156,7 +2104,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: 1.5rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -2194,7 +2142,7 @@ footer{
 
                     h2{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.2rem;
                         font-weight: 400;
                         line-height: 1.75rem;
@@ -2204,7 +2152,7 @@ footer{
                         li{
                             a{
                                 color: rgba(255, 255, 255, 0.3);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -2217,7 +2165,7 @@ footer{
 
                     h2{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.2rem;
                         font-weight: 400;
                         line-height: 1.75rem;
@@ -2227,7 +2175,7 @@ footer{
                         li{
                             a{
                                 color: rgba(255, 255, 255, 0.3);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -2239,7 +2187,7 @@ footer{
                 .services{
                     h2{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.2rem;
                         font-weight: 400;
                         line-height: 1.75rem;
@@ -2249,7 +2197,7 @@ footer{
                         li{
                             a{
                                 color: rgba(255, 255, 255, 0.3);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -2277,7 +2225,7 @@ footer{
 
                     a{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1rem;
                         font-weight: 600;
                         line-height: 0rem;
@@ -2296,7 +2244,7 @@ footer{
 
                     a{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.2rem;
                         font-weight: 400;
                         line-height: 0rem;
@@ -2635,7 +2583,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: .8rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -2650,7 +2598,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: .8rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -2672,7 +2620,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: .8rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -2687,7 +2635,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: .8rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -2777,7 +2725,7 @@ footer{
 
                     h2{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.2rem;
                         font-weight: 400;
                         line-height: 1.75rem;
@@ -2787,7 +2735,7 @@ footer{
                         li{
                             a{
                                 color: rgba(255, 255, 255, 0.3);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -2800,7 +2748,7 @@ footer{
 
                     h2{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.2rem;
                         font-weight: 400;
                         line-height: 1.75rem;
@@ -2810,7 +2758,7 @@ footer{
                         li{
                             a{
                                 color: rgba(255, 255, 255, 0.3);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -2822,7 +2770,7 @@ footer{
                 .services{
                     h2{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.2rem;
                         font-weight: 400;
                         line-height: 1.75rem;
@@ -2832,7 +2780,7 @@ footer{
                         li{
                             a{
                                 color: rgba(255, 255, 255, 0.3);
-                                font-family: "ABeeZee";
+                                font-family: "Roboto";
                                 font-size: 1rem;
                                 font-weight: 400;
                                 line-height: 1.31rem;
@@ -2860,7 +2808,7 @@ footer{
 
                     a{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1rem;
                         font-weight: 600;
                         line-height: 0rem;
@@ -2879,7 +2827,7 @@ footer{
 
                     a{
                         color: $white;
-                        font-family: "ABeeZee";
+                        font-family: "Roboto";
                         font-size: 1.2rem;
                         font-weight: 400;
                         line-height: 0rem;
@@ -2972,7 +2920,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: .8rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -2987,7 +2935,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: .8rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -3009,7 +2957,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: .8rem;
                             font-weight: 400;
                             line-height: 2.19rem;
@@ -3024,7 +2972,7 @@ footer{
 
                         a{
                             color: rgba(255, 255, 255, 0.6);;
-                            font-family: "ABeeZee";
+                            font-family: "Roboto";
                             font-size: .8rem;
                             font-weight: 400;
                             line-height: 2.19rem;

@@ -24,57 +24,51 @@ button {
   background: transparent;
 }
 
-.abhaya-libre-bold {
-  font-family: "Abhaya Libre", serif;
-  font-weight: 700;
-}
-
-.roboto-light {
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-}
-
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
-.roboto-medium {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-}
-
-.open-sans {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
-}
-
-.roboto-bold {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-}
-
-.doppio-one-regular {
-  font-family: "Doppio One", sans-serif;
-  font-weight: 400;
-}
-
-.taprom-regular {
-  font-family: "Taprom", system-ui;
-  font-weight: 400;
-}
-
-.abeezee-regular {
-  font-family: "ABeeZee", sans-serif;
-  font-weight: 400;
-}
-
-.abeezee-regular-italic {
-  font-family: "ABeeZee", sans-serif;
-  font-weight: 400;
+@font-face {
+  font-family: "ABeeZeeItalic";
+  src: url("../../fonts/ABeeZee/ABeeZee-Italic.ttf");
   font-style: italic;
 }
-
+@font-face {
+  font-family: "ABeeZee";
+  src: url("../../fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Abhaya Libre";
+  src: url("../../fonts/Abhaya/AbhayaLibre-Bold.ttf");
+}
+@font-face {
+  font-family: "DoppioOne";
+  src: url("../../fonts/DoppioOne/DoppioOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../../fonts/Sans/Sans-Regular.ttf");
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../../fonts/Sansation/Sansation_Regular.ttf");
+}
+@font-face {
+  font-family: "Taprom";
+  src: url("../../fonts/Taprom/Taprom-Regular.ttf");
+}
 .hidden {
   display: none !important;
 }
@@ -116,7 +110,7 @@ button {
 }
 .header__headerContainer__between__left .your_city {
   color: rgba(255, 255, 255, 0.13);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.81rem;
   font-weight: 400;
   line-height: 0.94rem;
@@ -125,7 +119,7 @@ button {
 }
 .header__headerContainer__between__left .city {
   color: rgba(255, 255, 255, 0.6);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.81rem;
   font-weight: 400;
   line-height: 0.94rem;
@@ -141,7 +135,7 @@ button {
 }
 .header__headerContainer__between__right a {
   color: rgba(255, 255, 255, 0.6);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.88rem;
   font-weight: 400;
   line-height: 1.06rem;
@@ -149,7 +143,7 @@ button {
 }
 .header__headerContainer__between__right p {
   color: rgba(255, 255, 255, 0.6);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.88rem;
   font-weight: 400;
   line-height: 1.06rem;
@@ -197,7 +191,7 @@ button {
 }
 .sec1 .mobile .burger__container__top__left P {
   color: rgba(255, 255, 255, 0.3);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.56rem;
   font-weight: 400;
   line-height: 0.69rem;
@@ -212,21 +206,21 @@ button {
 }
 .sec1 .mobile .burger__container__bottom__big_ul li:first-child a {
   color: rgb(234, 131, 5);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 1.31rem;
 }
 .sec1 .mobile .burger__container__bottom__big_ul li a {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 1.31rem;
 }
 .sec1 .mobile .burger__container__bottom__small_ul li a {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.63rem;
   font-weight: 400;
   line-height: 0.75rem;
@@ -279,14 +273,14 @@ button {
 }
 .sec1 .center__bottom ul li a {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.88rem;
   font-weight: 400;
   line-height: 1.06rem;
 }
 .sec1 .center__bottom ul li button {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.88rem;
   font-weight: 400;
   line-height: 1.06rem;
@@ -713,14 +707,14 @@ button {
 }
 .sec4 .slider__slides .product .content .type {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.88rem;
   font-weight: 400;
   margin-bottom: 4px;
 }
 .sec4 .slider__slides .product .content .name {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 20.15px;
@@ -733,7 +727,7 @@ button {
 .sec4 .slider__slides .product .content__bottom .count .price {
   position: relative;
   color: rgba(255, 255, 255, 0.6);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.88rem;
   font-weight: 400;
 }
@@ -751,7 +745,7 @@ button {
 }
 .sec4 .slider__slides .product .content__bottom .count .sale-price {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 400;
 }
@@ -778,14 +772,14 @@ button {
 }
 .sec4 .slider__slides .product-last .content .type {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.88rem;
   font-weight: 400;
   margin-bottom: 4px;
 }
 .sec4 .slider__slides .product-last .content .name {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 20.15px;
@@ -797,7 +791,7 @@ button {
 .sec4 .slider__slides .product-last .content__bottom .count .price {
   position: relative;
   color: rgba(255, 255, 255, 0.6);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.88rem;
   font-weight: 400;
 }
@@ -815,7 +809,7 @@ button {
 }
 .sec4 .slider__slides .product-last .content__bottom .count .sale-price {
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 400;
 }
@@ -896,7 +890,7 @@ button {
   display: flex;
   justify-content: center;
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 2.25rem;
   font-weight: 400;
 }
@@ -943,7 +937,7 @@ button {
   width: 100%;
   padding: 30px 0px;
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.19rem;
@@ -975,7 +969,7 @@ button {
   max-width: 12.5rem;
   max-height: 14.75rem;
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 1.88rem;
@@ -991,7 +985,7 @@ button {
   color: #CC7408;
   color: rgb(234, 131, 5);
   background: rgba(19, 18, 24, 0.8);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 200;
   line-height: 1.88rem;
@@ -1019,7 +1013,7 @@ button {
   width: 100%;
   padding: 30px 0px;
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.19rem;
@@ -1051,7 +1045,7 @@ button {
   max-width: 12.5rem;
   max-height: 14.75rem;
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 1.88rem;
@@ -1067,7 +1061,7 @@ button {
   color: #CC7408;
   color: rgb(234, 131, 5);
   background: rgba(19, 18, 24, 0.8);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 200;
   line-height: 1.88rem;
@@ -1095,7 +1089,7 @@ button {
   width: 100%;
   padding: 30px 0px;
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.19rem;
@@ -1127,7 +1121,7 @@ button {
   max-width: 12.5rem;
   max-height: 14.75rem;
   color: rgb(255, 255, 255);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 1.88rem;
@@ -1143,7 +1137,7 @@ button {
   color: #CC7408;
   color: rgb(234, 131, 5);
   background: rgba(19, 18, 24, 0.8);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 200;
   line-height: 1.88rem;
@@ -1252,13 +1246,13 @@ button {
   box-shadow: inset 0rem 0.25rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
   background: rgb(242, 234, 224);
   text-indent: 20px;
-  font-family: "Doppio One";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 400;
 }
 .sec6 .sec6-container form .input .inp p {
   color: rgb(225, 220, 213);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-weight: 400;
   font-style: italic;
   margin-top: 6px;
@@ -1313,7 +1307,7 @@ footer .content .leftSide .quetions .tel p {
 }
 footer .content .leftSide .quetions .tel a {
   color: rgb(196, 196, 196);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 600;
   line-height: 0rem;
@@ -1330,7 +1324,7 @@ footer .content .leftSide .quetions .schedule p {
 }
 footer .content .leftSide .quetions .schedule a {
   color: rgb(196, 196, 196);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 0rem;
@@ -1369,7 +1363,7 @@ footer .content .leftSide .confid {
 }
 footer .content .leftSide .confid p {
   color: rgb(196, 196, 196);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 1px;
@@ -1388,7 +1382,7 @@ footer .content .RightSide .top .catalog {
 }
 footer .content .RightSide .top .catalog h2 {
   color: rgb(196, 196, 196);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.75rem;
@@ -1396,7 +1390,7 @@ footer .content .RightSide .top .catalog h2 {
 }
 footer .content .RightSide .top .catalog ul li a {
   color: rgb(196, 196, 196);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.31rem;
@@ -1406,7 +1400,7 @@ footer .content .RightSide .top .service {
 }
 footer .content .RightSide .top .service h2 {
   color: rgb(196, 196, 196);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.75rem;
@@ -1414,14 +1408,14 @@ footer .content .RightSide .top .service h2 {
 }
 footer .content .RightSide .top .service ul li a {
   color: rgb(196, 196, 196);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.31rem;
 }
 footer .content .RightSide .top .services h2 {
   color: rgb(196, 196, 196);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.75rem;
@@ -1429,7 +1423,7 @@ footer .content .RightSide .top .services h2 {
 }
 footer .content .RightSide .top .services ul li a {
   color: rgb(196, 196, 196);
-  font-family: "ABeeZee";
+  font-family: "Roboto";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.31rem;
@@ -1618,7 +1612,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .leftSide .plates1 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -1642,7 +1636,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .leftSide .plates2 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -1671,7 +1665,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .rightSide .plates3 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -1695,7 +1689,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .rightSide .plates4 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -1722,7 +1716,7 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .list .catalog h2 {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.75rem;
@@ -1730,14 +1724,14 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .list .catalog ul li a {
     color: rgba(255, 255, 255, 0.3);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.31rem;
   }
   footer .container .list .service h2 {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.75rem;
@@ -1745,14 +1739,14 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .list .service ul li a {
     color: rgba(255, 255, 255, 0.3);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.31rem;
   }
   footer .container .list .services h2 {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.75rem;
@@ -1760,7 +1754,7 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .list .services ul li a {
     color: rgba(255, 255, 255, 0.3);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.31rem;
@@ -1781,7 +1775,7 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .quetions .tel a {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1rem;
     font-weight: 600;
     line-height: 0rem;
@@ -1796,7 +1790,7 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .quetions .schedule a {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 0rem;
@@ -2024,7 +2018,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .leftSide .plates1 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -2035,7 +2029,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .leftSide .plates2 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -2050,7 +2044,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .rightSide .plates3 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -2061,7 +2055,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .rightSide .plates4 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -2129,7 +2123,7 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .list .catalog h2 {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.75rem;
@@ -2137,14 +2131,14 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .list .catalog ul li a {
     color: rgba(255, 255, 255, 0.3);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.31rem;
   }
   footer .container .list .service h2 {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.75rem;
@@ -2152,14 +2146,14 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .list .service ul li a {
     color: rgba(255, 255, 255, 0.3);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.31rem;
   }
   footer .container .list .services h2 {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 1.75rem;
@@ -2167,7 +2161,7 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .list .services ul li a {
     color: rgba(255, 255, 255, 0.3);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.31rem;
@@ -2188,7 +2182,7 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .quetions .tel a {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1rem;
     font-weight: 600;
     line-height: 0rem;
@@ -2203,7 +2197,7 @@ footer .content .RightSide .top .services ul li a {
   }
   footer .container .quetions .schedule a {
     color: rgb(196, 196, 196);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 1.2rem;
     font-weight: 400;
     line-height: 0rem;
@@ -2264,7 +2258,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .leftSide .plates1 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -2275,7 +2269,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .leftSide .plates2 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -2290,7 +2284,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .rightSide .plates3 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 2.19rem;
@@ -2301,7 +2295,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec5 .sec5-container .mobile-Plates .rightSide .plates4 a {
     color: rgba(255, 255, 255, 0.6);
-    font-family: "ABeeZee";
+    font-family: "Roboto";
     font-size: 0.8rem;
     font-weight: 400;
     line-height: 2.19rem;

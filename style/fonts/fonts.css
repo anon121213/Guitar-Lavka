@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "ABeeZeeItalic";
+  src: url("../../fonts/ABeeZee/ABeeZee-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "ABeeZeeRegular";
+  src: url("../../fonts/ABeeZee/ABeeZee-Regular.ttf");
+}
+@font-face {
+  font-family: "AbhayaLibre";
+  src: url("../../fonts/Abhaya/AbhayaLibre-Bold.ttf");
+}
+@font-face {
+  font-family: "DoppioOne";
+  src: url("../../fonts/DoppioOne/DoppioOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../../fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("../../fonts/Roboto/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../../fonts/Roboto/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("../../fonts/Roboto/Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "Sans";
+  src: url("../../fonts/Sans/Sans-Regular.ttf");
+}
+@font-face {
+  font-family: "Sansation";
+  src: url("../../fonts/Sansation/Sansation_Regular.ttf");
+}
+@font-face {
+  font-family: "Taprom";
+  src: url("../../fonts/Taprom/Taprom-Regular.ttf");
+}/*# sourceMappingURL=fonts.css.map */

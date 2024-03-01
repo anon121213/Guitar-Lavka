@@ -1,1 +1,389 @@
 @import "reset.scss";
+@import "../fonts/fonts.scss";
+
+$blue-bg: #131218;
+$orange-bg: #CC7408;
+$product-bg: #3B3A40;
+$white: rgb(196, 196, 196);
+
+.hidden{
+    display: none;
+}    
+
+.rotate{
+    transform: rotate(90deg);   
+    transition: .2s ease; 
+}
+
+.container{
+     max-width: 1070px;   
+     margin: 0 auto;
+}
+
+.header{
+
+    width: 100%;
+    background-color: $blue-bg;
+    display: flex;
+    border-bottom: 0.06rem solid rgb(36, 36, 36);;
+    
+    &__headerContainer{
+
+        margin: 0 auto;
+        width: 100%;
+        padding-bottom: 1vh;
+        padding-top: 1vh;
+
+
+        &__between{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+    
+            &__left{
+    
+                display: flex;
+                margin-left: 42px;
+                margin-top: 13px; 
+                
+                .your_city{
+                    color: rgba(255, 255, 255, 0.13);
+                    font-family: "ABeeZee";
+                    font-size: 0.81rem;
+                    font-weight: 400;
+                    line-height: 0.94rem;
+                    text-align: center;
+                    margin-right: 10px;
+                }
+    
+                .city{
+                    color: rgba(255, 255, 255, 0.6);
+                    font-family: "ABeeZee";
+                    font-size: 0.81rem;
+                    font-weight: 400;
+                    line-height: 0.94rem;
+                }
+            }
+    
+            &__right{
+              
+                display: flex;
+                align-items: center;
+                margin-right: 42px;
+                margin-top: 13px; 
+
+                .phone{
+                    margin-right: 6px;
+                }
+
+                a{
+                    color: rgba(255, 255, 255, 0.6);
+                    font-family: "ABeeZee";
+                    font-size: 0.88rem;
+                    font-weight: 400;
+                    line-height: 1.06rem;
+                    margin-right: 14.5px;
+                }
+
+                p{
+                    color: rgba(255, 255, 255, 0.6);
+                    font-family: "ABeeZee";
+                    font-size: 0.88rem;
+                    font-weight: 400;
+                    line-height: 1.06rem;                  
+                }
+
+                .everyDay{
+                    margin-right: 14.5px;
+                }
+            }
+        }
+
+        .header_center{
+            
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            margin-top: -20px;
+
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                max-width: 262px;
+
+                li{
+                    max-width: 262px;
+                    align-items: center;
+                }
+            }
+        }
+    }
+}
+
+.sec1{   
+    background-color: $blue-bg;
+
+    .container{
+        .content{
+
+            padding-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .input{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                position: relative;
+
+                img{
+                    position: absolute;
+                    left: 8px;
+                }
+
+                input{
+                    background: url("../../img/catalogImg/section1/loop.svg");
+                    margin-right: 14px;
+                    width: 100%;
+                    max-width: 840px;
+                    height: 40px;
+                    border: 0;
+                    border-radius: 0.31rem;
+                    background: rgb(72, 71, 76);
+                    text-indent: 36px;               
+                    font-family: "ABeeZee";
+                    font-size: 0.88rem;
+                    font-weight: 400;
+                    line-height: 1.06rem;
+                    letter-spacing: 0%;    
+                }
+            }
+            
+
+            input::-webkit-input-placeholder {
+                color: rgba(255, 255, 255, 0.6);
+            } 
+
+            .heart{
+                margin-right: 14px;
+            }
+        }
+    }
+}
+
+.sec2{
+
+    background-color: $blue-bg;
+
+    .sec2-container{
+        max-width: 1400px;
+        margin: 0 auto;
+
+        &__leftSide{
+            margin-left: 30px;   
+            padding-bottom: 30px;
+
+            .names{
+                max-width: 250px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+        
+                .catalog{
+                    color: $white;
+                    font-family: "ABeeZee";
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    line-height: 2.19rem;
+                }
+        
+                .filters{
+                    color: $orange-bg;
+                    font-family: ABeeZee;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    line-height: 2.19rem;
+                }
+            }
+
+            .filters{
+
+                .guitar-list{
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+
+                    &__name{
+                        width: 100%;
+                        max-width: 225px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        button{  
+                            color: $white;
+                            font-family: "ABeeZee";
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.06rem;
+                        }
+
+                        img{
+                            max-width: 10px;
+                            transition: .2s ease;
+                            transform: rotate(0);
+                        }
+                        
+                        &__guitars{
+                            margin-top: 5px;
+
+                            li{
+                                margin-top: 5px;
+                                margin-left: 5px;
+                                a{
+                                    color: $white;
+                                    font-family: "ABeeZee";
+                                    font-size: 0.88rem;
+                                    font-weight: 400;
+                                    line-height: 1.88rem; 
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .ukuleles-list{
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+
+                    &__name{
+                        width: 100%;
+                        max-width: 225px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        button{
+                            color: $white;
+                            font-family: "ABeeZee";
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.06rem;
+                        }
+
+                        img{
+                            max-width: 10px;
+                            transition: .2s ease;
+                            transform: rotate(0);
+                        }
+                        
+                        &__ukulele{
+                            margin-top: 5px;
+
+                            li{
+                                margin-top: 5px;
+                                margin-left: 5px;
+                                a{
+                                    color: $white;
+                                    font-family: "ABeeZee";
+                                    font-size: 0.88rem;
+                                    font-weight: 400;
+                                    line-height: 1.88rem; 
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .accessories-list{
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+
+                    &__name{
+                        width: 100%;
+                        max-width: 225px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        button{
+                            color: $white;
+                            font-family: "ABeeZee";
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.06rem;
+                        }
+
+                        img{
+                            max-width: 10px;
+                            transition: .2s ease;
+                            transform: rotate(0);
+                        }
+                        
+                        &__accessories{
+                            margin-top: 5px;
+
+                            li{
+                                margin-top: 5px;
+                                margin-left: 5px;
+                                a{
+                                    color: $white;
+                                    font-family: "ABeeZee";
+                                    font-size: 0.88rem;
+                                    font-weight: 400;
+                                    line-height: 1.88rem; 
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .strings-list{
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+
+                    &__name{
+                        width: 100%;
+                        max-width: 225px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        button{
+                            color: $white;
+                            font-family: "ABeeZee";
+                            font-size: 1rem;
+                            font-weight: 400;
+                            line-height: 1.06rem;
+                        }
+
+                        img{
+                            max-width: 10px;
+                            transition: .2s ease;
+                            transform: rotate(0);
+                        }
+                        
+                        &__strings{
+                            margin-top: 5px;
+
+                            li{
+                                margin-top: 5px;
+                                margin-left: 5px;
+                                a{
+                                    color: $white;
+                                    font-family: "ABeeZee";
+                                    font-size: 0.88rem;
+                                    font-weight: 400;
+                                    line-height: 1.88rem; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
