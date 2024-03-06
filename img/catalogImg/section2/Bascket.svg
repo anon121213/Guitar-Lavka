@@ -1,0 +1,12 @@
+<svg width="19.102051" height="20.000000" viewBox="0 0 19.1021 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<pattern id="pattern_409_7230" patternContentUnits="objectBoundingBox" width="1.000000" height="1.000000">
+			<use xlink:href="#image409_723_0" transform="matrix(0.010906,0,0,0.010417,-0.023502,0)"/>
+		</pattern>
+		<image id="image409_723_0" width="96.000000" height="96.000000" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABHNCSVQICAgIfAhkiAAABSVJREFUeJztnU2IVlUYx/9nNIewpFLDrBYOafSFIRSMEzTFlNUmaFEU7cIyaBcF4aKoKBcVtCwoWoSLCGoRkU6FfSBhGVFi0IASloY4mNPAmKP+WtwZmN73zj3nfp77cX7L9557zvM8/znPuefj3pECgUAgEAgEAoFAoAEAa4H3gElgGvgM2OTbrk4ArAF+p58ZYLNv+1oNYIBPYoI/zxHgEt92thZgW0Lw53nHt52tBBgCphwEAHjAt72tAhgAvnYMPsBx4HLfdrcGYHuK4M/zkW+7WwFwM/BvBgEAHvZtf6MBBoGfMwYf4CRwtW8/Ggvweo7gz7MbML59aRzAbcDZAgQAeNy3P40CWAEcdgjsXuBdh3L/AEO+/WoMROs8NqaBDcByYMKh/LfAEt++1R7gfodgAjyx4J4R3NLV0z59qz3AauAvh0D2DazAGw73nQZu8uVf7QE+dAjiSeCqmHsHgQMO9/8IXODDv1oDPOYQPICHEurYBJxxqOOFCl2rP8A64JRD4N53qOtFh3pmgVuq8K32EC207XEI2h/AZQ71LQX2OdR3ELiwCh9rDfCsQ7DOA/ekqPM6oh0yG6+V6VvtAa53DNSbGep+xqHec8DtZfhWe4BlwE8OQfqVDKkC99R2CLi4DB9rDbDDITizwK052liH2y7aW0X6VnuAzbjNXJ8voK0nHdoBuK8I32oP0drNbw4B2U8BEyaikxSfOrR3FIenrMYDvO0QjBnghgLbXEt0iMvGzqLarCXAFqJHShtPldD2ow7tAjxYdNu1AFgFHHMIwDgl7WABHzi0fwJYU0b7ccQ6CmyQ9KqkMUkrqjKmpUxJGpf0nDFmovdinwDAeknfSWr/gFQtk5KGe0UYiCm4QyH4ZbBS0iu9P8b1gFMKaacs/jbGXLrwh7geEKiQOAG+r9yK7rC/94c4AXZXYEhX2dX7QxCgWvoE6INo7eSoZbKytQJjGwWw1RKzY3ETzL4eYIxB0ueW9u4uyvAWYYvJrrnY/o/FnoJsXWUMWOpkVgcgOnF3p6WYPf0sqHAV0XZdEsO5rG4RwLAlVudI+8YO0QGmJHJvlgSSJ2K2LrOlSEMCPQCjlh5wli7sIJVMUg/YK2k64foSSXcUa073WFQAY8wZSXss94c0lBPbYpxtHLi3KEMCMQDrLeMAwLW+7WwyiT1gbvfmkKWOkIZy4LIfMG653uplCVv3z1u/iwC2cWAUGMxrSFdxEeALSbMJ15dLGinGnO5hFcAYMyVpn6VYGAcy4ronbEtDrR4HyqQoATYCV+Q1pou4CvCDpBMJ142iU3SBlDgJYIw5L+lLS7GQhjKQ5lyQdXkaCOeMUpJWgKSJx2pJG/OZ0z2cBTDG/CnpoKVYeBxNSdqUYTszFMaBlKQVwDYOjAAXZTWmi6QV4CtJMwnXl0kazWxNB0klgDHmtKRvLMVCGkpBlsdG2zgQBuIUpH4ZDrhR0i+WYkPGmMPZTCqWItbsyyR1DzDGHJB0xFLsrmzmdI+sM1fb4d2QhhzJKoBtHBgjfJfNiUwvRAMrJR1XDd4xM8Yk+tC6MUCSjDGTinnfKZCePH/BHxdmRYfJ/E0G4EpJE5K8fviu6Sko10cxgO2SXi7IlkzYBMiLTcC87ecVYEDSTkmLfky1bJouQK6nmLmtykckvaTks0OBRSjsr4fo+/zbFM2Cr5FUybJ003tA+NceFmqdggL5CQJ4JgjgmSCAZ4IAngkCeCYI4JkggGeCAJ4JAngmCOCZ/wDRyLTZIJzp/QAAAABJRU5ErkJggg=="/>
+	</defs>
+	<rect id="icons8-shopping-basket-add-96-2 1" width="19.102137" height="20.000000" fill="url(#pattern_409_7230)" fill-opacity="0.600000"/>
+</svg>
