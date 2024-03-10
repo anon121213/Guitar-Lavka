@@ -24,6 +24,45 @@ addEventListener('scroll', event => {
     }
 })
 
+
+//search
+
+const loopButton = document.querySelector('.loop')
+const inputLine = document.querySelector('.input')
+const logo = document.querySelector('.logo')
+
+loopButton.addEventListener('click', event => {
+
+    loopButton.classList.add('hidden')
+    inputLine.classList.remove('hidden')
+
+    if(window.innerWidth < 550){
+        logo.classList.add('hidden')
+    }
+    
+})
+
+//burger
+
+const burgerButton = document.querySelector('.burgerButton')
+const burgerMenu = document.querySelector('.burger')
+const content = document.querySelector('.content')
+const hideBurgerButton = document.querySelector('.hideBurgerButton')
+
+burgerButton.addEventListener('click', event => {
+
+    content.classList.add('hidden')
+    burgerMenu.classList.remove('hidden')
+
+})
+
+hideBurgerButton.addEventListener('click', event => {
+
+    content.classList.remove('hidden')
+    burgerMenu.classList.add('hidden')
+
+})
+
 // filters
 
 const listButton = document.querySelectorAll('.listButton')
@@ -41,6 +80,22 @@ listButton.forEach(item => item.addEventListener('click', event => {
     let ArrowId = document.getElementById(`arrow-${targetData}`).style.transform = 'rotate(90deg)'
 
 }))
+
+// mobile filters
+
+const mobileSort = document.querySelector('.mobileSort')
+const filtersButton = document.querySelector('.filtersButton')
+let showfilters = false
+
+filtersButton.addEventListener('click', evet => {
+    showfilters = !showfilters  
+    
+    if(showfilters){
+        mobileSort.classList.remove('hidden')
+    }else if(!showfilters) {
+        mobileSort.classList.add('hidden')
+    }
+})
 
 // vue grid
 
