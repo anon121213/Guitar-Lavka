@@ -695,6 +695,9 @@ button {
   margin-bottom: 15px;
   max-height: 340px;
 }
+.sec2 .sec2-container__rightSide__bottom .list-product .product form {
+  margin-bottom: 0;
+}
 .sec2 .sec2-container__rightSide__bottom .list-product .product__left {
   margin-right: 15px;
   width: 100%;

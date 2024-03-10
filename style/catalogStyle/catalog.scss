@@ -758,11 +758,16 @@ $white: rgb(196, 196, 196);
                     }                 
                 }  
 
-                .list-product{
+                .list-product{  
+                   
+
                     .product{
                         display: flex;
                         margin-bottom: 15px;
                         max-height: 340px;
+                        form{
+                            margin-bottom: 0;
+                        }
 
                         &__left{
                             margin-right: 15px;

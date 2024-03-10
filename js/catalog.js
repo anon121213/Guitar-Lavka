@@ -119,8 +119,6 @@ gridNonActive.addEventListener('click', e => {
 
 listNonActive.addEventListener('click', e => {
 
-    console.log(list)
-    console.log(grid)
     gridActive.classList.add('hidden')
     gridNonActive.classList.remove('hidden')
     listActive.classList.remove('hidden')
