@@ -136,6 +136,27 @@ $white: rgb(196, 196, 196);
             justify-content: space-between;
             align-items: center;
 
+            .left{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                .breadcrumb{
+                    display: flex;
+                    margin-top: -40px;
+                    margin-bottom: 30px;
+                    li{
+                        margin-right: 5px;
+                        a{
+                            color: rgba(255, 255, 255, 0.6);
+                            font-family: "ABeeZee";
+                            font-size: 0.88rem;
+                            font-weight: 400; 
+                        }
+                    }
+                }
+            }
+
             .right{
                 width: 100%;
                 display: flex;
@@ -186,8 +207,44 @@ $white: rgb(196, 196, 196);
                 .burgerButton{
                     display: none;
                 }
-            }            
+            }                
         }
+
+        // .listMenu{
+        //     display: flex;
+        //     justify-content: center;
+            
+
+        //     ul{
+        //         display: flex;
+        //         width: 100%;
+        //         max-width: 608px;
+        //         justify-content: space-between;
+        //         margin-top: -185px;
+    
+        //         li{
+        //             max-width: 608px;
+        //             display: flex;
+        //             align-items: center;
+    
+        //             a{
+        //                 color: rgb(255, 255, 255);
+        //                 font-family: "Roboto";
+        //                 font-size: 0.88rem;
+        //                 font-weight: 400;
+        //                 line-height: 1.06rem;
+        //             }
+                    
+        //             button{
+        //                 color: rgb(255, 255, 255);
+        //                 font-family: "Roboto";
+        //                 font-size: 0.88rem;
+        //                 font-weight: 400;
+        //                 line-height: 1.06rem;
+        //             }
+        //         }
+        //     }          
+        // }
 
         .burger{
             &__container{
