@@ -2981,7 +2981,14 @@ footer{
                                         font-size: 0.75rem;
                                         padding: 15px 23px;
                                     }
-                                }                               
+                                }  
+                                
+                                .buy:hover{
+                                    .mobile-buy_button{
+                                        font-size: 0.75rem;
+                                        padding: 13px 23px;
+                                    }
+                                }
                             }
                         }
                     }

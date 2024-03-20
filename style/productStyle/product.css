@@ -2338,6 +2338,10 @@ footer .content .RightSide .top .services ul li a {
     font-size: 0.75rem;
     padding: 15px 23px;
   }
+  .sec2 .container .mobile__content__bottom__bottom__right .buy:hover .mobile-buy_button {
+    font-size: 0.75rem;
+    padding: 13px 23px;
+  }
   .sec4__container {
     margin: 0 40px;
   }
