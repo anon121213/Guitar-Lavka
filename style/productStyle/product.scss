@@ -2940,10 +2940,11 @@ footer{
         
                                 .score{
                                     margin-top: 5px;
-                                    margin-bottom: -2px;
+                                    margin-bottom: 0;
         
                                     .score_ul{
                                         display: flex;
+                                        margin-top: -2px;
         
                                         li{
                                             margin-right: 1.5px;
