@@ -67,10 +67,17 @@ hideBurgerButton.addEventListener('click', event => {
 
 const busketButton = document.querySelector('.nonActiveBuscket')
 const activeBuscketButton = document.querySelector('.ActiveBuscket')
+const mobile_busketButton = document.querySelector('.mobile-nonActiveBuscket')
+const mobile_activeBuscketButton = document.querySelector('.mobile-ActiveBuscket')
 
 busketButton.addEventListener('click', event => {
     busketButton.classList.add('hidden')
     activeBuscketButton.classList.remove('hidden')
+})
+
+mobile_busketButton.addEventListener('click', event => {
+    mobile_busketButton.classList.add('hidden')
+    mobile_activeBuscketButton.classList.remove('hidden')
 })
 
 // tabs
@@ -89,6 +96,37 @@ tab.forEach(items => items.addEventListener('click', event => {
     tabsContent.forEach(items => items.classList.add('hidden'))
 
     document.getElementById(data).classList.remove('hidden')
+
+}))
+
+// description
+
+const listButton = document.querySelectorAll('.listButton')
+const listButtonCherecter = document.querySelectorAll('.listButtonCherecter')
+const list_name = document.querySelectorAll('.list_name')
+const Arrow = document.querySelectorAll('.Arrow')
+
+listButton.forEach(item => item.addEventListener('click', event => {
+
+    let targetData = event.target.getAttribute('data-list')
+
+    list_name.forEach(items => items.classList.add('hidden'))
+    Arrow.forEach(items => items.style.transform = 'rotate(0deg)')
+    
+    let target = document.getElementById(targetData).classList.remove('hidden')
+    let ArrowId = document.getElementById(`arrow-${targetData}`).style.transform = 'rotate(90deg)'
+
+}))
+
+listButtonCherecter.forEach(item => item.addEventListener('click', event => {
+
+    let targetData = event.target.getAttribute('data-list')
+
+    list_name.forEach(items => items.classList.add('hidden'))
+    Arrow.forEach(items => items.style.transform = 'rotate(0deg)')
+
+    let target = document.getElementById(targetData).classList.remove('hidden')
+    let ArrowId = document.getElementById(`arrow-${targetData}`).style.transform = 'rotate(90deg)'
 
 }))
 

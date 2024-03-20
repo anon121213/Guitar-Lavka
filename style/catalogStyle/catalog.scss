@@ -210,41 +210,41 @@ $white: rgb(196, 196, 196);
             }                
         }
 
-        // .listMenu{
-        //     display: flex;
-        //     justify-content: center;
+        .listMenu{
+            display: flex;
+            justify-content: center;
             
 
-        //     ul{
-        //         display: flex;
-        //         width: 100%;
-        //         max-width: 608px;
-        //         justify-content: space-between;
-        //         margin-top: -185px;
+            ul{
+                display: flex;
+                width: 100%;
+                max-width: 608px;
+                justify-content: space-between;
+                margin-top: -185px;
     
-        //         li{
-        //             max-width: 608px;
-        //             display: flex;
-        //             align-items: center;
+                li{
+                    max-width: 608px;
+                    display: flex;
+                    align-items: center;
     
-        //             a{
-        //                 color: rgb(255, 255, 255);
-        //                 font-family: "Roboto";
-        //                 font-size: 0.88rem;
-        //                 font-weight: 400;
-        //                 line-height: 1.06rem;
-        //             }
+                    a{
+                        color: rgb(255, 255, 255);
+                        font-family: "Roboto";
+                        font-size: 0.88rem;
+                        font-weight: 400;
+                        line-height: 1.06rem;
+                    }
                     
-        //             button{
-        //                 color: rgb(255, 255, 255);
-        //                 font-family: "Roboto";
-        //                 font-size: 0.88rem;
-        //                 font-weight: 400;
-        //                 line-height: 1.06rem;
-        //             }
-        //         }
-        //     }          
-        // }
+                    button{
+                        color: rgb(255, 255, 255);
+                        font-family: "Roboto";
+                        font-size: 0.88rem;
+                        font-weight: 400;
+                        line-height: 1.06rem;
+                    }
+                }
+            }          
+        }
 
         .burger{
             &__container{
@@ -321,6 +321,7 @@ $white: rgb(196, 196, 196);
         }
     }
 }
+
 
 .sec2{
 
@@ -1407,6 +1408,10 @@ footer{
 
     .container{
         max-width: 870px;
+    }
+
+    .listMenu{
+        display: none !important;
     }
 
     .sec2{

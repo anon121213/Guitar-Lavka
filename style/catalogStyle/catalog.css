@@ -240,6 +240,36 @@ button {
 .sec1 .container .content .right .burgerButton {
   display: none;
 }
+.sec1 .container .listMenu {
+  display: flex;
+  justify-content: center;
+}
+.sec1 .container .listMenu ul {
+  display: flex;
+  width: 100%;
+  max-width: 608px;
+  justify-content: space-between;
+  margin-top: -185px;
+}
+.sec1 .container .listMenu ul li {
+  max-width: 608px;
+  display: flex;
+  align-items: center;
+}
+.sec1 .container .listMenu ul li a {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+}
+.sec1 .container .listMenu ul li button {
+  color: rgb(255, 255, 255);
+  font-family: "Roboto";
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.06rem;
+}
 .sec1 .container .burger__container {
   max-width: 90vw;
   margin: 0 auto;
@@ -1181,6 +1211,9 @@ footer .content .RightSide .top .services ul li a {
 @media (max-width: 1150px) {
   .container {
     max-width: 870px;
+  }
+  .listMenu {
+    display: none !important;
   }
   .sec2 .sec2-container__rightSide__top {
     max-width: 740px;
