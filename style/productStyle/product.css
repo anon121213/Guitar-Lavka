@@ -2309,7 +2309,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec2 .container .mobile__content__bottom__bottom__right .score .score_ul {
     display: flex;
-    margin-top: -5px;
+    margin-top: -3px;
   }
   .sec2 .container .mobile__content__bottom__bottom__right .score .score_ul li {
     margin-right: 1.5px;
@@ -2344,7 +2344,7 @@ footer .content .RightSide .top .services ul li a {
     padding: 13px 21px;
   }
   .sec4__container {
-    margin: 0 40px;
+    margin: 0 20px;
   }
   .sec4__container__center {
     flex-direction: column;
