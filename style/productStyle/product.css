@@ -2305,7 +2305,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec2 .container .mobile__content__bottom__bottom__right .score {
     margin-top: 5px;
-    margin-bottom: 0;
+    margin-bottom: -2px;
   }
   .sec2 .container .mobile__content__bottom__bottom__right .score .score_ul {
     display: flex;
@@ -2340,7 +2340,7 @@ footer .content .RightSide .top .services ul li a {
   }
   .sec2 .container .mobile__content__bottom__bottom__right .buy:hover .mobile-buy_button {
     font-size: 0.75rem;
-    padding: 13px 23px;
+    padding: 13px 21px;
   }
   .sec4__container {
     margin: 0 40px;
