@@ -187,6 +187,7 @@ button {
 
 .sec1 {
   background-color: #131218;
+  padding-bottom: 30px;
 }
 .sec1 .container .breadcrumb {
   display: flex;
@@ -306,6 +307,44 @@ button {
   font-size: 0.8rem;
   font-weight: 400;
   line-height: 0.75rem;
+}
+.sec1 .breadcrump .breadcrump {
+  display: flex;
+  margin-top: -60px;
+  margin-left: 10px;
+}
+.sec1 .breadcrump .breadcrump li {
+  margin-right: 5px;
+}
+.sec1 .breadcrump .breadcrump li a {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "ABeeZee";
+  font-size: 0.81rem;
+  font-weight: 400;
+}
+.sec1 .breadcrump-mobile {
+  display: none;
+}
+.sec1 .breadcrump-mobile .name a {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "ABeeZee";
+  font-size: 0.56rem;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.sec1 .breadcrump-mobile__breadcrumb {
+  display: flex;
+  margin-top: -60px;
+  margin-left: 10px;
+}
+.sec1 .breadcrump-mobile__breadcrumb li {
+  margin-right: 5px;
+}
+.sec1 .breadcrump-mobile__breadcrumb li a {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: "ABeeZee";
+  font-size: 0.56rem;
+  font-weight: 400;
 }
 
 .sec2 {
@@ -2102,6 +2141,15 @@ footer .content .RightSide .top .services ul li a {
     color: rgba(255, 255, 255, 0.3);
     margin-top: 3px;
   }
+  .sec1 .container {
+    margin: 0 10px;
+  }
+  .sec1 .breadcrump {
+    display: none;
+  }
+  .sec1 .breadcrump-mobile {
+    display: block;
+  }
   .sec2 .container .mobile__content {
     max-width: 480px;
   }
@@ -2204,30 +2252,6 @@ footer .content .RightSide .top .services ul li a {
   .container {
     margin: 0 20px;
   }
-  .sec1 .breadcrump-mobile {
-    padding-bottom: 50px;
-  }
-  .sec1 .breadcrump-mobile .name a {
-    color: rgba(255, 255, 255, 0.3);
-    font-family: "ABeeZee";
-    font-size: 0.56rem;
-    font-weight: 400;
-    margin-left: 10px;
-  }
-  .sec1 .breadcrump-mobile__breadcrumb {
-    display: flex;
-    margin-top: -60px;
-    margin-left: 10px;
-  }
-  .sec1 .breadcrump-mobile__breadcrumb li {
-    margin-right: 5px;
-  }
-  .sec1 .breadcrump-mobile__breadcrumb li a {
-    color: rgba(255, 255, 255, 0.3);
-    font-family: "ABeeZee";
-    font-size: 0.56rem;
-    font-weight: 400;
-  }
   .sec2 .container .mobile__content {
     max-width: 480px;
   }
@@ -2269,7 +2293,7 @@ footer .content .RightSide .top .services ul li a {
     width: 0.65rem;
   }
   .sec2 .container .mobile__content__bottom .sound button .line {
-    width: 250px;
+    width: 270px;
   }
   .sec2 .container .mobile__content__bottom .info p {
     font-size: 0.63rem;

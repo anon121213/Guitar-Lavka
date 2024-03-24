@@ -145,6 +145,7 @@ $white: rgb(196, 196, 196);
 
 .sec1{   
     background-color: $blue-bg;
+    padding-bottom: 30px;
 
     .container{
         .breadcrumb{
@@ -298,6 +299,58 @@ $white: rgb(196, 196, 196);
                 }
             }
         }
+    }
+
+    .breadcrump{
+        
+
+        .breadcrump{
+            display: flex;
+            margin-top: -60px;
+            margin-left: 10px;
+
+            li{
+                margin-right: 5px;
+                
+                a{  
+                    color: rgba(255, 255, 255, 0.6);
+                    font-family: "ABeeZee";
+                    font-size: 0.81rem;
+                    font-weight: 400;
+                }               
+            }       
+        }
+    }
+
+    .breadcrump-mobile{
+        display: none;
+
+        .name{
+            a{  
+                color: rgba(255, 255, 255, 0.3);
+                font-family: "ABeeZee";
+                font-size: 0.56rem;
+                font-weight: 400;
+                margin-left: 10px;    
+
+            }
+        }
+
+        &__breadcrumb{
+            display: flex;
+            margin-top: -60px;               
+            margin-left: 10px;               
+
+            li{
+                margin-right: 5px;
+                a{
+                    color: rgba(255, 255, 255, 0.3);
+                    font-family: "ABeeZee";
+                    font-size: 0.56rem;
+                    font-weight: 400;
+                }
+            }
+        }           
     }
 }
 
@@ -2623,6 +2676,20 @@ footer{
         }             
     }
 
+    .sec1{
+        .container{
+            margin: 0 10px;
+        }
+
+        .breadcrump{
+            display: none;
+        }
+
+        .breadcrump-mobile{
+            display: block;
+        }
+    }
+
     .sec2{
         .container{
             .mobile{   
@@ -2786,40 +2853,6 @@ footer{
         margin: 0 20px;
     }
 
-    .sec1{
-        .breadcrump-mobile{
-            padding-bottom: 50px;
-
-            .name{
-                a{  
-                    color: rgba(255, 255, 255, 0.3);
-                    font-family: "ABeeZee";
-                    font-size: 0.56rem;
-                    font-weight: 400;
-                    margin-left: 10px;    
-
-                }
-            }
-
-            &__breadcrumb{
-                display: flex;
-                margin-top: -60px;               
-                margin-left: 10px;               
-    
-                li{
-                    margin-right: 5px;
-                    a{
-                        color: rgba(255, 255, 255, 0.3);
-                        font-family: "ABeeZee";
-                        font-size: 0.56rem;
-                        font-weight: 400;
-                    }
-                }
-            }           
-        }
-    }
-    
-
     .sec2{
         .container{
             .mobile{   
@@ -2882,7 +2915,7 @@ footer{
                                 }
 
                                 .line{
-                                    width: 250px;
+                                    width: 270px;
                                 }
                             }
                         }
