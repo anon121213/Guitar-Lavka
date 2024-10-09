@@ -1,4 +1,3 @@
-
 using Microsoft.EntityFrameworkCore;
 using MyWebAPI.Data;
 using MyWebAPI.Vendor;
@@ -11,10 +10,19 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-DependencyInstaller dependencyInstaller =
-    new DependencyInstaller(builder);
-
+DependencyInstaller dependencyInstaller = new DependencyInstaller(builder);
 dependencyInstaller.RegisterDependencies();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader();
+        });
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -28,6 +36,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Убираем перенаправление на HTTPS для упрощения конфигурации
+// app.UseHttpsRedirection();
+
+app.UseCors("AllowAllOrigins");
 app.UseRouting();
 app.MapControllers();
 
