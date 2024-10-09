@@ -203,7 +203,7 @@ $white: rgb(196, 196, 196);
                         font-size: 0.88rem;
                         font-weight: 400;
                         line-height: 1.06rem;
-                        letter-spacing: 0%;    
+                        letter-spacing: 0;
                     }
                 }
                 
@@ -1680,7 +1680,7 @@ footer{
                     font-size: 1.13rem;
                     font-weight: 400;
                     line-height: 1.44rem;
-                    letter-spacing: 0%;
+                    letter-spacing: 0;
                 }
             }
 
@@ -1697,7 +1697,7 @@ footer{
                         font-size: 1.13rem;
                         font-weight: 400;
                         line-height: 0rem;
-                        letter-spacing: 0%;
+                        letter-spacing: 0;
                         padding-bottom: 20px;
                     }
 
@@ -1718,7 +1718,7 @@ footer{
                         font-size: 1.13rem;
                         font-weight: 400;
                         line-height: 0rem;
-                        letter-spacing: 0%;
+                        letter-spacing: 0;
                         padding-bottom: 15px;
                     }
 
@@ -1756,7 +1756,7 @@ footer{
                     font-size: 1.13rem;
                     font-weight: 400;
                     line-height: 0rem;
-                    letter-spacing: 0%;
+                    letter-spacing: 0;
                     padding-bottom: 15px;
                 }
                 ul{
@@ -1949,7 +1949,7 @@ footer{
                             p{
                                 margin-bottom: 5px;
                                 color: rgba(255, 255, 255, 0.6);
-                                font-family: "ABeeZee";
+                                font-family: "ABeeZee", serif;
                                 font-size: 11px;
                                 line-height: 20px;
                                 font-weight: 400;
@@ -2857,7 +2857,7 @@ footer{
         .container{
             .mobile{   
                 &__content{
-                    max-width: 480px;
+                    max-width: 90%;
     
                     &__top{
                         &__names{
@@ -2880,25 +2880,30 @@ footer{
     
                                 &__images{
                                     li{
-                                        width: 47px;
+                                        max-width: 47px;
+                                        width: unset;
             
                                         img{
-                                            width: 47px;
+                                            max-width: 47px;
+                                            width: unset;
                                         }
             
                                         .play{
-                                            width: 1.31rem;
+                                            max-width: 1.31rem;
+                                            width: unset;
                                         }
             
                                         .Model{
-                                            width: 1.6rem;
+                                            max-width: 1.6rem;
+                                            width: unset;
                                         }
                                     }
                                 }
                             }
                             .main{
                                 img{
-                                    width: 265px;
+                                    max-width: 265px;
+                                    width: unset !important;
                                 }
                             }
                         }
