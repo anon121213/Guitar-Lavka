@@ -1,6 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-using MyWebAPI.Vendor.Server;
+﻿using Microsoft.EntityFrameworkCore;
+using MyWebAPI.Vendor.Server.Data;
 
 namespace MyWebAPI.Data
 {

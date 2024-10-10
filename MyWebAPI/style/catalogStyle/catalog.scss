@@ -187,7 +187,7 @@ $white: rgb(196, 196, 196);
                         font-size: 0.88rem;
                         font-weight: 400;
                         line-height: 1.06rem;
-                        letter-spacing: 0%;    
+                        letter-spacing: 0;    
                     }
                 }
                 
@@ -758,7 +758,7 @@ $white: rgb(196, 196, 196);
                             .name{
                                 color: rgb(255, 255, 255);
                                 font-family: "Roboto";
-                                font-size: 1.5rem;
+                                font-size: 1.2rem;
                                 font-weight: 400;
                                 margin-bottom: 20.15px;
                             }
@@ -881,7 +881,7 @@ $white: rgb(196, 196, 196);
                                     .name{
                                         color: $white;
                                         font-family: "ABeeZee";
-                                        font-size: 1.5rem;
+                                        font-size: 1.2rem;
                                         font-weight: 400;
                                         letter-spacing: 1px;
                                     }
@@ -889,7 +889,6 @@ $white: rgb(196, 196, 196);
 
                                 &__right{
                                     margin-right: 34px;
-
                                 }
                             }
 
@@ -1215,7 +1214,7 @@ footer{
                     font-size: 1.13rem;
                     font-weight: 400;
                     line-height: 1.44rem;
-                    letter-spacing: 0%;
+                    letter-spacing: 0;
                 }
             }
 
@@ -1232,7 +1231,7 @@ footer{
                         font-size: 1.13rem;
                         font-weight: 400;
                         line-height: 0rem;
-                        letter-spacing: 0%;
+                        letter-spacing: 0;
                         padding-bottom: 20px;
                     }
 
@@ -1253,7 +1252,7 @@ footer{
                         font-size: 1.13rem;
                         font-weight: 400;
                         line-height: 0rem;
-                        letter-spacing: 0%;
+                        letter-spacing: 0;
                         padding-bottom: 15px;
                     }
 
@@ -1291,7 +1290,7 @@ footer{
                     font-size: 1.13rem;
                     font-weight: 400;
                     line-height: 0rem;
-                    letter-spacing: 0%;
+                    letter-spacing: 0;
                     padding-bottom: 15px;
                 }
                 ul{

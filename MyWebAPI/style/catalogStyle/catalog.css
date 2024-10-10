@@ -226,7 +226,7 @@ button {
   font-size: 0.88rem;
   font-weight: 400;
   line-height: 1.06rem;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 .sec1 .container .content .right input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -696,7 +696,7 @@ button {
 .sec2 .sec2-container__rightSide__bottom .products .product .content .name {
   color: rgb(255, 255, 255);
   font-family: "Roboto";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 20.15px;
 }
@@ -795,7 +795,7 @@ button {
 .sec2 .sec2-container__rightSide__bottom .list-product .product__right__top__left .name {
   color: rgb(196, 196, 196);
   font-family: "ABeeZee";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -1067,7 +1067,7 @@ footer .content .leftSide .main p {
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 1.44rem;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 footer .content .leftSide .quetions {
   padding-bottom: 20px;
@@ -1081,7 +1081,7 @@ footer .content .leftSide .quetions .tel p {
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 0rem;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   padding-bottom: 20px;
 }
 footer .content .leftSide .quetions .tel a {
@@ -1098,7 +1098,7 @@ footer .content .leftSide .quetions .schedule p {
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 0rem;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   padding-bottom: 15px;
 }
 footer .content .leftSide .quetions .schedule a {
@@ -1126,7 +1126,7 @@ footer .content .leftSide .payment p {
   font-size: 1.13rem;
   font-weight: 400;
   line-height: 0rem;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   padding-bottom: 15px;
 }
 footer .content .leftSide .payment ul {

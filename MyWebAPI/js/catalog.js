@@ -2,7 +2,7 @@
 
 const BackToStartPage = document.querySelector('.BackToStartPage')
 
-BackToStartPage.addEventListener('click', event => {
+BackToStartPage.addEventListener('click', () => {
 
     window.scrollTo({
         top: 0,
@@ -12,14 +12,13 @@ BackToStartPage.addEventListener('click', event => {
 
 })
 
-addEventListener('scroll', event => {
+addEventListener('scroll', function (event) {
 
     let scrollY = window.scrollY
 
-    if(scrollY > 600){
+    if (scrollY > 600) {
         BackToStartPage.style.right = 100 + 'px'
-    }
-    else if(scrollY <= 600){
+    } else if (scrollY <= 600) {
         BackToStartPage.style.right = -120 + 'px'
     }
 })
@@ -224,31 +223,24 @@ nonActiveBuscket.forEach(items => items.addEventListener('click', event => {
 
 // player
 
-// 2. This code loads the IFrame Player API code asynchronously.
-var tag = document.createElement('script');
+const tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
+const firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var player;
+let player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         'autoplay': 0,
         'disablekb': 0,   
         videoId: 'z0DnBiM3DtQ',
         events: {
-            'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
         }
     });
 }
 
-function onPlayerReady(event) {
-    event.target.playVideo();
-}
 
 var done = false;
 function onPlayerStateChange(event) {
