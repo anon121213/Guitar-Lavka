@@ -1,5 +1,4 @@
-﻿using MyWebAPI.Vendor.Server;
-using MyWebAPI.Vendor.Server.EventSystem.Events;
+﻿using MyWebAPI.Vendor.Server.EventSystem.Events;
 
 namespace MyWebAPI.Vendor;
 
@@ -7,8 +6,10 @@ public class DependencyInstaller(WebApplicationBuilder _builder)
 {
     public void RegisterDependencies()
     {
-        _builder.Services.AddTransient<IGetDataService, GetDataService>();
+        _builder.Services.AddTransient<IGetDataByIdService, GetDataByIdByIdService>();
         _builder.Services.AddTransient<IGetStringsCount, GetStringsCount>();
         _builder.Services.AddTransient<IGetAllProducts, GetAllProducts>();
+        _builder.Services.AddTransient<IGetProductsByDiapasonePrice, GetProductsByDiapasonePrice>();
+        _builder.Services.AddTransient<IGetAllProductsByPrice, GetAllProductsByPrice>();
     }
 }

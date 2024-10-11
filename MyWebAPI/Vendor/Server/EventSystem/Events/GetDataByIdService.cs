@@ -4,9 +4,9 @@ using MyWebAPI.Vendor.Server.Data;
 
 namespace MyWebAPI.Vendor.Server.EventSystem.Events;
 
-public class GetDataService(ApplicationDbContext _context) : IGetDataService
+public class GetDataByIdByIdService(ApplicationDbContext _context) : IGetDataByIdService
 {
-    private const string EVENTID = "GetData";
+    private const string EVENTID = "GetDataById";
     
     public async Task<EventData?> GetData(int eventId)
     {
@@ -16,7 +16,7 @@ public class GetDataService(ApplicationDbContext _context) : IGetDataService
         return product;
     }
     
-    public async Task<EventData?> OnEvent(string eventId, string? data = default)
+    public async Task<EventData?> OnEvent(string eventId, ClientData data = default)
     {
         if (eventId != EVENTID)
             return null;
@@ -25,7 +25,7 @@ public class GetDataService(ApplicationDbContext _context) : IGetDataService
     }
 }
 
-public interface IGetDataService : IOnEventCallback
+public interface IGetDataByIdService : IOnEventCallback
 {
     Task<EventData?> GetData(int eventId);
 }

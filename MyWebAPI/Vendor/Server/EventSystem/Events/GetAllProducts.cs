@@ -15,7 +15,7 @@ public class GetAllProducts(ApplicationDbContext _context) : IGetAllProducts
         return product;
     }
 
-    public async Task<EventData?> OnEvent(string eventId, string? data = default)
+    public async Task<EventData?> OnEvent(string eventId, ClientData data = default)
     {
         if (eventId != EVENTID)
             return null;

@@ -2,7 +2,7 @@
 using MyWebAPI.Vendor.Server.Data;
 using MyWebAPI.Vendor.Server.EventSystem.Events;
 
-namespace MyWebAPI.Vendor.Server
+namespace MyWebAPI.Vendor.Server.EventSystem
 {
     [Route("api/eventservice")]
     [ApiController]
@@ -12,32 +12,21 @@ namespace MyWebAPI.Vendor.Server
         private readonly ILogger<EventService> _logger;
 
         public EventService(ILogger<EventService> logger,
-            IGetDataService getData,
+            IGetDataByIdService getDataById,
             IGetAllProducts allProducts,
-            IGetStringsCount getStringsCount)
+            IGetStringsCount getStringsCount,
+            IGetAllProductsByPrice getAllProductsByPrice,
+            IGetProductsByDiapasonePrice getProductsByDiapasonePrice)
         {
             _logger = logger;
-            _eventCallbacks.Add(getData);
+            _eventCallbacks.Add(getDataById);
             _eventCallbacks.Add(allProducts);
             _eventCallbacks.Add(getStringsCount);
+            _eventCallbacks.Add(getAllProductsByPrice);
+            _eventCallbacks.Add(getProductsByDiapasonePrice);
         }
         
-
-        private async Task<EventData?> RaiseEventFromClient(string id)
-        {
-            _logger.LogInformation($"Event {id} received");
-            
-            foreach (var callback in _eventCallbacks)
-            {
-                var data = await callback.OnEvent(id);
-                _logger.LogInformation($"Event {callback} raised");
-                if (data != null)
-                    return data;
-            }
-            return null;
-        }
-        
-        private async Task<EventData?> RaiseEventFromClient(string id, string? data)
+        private async Task<EventData?> RaiseEventFromClient(string id, ClientData data)
         {
             _logger.LogInformation($"Event {id} received");
             
@@ -50,30 +39,9 @@ namespace MyWebAPI.Vendor.Server
             }
             return null;
         }
-
-        [HttpGet("handle-event/{id}")]
-        public async Task<IActionResult> HandleEvent(string id)
-        {
-            try
-            {
-                _logger.LogInformation($"Handling event {id}");
-                
-                var data = await RaiseEventFromClient(id);
-                
-                _logger.LogInformation(data.Name);
-                
-                return Ok(data);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error handling event");
-                return StatusCode(StatusCodes.Status500InternalServerError,
-                    "An error occurred while handling the event.");
-            }
-        } 
         
-        [HttpGet("payload-event/{id}/{data}")]
-        public async Task<IActionResult> HandleEvent(string id, string data)
+        [HttpPost("payload-event/{id}")]
+        public async Task<IActionResult> HandleEvent(string id, [FromBody] ClientData data)
         {
             try
             {
@@ -81,7 +49,7 @@ namespace MyWebAPI.Vendor.Server
                 
                 var eventData = await RaiseEventFromClient(id, data);
 
-                _logger.LogInformation(eventData.Name);
+                _logger.LogInformation(eventData?.Name);
                 
                 return Ok(eventData);
             }
@@ -96,6 +64,12 @@ namespace MyWebAPI.Vendor.Server
 
     public interface IOnEventCallback
     {
-        Task<EventData?> OnEvent(string eventId, string? data = default);
+        Task<EventData?> OnEvent(string eventId, ClientData data = default);
+    }
+    
+    public struct ClientData
+    {
+        public int MinPrice { get; set; }
+        public int MaxPrice { get; set; }
     }
 }

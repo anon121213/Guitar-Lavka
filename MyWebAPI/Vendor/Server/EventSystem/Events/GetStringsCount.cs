@@ -14,7 +14,7 @@ public class GetStringsCount(ApplicationDbContext _context) : IGetStringsCount
         return count;
     }
 
-    public async Task<EventData?> OnEvent(string eventid, string? data = default)
+    public async Task<EventData?> OnEvent(string eventid, ClientData data = default)
     {
         if (eventid != EVENTID)
             return null;

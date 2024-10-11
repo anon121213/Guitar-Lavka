@@ -1,4 +1,16 @@
-﻿function createProductHTML(product) {
+﻿const GetAllProdictsId = "GetAllProducts"
+const GetyDiapasonePrice = "GetProductsByDiapasonePrice"
+const ReduseID = "GetReduseProducts";
+const IncreaseID = "GetIncreseProducts";
+const GetDataById = "GetDataById";
+const GetStringsCountId = "GetStringsCount";
+
+const nullData = {
+    minPrice: 0,
+    maxPrice: 0
+}
+
+function createProductHTML(product) {
     return `
         <div class="product">   
             <form action="#" class="product">
@@ -26,21 +38,58 @@
 
 async function LoadAllProducts() {
     try {
-        const response = await fetch(`http://localhost:5144/api/eventservice/handle-event/GetAllProducts`, {
-            method: 'GET',
+        const data = {
+            minPrice: 0,
+            maxPrice: 200000
+        }
+        
+        const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/${GetAllProdictsId}`, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
-            }
+            },
+            body: JSON.stringify(nullData)
         });
+
+        if (!response.ok) 
+            console.log('Network response was not ok');
 
         const products = await response.json();
         const gridDiv = document.getElementById('grid');
         
-        console.log(products)
-        
         products.allProducts.forEach(product => {
             gridDiv.innerHTML += createProductHTML(product);
         })
+
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+async function LoadAllProductByPrice() {
+    try {
+        const data = {
+            minPrice: 0,
+            maxPrice: 200000
+        }
+
+        const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/${IncreaseID}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!response.ok) 
+            console.log('Network response was not ok');
+
+        const products = await response.json();
+        const gridDiv = document.getElementById('grid');
+
+        products.allProducts.forEach(product => {
+            gridDiv.innerHTML += createProductHTML(product);
+        });
 
     } catch (error) {
         console.error('Error:', error);
