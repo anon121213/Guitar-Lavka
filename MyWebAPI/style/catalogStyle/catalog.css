@@ -511,6 +511,29 @@ button {
   font-weight: 400;
   line-height: 1.88rem;
 }
+.sec2 .sec2-container__leftSide .filters .price-inputs__label {
+  display: flex;
+  flex-direction: column;
+}
+.sec2 .sec2-container__leftSide .filters .price-inputs__label__price-input {
+  max-width: 200px;
+  height: 30px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 2px solid #CC7408;
+  color: #CC7408;
+  background-color: #131218;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+.sec2 .sec2-container__leftSide .filters .price-inputs__label__apply {
+  max-width: 220px;
+  height: 30px;
+  width: 100%;
+  background-color: #CC7408;
+  color: #131218;
+  font-size: 15px;
+}
 .sec2 .sec2-container__rightSide {
   width: 100%;
   margin-left: 40px;

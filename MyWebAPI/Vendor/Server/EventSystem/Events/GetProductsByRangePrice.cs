@@ -2,20 +2,21 @@
 using Microsoft.EntityFrameworkCore;
 using MyWebAPI.Data;
 using MyWebAPI.Vendor.Server.Data;
+using Npgsql;
 
 namespace MyWebAPI.Vendor.Server.EventSystem.Events;
 
-public class GetProductsByDiapasonePrice(ApplicationDbContext _context) : IGetProductsByDiapasonePrice
+public class GetProductsByRangePrice(ApplicationDbContext _context) : IGetProductsByDiapasonePrice
 {
     private const string EVENTID = "GetProductsByDiapasonePrice";
     
     public async Task<EventData?> GetDiapasonePrice(int minPrice, int maxPrice)
     {
         var minPriceParameter =
-            new SqlParameter("@minPrice", minPrice);
+            new NpgsqlParameter("@minPrice", minPrice);
         
         var maxPriceParameter =
-            new SqlParameter("@maxPrice", maxPrice);
+            new NpgsqlParameter("@maxPrice", maxPrice);
         
         var sql = "SELECT * FROM Products WHERE Price >= @minPrice AND Price <= @maxPrice";
         

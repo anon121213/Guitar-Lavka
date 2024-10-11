@@ -538,6 +538,34 @@ $white: rgb(196, 196, 196);
                         }
                     }
                 }
+                .price-inputs{
+                    &__label{
+                        display: flex;
+                        flex-direction: column;
+
+                        &__price-input{
+                            max-width: 200px;
+                            height: 30px;
+                            width: 100%;
+                            margin-bottom: 10px;
+                            border: 2px solid #CC7408;
+                            color: #CC7408;
+                            background-color: #131218;
+                            border-radius: 3px;
+                            padding-left: 15px;
+                        }
+                        
+                        &__apply{
+                            max-width: 220px;
+                            height: 30px;
+                            width: 100%;
+                            background-color: #CC7408;
+                            color: #131218;
+                            font-size: 15px;
+                            border-radius: 3px;
+                        }
+                    }
+                }
             }
         }
 

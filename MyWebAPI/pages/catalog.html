@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../style/catalogStyle/catalog.css">
-    <script src="../js/catalog.js" defer></script>
-    <script src="../js/GetProduct.js" defer></script>
+    <script src="../js/Catalog/CreateProduct.js" defer></script>
+    <script src="../js/Catalog/GetProduct.js" defer></script>
+    <script src="../js/Catalog/LoadProductByPrice.js" defer></script>
+    <script src="../js/Catalog/Catalog.js" defer></script>
+    <script src="../js/Catalog/Main.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -159,7 +162,14 @@
                             <li><a href="#">Струны для бас-гитары</a></li>
                             <li><a href="#">Струны для укулеле</a></li>
                         </ul>
-                    </div>            
+                    </div>
+                    <div class="price-inputs">
+                        <label class="price-inputs__label">
+                            <input class="price-inputs__label__price-input" id="min-price" type="number" step="1" value="0">
+                            <input class="price-inputs__label__price-input" id="max-price" type="number" step="1" value="370000">
+                            <button class="price-inputs__label__apply" id = "apply-price-range">Применить</button>
+                        </label>
+                    </div>
                 </div>
                 <button class="filtersButton">фильтры</button>  
             </div>
@@ -176,9 +186,9 @@
                             <p>сортировка</p>
                             <button class="sort-button">По умолчанию ...</button>
                             <ul class="sort">
-                                <li class="first"><button><span>По умолчанию</span></button></li>
-                                <li><button><span>По возрастанию цены</span></button></li>
-                                <li><button><span>По убыванию цены</span></button></li>
+                                <li class="first" id = "DefaultSortButton"><button><span>По умолчанию</span></button></li>
+                                <li><button id = "IncreasePriceButton"><span>По возрастанию цены</span></button></li>
+                                <li><button id = "RedusePriceButton"><span>По убыванию цены</span></button></li>
                             </ul>
                         </div>
                         <div class="sort-number">
@@ -218,27 +228,6 @@
                 </div>     
                 <div class="sec2-container__rightSide__bottom">
                     <div id="grid" class="products">
-                        <div class="product">   
-                            <form action="#" class="product">
-                                <div class="product__imgContainer">
-                                    <a href="product.html"><img class="product__imgContainer__img" src="../img/catalogImg/section2/product.png" alt="Ptoduct.png"></a>
-                                </div>
-                                <div class="content">
-                                    <a href="#"><p class="type">Укулеле</p></a>
-                                    <a href="product.html"><h2 class="name">Enya EUC-MAD</h2></a>
-                                    <div class="content__bottom">
-                                        <div class="count">
-                                            <p class="price">₽24 890</p>
-                                            <p class="sale-price">₽24 890</p>
-                                        </div>
-                                        <div class="score">
-                                            <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
-                                            <a href="#"><p class="score">7 <span>отзывов</span></p>  </a>                         
-                                        </div>
-                                    </div>                               
-                                </div> 
-                            </form>                                                      
-                        </div>
                     </div>  
                     <div class="mobileProducts">
                         <div class="product">      
