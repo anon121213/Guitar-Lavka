@@ -1,6 +1,7 @@
-﻿async function LoadAllProducts() {
+﻿async function LoadAllProducts(isStock) {
     try {
         const nullData = {
+            isStock: isStock,
             minPrice: 0,
             maxPrice: 0
         }

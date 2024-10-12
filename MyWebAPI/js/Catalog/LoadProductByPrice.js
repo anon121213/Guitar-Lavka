@@ -1,10 +1,11 @@
-﻿async function LoadAllProductByPrice(minPrice, maxPrice, id) {
+﻿async function LoadAllProductByPrice(minPrice, maxPrice, isStockValue, id) {
     try {
         minPrice = minPrice == '' ? 0 : minPrice;
         maxPrice = maxPrice == '' ? 999999 : maxPrice;
-
-        const data = { minPrice, maxPrice }
+        let isStock = isStockValue;
         
+        const data = { isStock, minPrice, maxPrice }
+        console.log(data.isStockValue)
         const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/${id}`, {
             method: 'POST',
             headers: {

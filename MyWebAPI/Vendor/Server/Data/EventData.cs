@@ -13,18 +13,27 @@ public class EventData
 
     [Column("name")]
     public string Name { get; set; }
+    
     [Column("type")]
     public string Type { get; set; }
+    
     [Column("price")]
     public int Price { get; set; }
+    
     [Column("sale_price")]
     public int SalePrice { get; set; }
+    
     [Column("rating")]
-    public decimal Rating { get; set; }
+    public double Rating { get; set; }
+    
     [Column("rating_preople_count")]
     public int RatingCount { get; set; }
+    
     [Column("image_link")]
     public string ImageLink { get; set; }
+    
+    [Column("is_stock")]
+    public bool IsStock { get; set; }
     
     [NotMapped]
     public int StringCount { get; set; }

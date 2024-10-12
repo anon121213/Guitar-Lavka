@@ -66,10 +66,4 @@ namespace MyWebAPI.Vendor.Server.EventSystem
     {
         Task<EventData?> OnEvent(string eventId, ClientData data = default);
     }
-    
-    public struct ClientData
-    {
-        public int MinPrice { get; set; }
-        public int MaxPrice { get; set; }
-    }
 }
