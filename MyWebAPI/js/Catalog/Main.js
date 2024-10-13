@@ -41,6 +41,11 @@ defaultSortButton.onclick = async () => {
 }
 
 window.onload = async function() {
+    CreateAll();
+    await LoadAllProducts(isStock.checked);
+};
+
+function CreateAll(){
     CreateFiltersLogic("listButton", "list_name", "Arrow");
     CreateScrollButton("BackToStartPageButton");
     CreateFinderLogic("loop", "input", "logo");
@@ -55,5 +60,4 @@ window.onload = async function() {
         "", "", false);
     CreateFavoritesLogic( "ActiveHeart", "nonActiveHeart");
     CreatePlayer("https://www.youtube.com/iframe_api");
-    await LoadAllProducts(isStock.checked);
-};
+}
