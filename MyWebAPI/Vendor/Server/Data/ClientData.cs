@@ -1,4 +1,4 @@
-﻿namespace MyWebAPI.Vendor.Server.EventSystem;
+﻿namespace MyWebAPI.Vendor.Server.Data;
 
 public struct ClientData
 {

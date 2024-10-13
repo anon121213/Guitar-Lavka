@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MyWebAPI.Data;
 using MyWebAPI.Vendor.Server.Data;
+using MyWebAPI.Vendor.Server.DBController;
 using Npgsql;
 
 namespace MyWebAPI.Vendor.Server.EventSystem.Events

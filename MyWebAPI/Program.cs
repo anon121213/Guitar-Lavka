@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using MyWebAPI.Data;
 using MyWebAPI.Vendor;
+using MyWebAPI.Vendor.Installers;
 using MyWebAPI.Vendor.Server;
+using MyWebAPI.Vendor.Server.DBController;
 
 var builder = WebApplication.CreateBuilder(args);
 
