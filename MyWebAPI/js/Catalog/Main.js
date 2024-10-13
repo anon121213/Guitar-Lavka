@@ -41,5 +41,19 @@ defaultSortButton.onclick = async () => {
 }
 
 window.onload = async function() {
+    CreateFiltersLogic("listButton", "list_name", "Arrow");
+    CreateScrollButton("BackToStartPageButton");
+    CreateFinderLogic("loop", "input", "logo");
+    CreateBurgerLogic("burgerButton", "burger",
+        "content", "hideBurgerButton");
+    CreateMobileFilters("mobileSort", "filtersButton");
+    CreateNumsLogic("numsClass", "lastClass", "firstClass",
+        "startClass", "finishClass");
+    CreateGridLogic("gridActive", "gridNonActive",
+        "listActives", "listNonActive", "list", "grid");
+    CreateBasketButton("nonActiveBuscket", "ActiveBuscket",
+        "", "", false);
+    CreateFavoritesLogic( "ActiveHeart", "nonActiveHeart");
+    CreatePlayer("https://www.youtube.com/iframe_api");
     await LoadAllProducts(isStock.checked);
 };

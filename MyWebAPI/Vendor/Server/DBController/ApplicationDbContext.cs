@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MyWebAPI.Vendor.Server.Data;
 
-namespace MyWebAPI.Data
+namespace MyWebAPI.Vendor.Server.DBController
 {
     public class ApplicationDbContext : DbContext
     {

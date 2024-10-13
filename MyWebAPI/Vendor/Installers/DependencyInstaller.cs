@@ -1,6 +1,6 @@
 ﻿using MyWebAPI.Vendor.Server.EventSystem.Events;
 
-namespace MyWebAPI.Vendor;
+namespace MyWebAPI.Vendor.Installers;
 
 public class DependencyInstaller(WebApplicationBuilder _builder)
 {
