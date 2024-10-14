@@ -15,7 +15,7 @@ public class GetProductsBySearch(ApplicationDbContext _context)
     {
         string sql = @"
             SELECT * FROM products
-            WHERE name LIKE @searchParameter
+            WHERE LOWER(name) LIKE LOWER(@searchParameter)
               AND price >= @minPrice
               AND price <= @maxPrice
         ";
@@ -41,8 +41,6 @@ public class GetProductsBySearch(ApplicationDbContext _context)
 
         return products;
     }
-
-
     
     public async Task<EventData?> OnEvent(string eventId, ClientData data = default)
     {

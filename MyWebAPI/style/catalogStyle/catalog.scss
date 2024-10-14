@@ -130,7 +130,6 @@ $white: rgb(196, 196, 196);
 
     .container{
         .content{
-
             padding-bottom: 15px;
             display: flex;
             justify-content: space-between;
@@ -167,10 +166,12 @@ $white: rgb(196, 196, 196);
                     display: flex;
                     align-items: center;
                     position: relative;
-    
-                    img{
-                        position: absolute;
-                        left: 8px;
+                    
+                    button{
+                        align-items: center;
+                        position: relative;
+                        left: 28px;
+                        top: 2px;
                     }
     
                     input{

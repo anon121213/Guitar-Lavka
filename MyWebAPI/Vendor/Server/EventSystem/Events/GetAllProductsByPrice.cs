@@ -17,7 +17,7 @@ public class GetAllProductsByPrice(ApplicationDbContext _context)
         var order = isDescending ? "DESC" : "ASC";
         var sql = $@"
             SELECT * FROM products
-            WHERE name LIKE @searchParameter
+            WHERE LOWER(name) LIKE LOWER(@searchParameter)
               AND price >= @minPrice
               AND price <= @maxPrice
               {(isStock ? "AND is_stock = @isStockParameter" : "")}

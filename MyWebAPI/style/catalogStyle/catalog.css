@@ -208,9 +208,11 @@ button {
   align-items: center;
   position: relative;
 }
-.sec1 .container .content .right .input img {
-  position: absolute;
-  left: 8px;
+.sec1 .container .content .right .input button {
+  align-items: center;
+  position: relative;
+  left: 28px;
+  top: 2px;
 }
 .sec1 .container .content .right .input input {
   background: url("../../img/catalogImg/section1/loop.svg");
@@ -533,6 +535,7 @@ button {
   background-color: #CC7408;
   color: #131218;
   font-size: 15px;
+  border-radius: 3px;
 }
 .sec2 .sec2-container__rightSide {
   width: 100%;

@@ -14,7 +14,7 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
         {
             var sql = $@"
                 SELECT * FROM Products
-                WHERE name LIKE @searchParameter
+                WHERE LOWER(name) LIKE LOWER(@searchParameter)
                   AND price >= @minPrice 
                   AND price <= @maxPrice 
                 {(isStock ? "AND is_stock = @isStockParameter" : "")}";
