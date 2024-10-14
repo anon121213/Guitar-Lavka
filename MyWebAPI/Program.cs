@@ -42,6 +42,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseCors("AllowAllOrigins");
 app.UseRouting();
+
 app.MapControllers();
 
-app.Run();
+app.Run("http://*:80"); // Убедись, что приложение слушает на порту 80 внутри контейнера

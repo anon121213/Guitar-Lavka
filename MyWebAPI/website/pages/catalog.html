@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/catalogStyle/catalog.css">
+    <script src="../js/Catalog/Requests/CreateProduct.js" defer></script>
+    <script src="../js/Catalog/Requests/GetProduct.js" defer></script>
+    <script src="../js/Catalog/Requests/LoadProductByPrice.js" defer></script>
+    <script src="../js/Filters/FiltersList.js" defer></script>
+    <script src="../js/Filters/MobileFiltersList.js" defer></script>
+    <script src="../js/ScrollButton/ScrollButton.js" defer></script>
+    <script src="../js/Find/Find.js" defer></script>
+    <script src="../js/Catalog/GridVue/VueGrid.js" defer></script>
+    <script src="../js/Baskets/Basket.js" defer></script>
+    <script src="../js/Catalog/Favorites/Favorites.js" defer></script>
+    <script src="../js/Catalog/Nums/Nums.js" defer></script>
+    <script src="../js/YouTubePlayer/Player.js" defer></script>
+    <script src="../js/Catalog/Main.js" defer></script>
+</head>
+<body>
+<header class="header">
+    <div class="header__headerContainer">
+        <div class="header__headerContainer__between">
+            <div class="header__headerContainer__between__left">
+                <p class="your_city">Ваш город:</p>
+                <p class="city">Самара</p>
+            </div>
+            <div class="header__headerContainer__between__right">
+                <img src="../img/catalogImg/header/phoneTrubka.svg" alt="phone.svg" class="phone">
+                <a href="tel:88001002680">8 (800) 100 26 80</a>
+                <p class="everyDay">ЕЖЕДНЕВНО</p>
+                <p>10:00-20:00</p>
+            </div>
+        </div>
+        <div class="header_center">
+            <ul>
+                <li class="whatsUp"><a href="#"><img src="../img/catalogImg/header/whatsUp.svg" alt="whatsUp"></a></li>
+                <li class="tg"><a href="#"><img src="../img/catalogImg/header/telegramm.svg" alt="telegramm"></a></li>
+                <li class="vk"><a href="#"><img src="../img/catalogImg/header/vk.svg" alt="vk"></a></li>
+                <li class="viber"><a href="#"><img src="../img/catalogImg/header/viber.svg" alt="viber"></a></li>
+                <li class="yt"><a href="#"><img src="../img/catalogImg/header/YT.svg" alt="YT"></a></li>
+                <li class="inst"><a href="#"><img src="../img/catalogImg/header/inst.svg" alt="inst"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="BackToStartPage hidden">
+        <button id="BackToStartPageButton" class="BackToStartPageButton"><img
+                src="../img/catalogImg/header/ArrowBackToStartPage.svg" alt="ArrowBackToStartPage.svg"></button>
+    </div>
+</header>
+<section class="sec1">
+    <div class="container">
+        <div class="content">
+            <div class="left logo">
+                <a href="../pages/index.html"><img src="../img/catalogImg/section1/Logo.svg" alt="Logo.svg"></a>
+                <ul class="breadcrumb">
+                    <li><a href="./index.html">Главная</a></li>
+                    <li><a href="#">/</a></li>
+                    <li><a href="./catalog.html">Каталог</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="input hidden">
+                    <button id=Search_button><img src="../img/catalogImg/section1/loop.svg" alt="loop.svg"></button>
+                    <label for="Search_input"></label><input id="Search_input" type="text" placeholder="Поиск...">
+                </div>
+                <button class="loop"><img src="../img/catalogImg/section1/loop.svg" alt="loop.svg"></button>
+                <button class="heart"><img src="../img/catalogImg/section1/heart.svg" alt="heart.svg"></button>
+                <button><img src="../img/catalogImg/section1/bascket.svg" alt="bascket.svg"></button>
+                <button class="burgerButton"><img src="../img/catalogImg/section1/burger.svg" alt="burger.svg"></button>
+            </div>
+        </div>
+        <div class="listMenu">
+            <ul class="center_ul">
+                <li><a href="./catalog.html">КАТАЛОГ</a></li>
+                <li>
+                    <button>УСЛУГИ</button>
+                </li>
+                <li><a href="#">О НАС</a></li>
+                <li><a href="#">ДОСТАВКА</a></li>
+                <li><a href="#">ОТЗЫВЫ</a></li>
+                <li><a href="#">ОБУЧЕНИЕ</a></li>
+                <li><a href="#">КОНТАКТЫ</a></li>
+                <li><a href="#">ОПТ</a></li>
+            </ul>
+        </div>
+        <div class="burger hidden">
+            <div class="burger__container">
+                <div class="burger__container__top">
+                    <div class="burger__container__top__left">
+                        <a href="#"><img src="../img/indexImg/section1/mobile/mobileLogo.svg" alt="mobileLogo.svg"></a>
+                        <p>Главная / Меню</p>
+                    </div>
+                    <div class="burger__container__top__right">
+                        <button class="hideBurgerButton"><img src="../img/indexImg/section1/mobile/cross.svg"
+                                                              alt="cross.svg"></button>
+                    </div>
+                </div>
+                <div class="burger__container__bottom">
+                    <ul class="burger__container__bottom__big_ul">
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Опт</a></li>
+                    </ul>
+                    <ul class="burger__container__bottom__small_ul">
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Обучение</a></li>
+                        <li><a href="#">О нас</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec2">
+    <div class="sec2-container">
+        <div class="sec2-container__leftSide">
+            <div class="names">
+                <h2 class="catalog">Каталог</h2>
+                <h2 class="filters">Фильтры</h2>
+            </div>
+            <div class="filters">
+                <div class="guitar-list">
+                    <div class="guitar-list__name">
+                        <button data-list="1" class="listButton">Гитары</button>
+                        <img id="arrow-1" class="Arrow" src="../img/catalogImg/section2/arrowRight.svg"
+                             alt="arrowRight.svg">
+                    </div>
+                    <ul id="1" class="guitar-list__name__guitars list_name hidden">
+                        <li><a href="#">Акустические гитары</a></li>
+                        <li><a href="#">Электроакустические гитары</a>></li>
+                        <li><a href="#">Полуакустические гитары</a></li>
+                        <li><a href="#">Классические гитары</a></li>
+                        <li><a href="#">Электрогитары</a></li>
+                        <li><a href="#">Б/У электрогитары</a></li>
+                        <li><a href="#">Тревел-гитары</a></li>
+                    </ul>
+                </div>
+                <div class="ukuleles-list">
+                    <div class="ukuleles-list__name">
+                        <button data-list="2" class="listButton">Укулеле</button>
+                        <img id="arrow-2" class="Arrow" src="../img/catalogImg/section2/arrowRight.svg"
+                             alt="arrowRight.svg">
+                    </div>
+                    <ul id="2" class="ukuleles-list__name__ukulele list_name hidden">
+                        <li><a href="#">Укулеле тенор</a></li>
+                        <li><a href="#">Укулеле сопрано</a></li>
+                        <li><a href="#">Укулеле концерт</a></li>
+                    </ul>
+                </div>
+                <div class="accessories-list">
+                    <div class="accessories-list__name">
+                        <button data-list="3" class="listButton">Аксессуары</button>
+                        <img id="arrow-3" class="Arrow" src="../img/catalogImg/section2/arrowRight.svg"
+                             alt="arrowRight.svg">
+                    </div>
+                    <ul id="3" class="accessories-list__name__accessories list_name hidden">
+                        <li><a href="#">Средства для ухода</a></li>
+                        <li><a href="#">Чехлы для укулеле</a></li>
+                        <li><a href="#">Чехлы для гитары</a></li>
+                        <li><a href="#">Ремни</a></li>
+                        <li><a href="#">Колки</a></li>
+                        <li><a href="#">Комбоусилители</a></li>
+                    </ul>
+                </div>
+                <div class="strings-list">
+                    <div class="strings-list__name">
+                        <button data-list="4" class="listButton">Струны</button>
+                        <img id="arrow-4" class="Arrow" src="../img/catalogImg/section2/arrowRight.svg"
+                             alt="arrowRight.svg">
+                    </div>
+                    <ul id="4" class="strings-list__name__strings list_name hidden">
+                        <li><a href="#">Струны для гитары</a></li>
+                        <li><a href="#">Струны для бас-гитары</a></li>
+                        <li><a href="#">Струны для укулеле</a></li>
+                    </ul>
+                </div>
+                <div class="price-inputs">
+                    <label class="price-inputs__label">
+                        <input class="price-inputs__label__price-input" id="min-price" type="number" step="1" value="0">
+                        <input class="price-inputs__label__price-input" id="max-price" type="number" step="1"
+                               value="370000">
+                        <button class="price-inputs__label__apply" id="apply-price-range">Применить</button>
+                    </label>
+                </div>
+            </div>
+            <button class="filtersButton">фильтры</button>
+        </div>
+        <div class="sec2-container__rightSide">
+            <div class="sec2-container__rightSide__top">
+                <div class="center">
+                    <p id="products-count">155 товаров</p>
+                    <label>
+                        В наличии
+                        <input class="checkbox" type="checkbox" value="HTML" id="isStock">
+                        <span class="fake"></span>
+                    </label>
+                    <div class="sort-list">
+                        <p>сортировка</p>
+                        <button class="sort-button">По умолчанию ...</button>
+                        <ul class="sort">
+                            <li class="first" id="DefaultSortButton">
+                                <button><span>По умолчанию</span></button>
+                            </li>
+                            <li>
+                                <button id="IncreasePriceButton"><span>По возрастанию цены</span></button>
+                            </li>
+                            <li>
+                                <button id="RedusePriceButton"><span>По убыванию цены</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sort-number">
+                        <p>Показывать по</p>
+                        <input type="text" placeholder="15">
+                    </div>
+                    <div class="vue-type">
+                        <button class="grid"><img class="grid_Active active"
+                                                  src="../img/catalogImg/section2/ActiveGrid.svg" alt="grid.svg"><img
+                                class="grid_nonActive hidden" src="../img/catalogImg/section2/nonActiveGrid.svg"
+                                alt="nonActiveGrid.svg"></button>
+                        <button class="list"><img class="list_nonActive"
+                                                  src="../img/catalogImg/section2/nonActiveList.svg" alt="list.svg"><img
+                                class="list_Active hidden" src="../img/catalogImg/section2/ActiveList.svg"
+                                alt="ActiveList.svg"></button>
+                    </div>
+                </div>
+                <div class="mobileSort hidden">
+                    <p>155 товаров</p>
+                    <label>
+                        В наличии
+                        <input class="checkbox" type="checkbox" value="HTML">
+                        <span class="fake"></span>
+                    </label>
+                    <div class="sort-list">
+                        <p>сортировка</p>
+                        <button class="sort-button">По умолчанию ...</button>
+                        <ul class="sort">
+                            <li class="first">
+                                <button><span>По умолчанию</span></button>
+                            </li>
+                            <li>
+                                <button><span>По возрастанию цены</span></button>
+                            </li>
+                            <li>
+                                <button><span>По убыванию цены</span></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="sort-number">
+                        <p>Показывать по</p>
+                        <input type="text" placeholder="15">
+                    </div>
+                    <div class="vue-type">
+                        <button class="grid"><img class="grid_Active active"
+                                                  src="../img/catalogImg/section2/ActiveGrid.svg" alt="grid.svg"><img
+                                class="grid_nonActive hidden" src="../img/catalogImg/section2/nonActiveGrid.svg"
+                                alt="nonActiveGrid.svg"></button>
+                        <button class="list"><img class="list_nonActive"
+                                                  src="../img/catalogImg/section2/nonActiveList.svg" alt="list.svg"><img
+                                class="list_Active hidden" src="../img/catalogImg/section2/ActiveList.svg"
+                                alt="ActiveList.svg"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="sec2-container__rightSide__bottom">
+                <div id="grid" class="products">
+                </div>
+                <div class="mobileProducts">
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html">
+                                    <img class="product__imgContainer__img"
+                                         src="../img/catalogImg/section2/mobileProduct.png"
+                                         alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="product">
+                        <form action="#" class="product" method="post">
+                            <div class="product__imgContainer">
+                                <a href="./product.html"><img class="product__imgContainer__img"
+                                                              src="../img/catalogImg/section2/mobileProduct.png"
+                                                              alt="Product.png"></a>
+                            </div>
+                            <div class="content">
+                                <a href="./product.html"><h2 class="name">Enya EUC-MAD</h2></a>
+                                <div class="content__bottom">
+                                    <div class="count">
+                                        <p class="price">₽24 890</p>
+                                    </div>
+                                    <div class="score">
+                                        <img src="../img/indexImg/section4/Score.svg" alt="score.svg">
+                                        <a href="./product.html"><p class="score">7 <span>отзывов</span></p></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="list" class="list hidden">
+                    <div class="list-product">
+                        <div class="product">
+                            <form action="#" method="post" class="product">
+                                <div class="product__left">
+                                    <a href="#"><img src="../img/catalogImg/section2/ukulele.png" alt="ukulele.png"></a>
+                                </div>
+                                <div class="product__right first">
+                                    <div class="product__right__top">
+                                        <div class="product__right__top__left">
+                                            <a href="#">Комбоусилитель</a>
+                                            <a class="name" href="#">Joyo AC - 20</a>
+                                        </div>
+                                        <div class="product__right__top__right">
+                                            <button id="1" class="nonActiveHeart"><img id="1"
+                                                                                       src="../img/catalogImg/section2/heart.svg"
+                                                                                       alt="heart.svg"></button>
+                                            <button id="1" class="ActiveHeart hidden"><img id="1"
+                                                                                           src="../img/catalogImg/section2/orageHeart.svg"
+                                                                                           alt="orageHeart.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product__right__bottom">
+                                        <div class="product__right__bottom__top">
+                                            <p>₽24 890</p>
+                                            <div class="score">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                            </div>
+                                        </div>
+                                        <div class="product__right__bottom__bottom">
+                                            <div class="photos">
+                                                <img src="../img/catalogImg/section2/deca.png" alt="deca.png">
+                                                <img src="../img/catalogImg/section2/golova.png" alt="golova.png">
+                                                <img src="../img/catalogImg/section2/fullPhoto.png" alt="fullPhoto.png">
+                                            </div>
+                                            <div class="bascket">
+                                                <div id="1" class="ActiveBuscket hidden">
+                                                    <button id="1" class="basketButton">Перейти в корзину</button>
+                                                </div>
+                                                <div id="1" class="nonActiveBuscket">
+                                                    <button id="1" class="basketButton"><img
+                                                            src="../img/catalogImg/section2/Bascket.svg"
+                                                            alt="Bascket.svg">В корзину
+                                                    </button>
+                                                </div>
+                                                <button class="comparison">Добавить к сравнению</button>
+                                            </div>
+                                        </div>
+                                        <a class="inStock" href="#">в наличии</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="product">
+                            <form action="#" method="post" class="product">
+                                <div class="product__left">
+                                    <a href="#"><img src="../img/catalogImg/section2/combic.png" alt="combic.png"></a>
+                                </div>
+                                <div class="product__right">
+                                    <div class="product__right__top">
+                                        <div class="product__right__top__left">
+                                            <a href="#">Комбоусилитель</a>
+                                            <a class="name" href="#">Joyo AC - 20</a>
+                                        </div>
+                                        <div class="product__right__top__right">
+                                            <button id="2" class="nonActiveHeart"><img id="2"
+                                                                                       src="../img/catalogImg/section2/heart.svg"
+                                                                                       alt="heart.svg"></button>
+                                            <button id="2" class="ActiveHeart hidden"><img id="2"
+                                                                                           src="../img/catalogImg/section2/orageHeart.svg"
+                                                                                           alt="orageHeart.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product__right__bottom">
+                                        <div class="product__right__bottom__top">
+                                            <p>₽24 890</p>
+                                            <div class="score">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                            </div>
+                                        </div>
+                                        <div class="product__right__bottom__bottom">
+                                            <div class="photos">
+                                                <img src="../img/catalogImg/section2/deca.png" alt="deca.png">
+                                                <img src="../img/catalogImg/section2/golova.png" alt="golova.png">
+                                                <img src="../img/catalogImg/section2/fullPhoto.png" alt="fullPhoto.png">
+                                            </div>
+                                            <div class="bascket">
+                                                <div id="2" class="ActiveBuscket hidden">
+                                                    <button id="2" class="basketButton">Перейти в корзину</button>
+                                                </div>
+                                                <div id="2" class="nonActiveBuscket">
+                                                    <button id="2" class="basketButton"><img
+                                                            src="../img/catalogImg/section2/Bascket.svg"
+                                                            alt="Bascket.svg">В корзину
+                                                    </button>
+                                                </div>
+                                                <button class="comparison">Добавить к сравнению</button>
+                                            </div>
+                                        </div>
+                                        <a href="#">под заказ</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="product">
+                            <form action="#" method="post" class="product">
+                                <div class="product__left">
+                                    <img src="../img/catalogImg/section2/chehol.png" alt="chehol.png">
+                                </div>
+                                <div class="product__right lastProduct">
+                                    <div class="product__right__top">
+                                        <div class="product__right__top__left">
+                                            <a href="#">Комбоусилитель</a>
+                                            <a class="name" href="#">Joyo AC - 20</a>
+                                        </div>
+                                        <div class="product__right__top__right">
+                                            <button id="3" class="nonActiveHeart"><img id="3"
+                                                                                       src="../img/catalogImg/section2/heart.svg"
+                                                                                       alt="heart.svg"></button>
+                                            <button id="3" class="ActiveHeart hidden"><img id="3"
+                                                                                           src="../img/catalogImg/section2/orageHeart.svg"
+                                                                                           alt="orageHeart.svg">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="product__right__bottom">
+                                        <div class="product__right__bottom__top">
+                                            <p>₽24 890</p>
+                                            <div class="score">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                                <img src="../img/catalogImg/section2/Score.svg" alt="Score.svg">
+                                            </div>
+                                        </div>
+                                        <div class="product__right__bottom__bottom">
+                                            <div class="photos">
+                                                <img src="../img/catalogImg/section2/deca.png" alt="deca.png">
+                                                <img src="../img/catalogImg/section2/golova.png" alt="golova.png">
+                                                <img src="../img/catalogImg/section2/fullPhoto.png" alt="fullPhoto.png">
+                                            </div>
+                                            <div class="bascket">
+                                                <div id="3" class="ActiveBuscket hidden">
+                                                    <button id="3" class="basketButton">Перейти в корзину</button>
+                                                </div>
+                                                <div id="3" class="nonActiveBuscket">
+                                                    <button id="3" class="basketButton"><img
+                                                            src="../img/catalogImg/section2/Bascket.svg"
+                                                            alt="Bascket.svg">В корзину
+                                                    </button>
+                                                </div>
+                                                <button class="comparison">Добавить к сравнению</button>
+                                            </div>
+                                        </div>
+                                        <a class="inStock" href="#">в наличии</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec2-container__rightSide__nums">
+                <button class="firstElement">Первая</button>
+                <button class="start"><img src="../img/catalogImg/section2/arrowRight.svg" alt="arrowRight.svg">
+                </button>
+                <ul>
+                    <li id="1" class="nums box">1</li>
+                    <li id="2" class="nums">2</li>
+                    <li id="3" class="nums">3</li>
+                    <li id="4" class="nums">4</li>
+                    <li id="5" class="nums">5</li>
+                    <li id="6" class="nums">6</li>
+                </ul>
+                <button class="finish"><img src="../img/catalogImg/section2/arrowRight.svg" alt="arrowRight.svg">
+                </button>
+                <button class="last">Последняя</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="sec3">
+    <div class="sec3__container">
+        <div class="sec3__container__center">
+            <div class="sec3__container__center__leftSide">
+                <div class="player" id="player"></div>
+                <img src="../img/catalogImg/section3/bg.svg" alt="bg.svg">
+            </div>
+            <div class="sec3__container__center__rightSide">
+                <h2>У нас широкий выбор инструментов</h2>
+                <ul>
+                    <li><img src="../img/catalogImg/section3/Line1.svg" alt="Line1.svg"><a href="#">Акустические</a>
+                    </li>
+                    <li><img src="../img/catalogImg/section3/Line2.svg" alt="Line2.svg"><a
+                            href="#">Трансакустические</a></li>
+                    <li><img src="../img/catalogImg/section3/Line3.svg" alt="Line3.svg"><a
+                            href="#">Электроакустические</a></li>
+                    <li><img src="../img/catalogImg/section3/Line4.svg" alt="Line4.svg"><a href="#">Классические</a>
+                    </li>
+                    <li><img src="../img/catalogImg/section3/Line5.svg" alt="Line5.svg"><a href="#">Тревел-гитары</a>
+                    </li>
+                    <li><img src="../img/catalogImg/section3/Line6.svg" alt="Line6.svg"><a href="#">Электрогитары</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="sec3__container__bottom">
+            <p class="long">Хорошая акустическая гитара – верный путь к правильному восприятию нот, а значит, она
+                способна ускорить процесс обучения игры на музыкальном инструменте. Компания Guitar Lavka предлагает
+                купить акустическую гитару с доставкой от ведущих производителей – Cort, Enya и Sigma Guitars.</p>
+            <p class="long">Каждая гитара акустическая, цена на которую меньше 5000 рублей (дешевые модели), часто
+                искажают качество звука при игре, что затрудняет обучение, однако это не означает, что невозможно найти
+                недорогую гитару в интернет- магазине Guitar Lavka. В акаталоге имеется базовая «акустика» (бюджетные
+                модели) стоимостью до 10000 рублей. Такие модели лишены дополнительного лоска, но самое главное – они не
+                искажают звук и способны правильно научить слушать ритм, ноты и такты при обучении.</p>
+            <p class="short">Хорошая акустическая гитара – верный путь к правильному восприятию нот, а значит, она
+                способна ускорить процесс обучения игры на музыкальном инструменте. </p>
+            <a href="#">подробнее...</a>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="content">
+            <div class="leftSide">
+                <div class="main">
+                    <img src="../img/indexImg/footer/logo.svg" alt="logo.svg">
+                    <p>Мы работаем по всей России,</p>
+                    <p>поэтому можем сделать онлайн-показ</p>
+                    <p>инструмента и доставить его до вашей двери</p>
+                </div>
+                <div class="quetions">
+                    <div class="tel">
+                        <p>Остались вопросы?</p>
+                        <a href="tel:88001002680">8 (800) 100-26-80</a>
+                    </div>
+                    <div class="schedule">
+                        <p>ЕЖЕДНЕВНО 10:00 - 20:00</p>
+                        <a href="malto:info@guitarlavka.ru">info@guitarlavka.ru</a>
+                    </div>
+                </div>
+                <div class="Media">
+                    <ul>
+                        <li><a href="#"><img src="../img/indexImg/footer/whatsUp.svg" alt="whatsUp.svg"></a></li>
+                        <li><a href="#"><img src="../img/indexImg/footer/telegramm.svg" alt="telegramm.svg"></a></li>
+                        <li><a href="#"><img src="../img/indexImg/footer/vk.svg" alt="vk.svg"></a></li>
+                        <li><a href="#"><img src="../img/indexImg/footer/whatsUp.svg" alt="whatsUp.svg"></a></li>
+                        <li><a href="#"><img src="../img/indexImg/footer/YT.svg" alt="YT.svg"></a></li>
+                        <li><a href="#"><img src="../img/indexImg/footer/inst.svg" alt="inst.svg"></a></li>
+                    </ul>
+                </div>
+                <div class="payment">
+                    <p>СПОСОБЫ ОПЛАТЫ</p>
+                    <ul>
+                        <li><a href="#"><img src="../img/indexImg/footer/mastercard-credit-card.svg"
+                                             alt="mastercard-credit-card.svg"></a></li>
+                        <li class="otstup"><a href="#"><img src="../img/indexImg/footer/AplePay.svg" alt="AplePay.svg"></a>
+                        </li>
+                        <li><a href="#"><img src="../img/indexImg/footer/PayPall.svg" alt="PayPall.svg"></a></li>
+                        <li><a href="#"><img src="../img/indexImg/footer/visa.svg" alt="visa.svg"></a></li>
+                        <li class="otstup"><a href="#"><img src="../img/indexImg/footer/YMoney.svg"
+                                                            alt="YMoney.svg"></a></li>
+                    </ul>
+                </div>
+                <div class="confid">
+                    <p>© 2021 GuitarLavka - музыкальный магазин Политика конфиденциальности</p>
+                </div>
+            </div>
+            <div class="RightSide">
+                <div class="top">
+                    <div class="catalog">
+                        <h2>КАТАЛОГ</h2>
+                        <ul>
+                            <li><a href="#">Гитары</a></li>
+                            <li><a href="#">Укулеле</a></li>
+                            <li><a href="#">Аксесуары</a></li>
+                            <li><a href="#">Струны</a></li>
+                        </ul>
+                    </div>
+                    <div class="service">
+                        <h2>СЕРВИС</h2>
+                        <ul>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Гарантия</a></li>
+                            <li><a href="#">Доставка</a></li>
+                        </ul>
+                    </div>
+                    <div class="services">
+                        <h2>УСЛУГИ</h2>
+                        <ul>
+                            <li><a href="#">Ремонт</a></li>
+                            <li><a href="#">Онлайн подбор</a></li>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Комиссионка</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="iphone">
+                    <img src="../img/indexImg/footer/Iphone.png" alt="Iphone.png">
+                </div>
+            </div>
+        </div>
+        <div class="mobileContent">
+            <div class="main">
+                <img src="../img/indexImg/footer/mobile/logo.svg" alt="logo.svg">
+            </div>
+            <div class="list">
+                <div class="catalog">
+                    <h2>КАТАЛОГ</h2>
+                    <ul>
+                        <li><a href="#">Гитары</a></li>
+                        <li><a href="#">Укулеле</a></li>
+                        <li><a href="#">Аксесуары</a></li>
+                        <li><a href="#">Струны</a></li>
+                    </ul>
+                </div>
+                <div class="service">
+                    <h2>СЕРВИС</h2>
+                    <ul>
+                        <li><a href="#">Оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Доставка</a></li>
+                    </ul>
+                </div>
+                <div class="services">
+                    <h2>УСЛУГИ</h2>
+                    <ul>
+                        <li><a href="#">Ремонт</a></li>
+                        <li><a href="#">Онлайн подбор</a></li>
+                        <li><a href="#">Обучение</a></li>
+                        <li><a href="#">Комиссионка</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="quetions">
+                <div class="tel">
+                    <p>Остались вопросы?</p>
+                    <a href="tel:88001002680">8 (800) 100-26-80</a>
+                </div>
+                <div class="schedule">
+                    <p>ЕЖЕДНЕВНО 10:00 - 20:00</p>
+                    <a href="malto:info@guitarlavka.ru">info@guitarlavka.ru</a>
+                </div>
+            </div>
+            <div class="Media">
+                <ul>
+                    <li><a href="#"><img src="../img/indexImg/footer/whatsUp.svg" alt="whatsUp.svg"></a></li>
+                    <li><a href="#"><img src="../img/indexImg/footer/telegramm.svg" alt="telegramm.svg"></a></li>
+                    <li><a href="#"><img src="../img/indexImg/footer/vk.svg" alt="vk.svg"></a></li>
+                    <li><a href="#"><img src="../img/indexImg/footer/whatsUp.svg" alt="whatsUp.svg"></a></li>
+                    <li><a href="#"><img src="../img/indexImg/footer/YT.svg" alt="YT.svg"></a></li>
+                    <li><a href="#"><img src="../img/indexImg/footer/inst.svg" alt="inst.svg"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

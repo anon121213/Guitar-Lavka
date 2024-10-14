@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5144:80"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=host.docker.internal;Database=GuitarLavka;Username=postgres;Password=12345678
+
+  frontend:
+    image: nginx:alpine
+    volumes:
+      - ./website:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "5000:5000"
