@@ -1,0 +1,7 @@
+"id","name","type","price","sale_price","rating","rating_preople_count","image_link","is_stock"
+1,"Ibanez tod 10
+","Гитара","200000.00","190000.00","5.00",7,"product.png",True
+2,"Schecter Hellracer C-1","Гитара","120000.00","100000.00","5.00",2,"product.png",True
+3,"Ibanez gio gsa 60","Гитара","25000.00","23000.00","3.00",6,"product.png",False
+4,"Mayones duvel elite 6","Гитара","300000.00","280000.00","5.00",3,"product.png",True
+5,"Mayones duvel elite 7","Гитара","350000.00","335000.00","5.00",4,"product.png",False

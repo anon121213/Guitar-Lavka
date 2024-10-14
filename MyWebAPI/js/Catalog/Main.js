@@ -50,7 +50,7 @@ increasePriceButton.onclick = async () => {
 }
 
 defaultSortButton.onclick = async () => {
-    await LoadAllProducts(isStock.checked);
+    await LoadAllProducts(isStock.checked, serchInput.value);
 }
 
 window.onload = async function() {

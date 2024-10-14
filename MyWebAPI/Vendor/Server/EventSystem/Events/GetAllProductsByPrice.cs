@@ -11,22 +11,32 @@ public class GetAllProductsByPrice(ApplicationDbContext _context)
     private const string REDUSEID = "GetReduseProducts"; 
     private const string INCREASEID = "GetIncreseProducts";
 
-    private async Task<EventData?> GetProductsByPrice(int minPrice, int maxPrice, bool isStock, bool isDescending)
+    private async Task<EventData?> GetProductsByPrice(int minPrice, int maxPrice,
+        bool isStock, bool isDescending, string search)
     {
         var order = isDescending ? "DESC" : "ASC";
         var sql = $@"
             SELECT * FROM products
-            WHERE price >= @minPrice
+            WHERE name LIKE @searchParameter
+              AND price >= @minPrice
               AND price <= @maxPrice
               {(isStock ? "AND is_stock = @isStockParameter" : "")}
             ORDER BY price {order}";
 
-        var minPriceParameter = new NpgsqlParameter("@minPrice", minPrice);
-        var maxPriceParameter = new NpgsqlParameter("@maxPrice", maxPrice);
-        var isStockParameter = new NpgsqlParameter("@isStockParameter", isStock);
+        var minPriceParameter =
+            new NpgsqlParameter("@minPrice", minPrice);
+        
+        var maxPriceParameter =
+            new NpgsqlParameter("@maxPrice", maxPrice);
+        
+        var isStockParameter =
+            new NpgsqlParameter("@isStockParameter", isStock);
+        
+        var searchParameter =
+            new NpgsqlParameter("@searchParameter", $"%{search}%");
 
-        var parameters = isStock ? [minPriceParameter, maxPriceParameter, isStockParameter]
-            : new object[] { minPriceParameter, maxPriceParameter };
+        var parameters = isStock ? [minPriceParameter, maxPriceParameter, isStockParameter, searchParameter]
+            : new object[] { minPriceParameter, maxPriceParameter, searchParameter };
 
         var products = await _context.Products
             .FromSqlRaw(sql, parameters)
@@ -35,18 +45,18 @@ public class GetAllProductsByPrice(ApplicationDbContext _context)
         return new EventData { AllProducts = products };
     }
 
-    public Task<EventData?> GetReducedPrice(int minPrice, int maxPrice, bool isStock) =>
-        GetProductsByPrice(minPrice, maxPrice, isStock, true);
+    public Task<EventData?> GetReducedPrice(int minPrice, int maxPrice, bool isStock, string search) =>
+        GetProductsByPrice(minPrice, maxPrice, isStock, true, search);
 
-    public Task<EventData?> GetIncreasePrice(int minPrice, int maxPrice, bool isStock) =>
-        GetProductsByPrice(minPrice, maxPrice, isStock, false);
+    public Task<EventData?> GetIncreasePrice(int minPrice, int maxPrice, bool isStock, string search) =>
+        GetProductsByPrice(minPrice, maxPrice, isStock, false, search);
 
     public async Task<EventData?> OnEvent(string eventId, ClientData data)
     {
         return eventId switch
         {
-            REDUSEID => await GetReducedPrice(data.MinPrice, data.MaxPrice, data.IsStock),
-            INCREASEID => await GetIncreasePrice(data.MinPrice, data.MaxPrice, data.IsStock),
+            REDUSEID => await GetReducedPrice(data.MinPrice, data.MaxPrice, data.IsStock, data.Search),
+            INCREASEID => await GetIncreasePrice(data.MinPrice, data.MaxPrice, data.IsStock, data.Search),
             _ => null
         };
     }
@@ -54,6 +64,6 @@ public class GetAllProductsByPrice(ApplicationDbContext _context)
 
 public interface IGetAllProductsByPrice : IOnEventCallback
 {
-    Task<EventData?> GetReducedPrice(int minPrice, int maxPrice, bool isStock);
-    Task<EventData?> GetIncreasePrice(int minPrice, int maxPrice, bool isStock);
+    Task<EventData?> GetReducedPrice(int minPrice, int maxPrice, bool isStock, string search);
+    Task<EventData?> GetIncreasePrice(int minPrice, int maxPrice, bool isStock, string search);
 }
