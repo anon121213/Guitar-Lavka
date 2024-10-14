@@ -1,15 +1,14 @@
-function CreateMobileFilters(mobileSortClass, filtersButtonClass){
-    const mobileSort = document.querySelectorAll(`.${mobileSortClass}`)
-    const filtersButton = document.querySelectorAll(`.${filtersButtonClass}`)
-    let showfilters = false
+function CreateMobileFilters(mobileSortClass, filtersButtonClass) {
+    const mobileSort = document.querySelector(`.${mobileSortClass}`);
+    const filtersButton = document.querySelector(`.${filtersButtonClass}`);
+    let showfilters = false;
 
-    filtersButton.addEventListener('click', evet => {
-        showfilters = !showfilters
-
-        if(showfilters){
-            mobileSort.classList.remove('hidden')
-        }else if(!showfilters) {
-            mobileSort.classList.add('hidden')
+    filtersButton.addEventListener('click', () => {
+        showfilters = !showfilters;
+        if (showfilters) {
+            mobileSort.classList.remove('hidden');
+        } else {
+            mobileSort.classList.add('hidden');
         }
-    })
+    });
 }

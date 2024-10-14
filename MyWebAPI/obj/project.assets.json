@@ -2863,26 +2863,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\anon1.JASPERMAGLOT\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Guitar-Lavka\\MyWebAPI\\MyWebAPI.csproj",
+      "projectUniqueName": "D:\\Projects\\Guitar-Lavka\\MyWebAPI\\MyWebAPI.csproj",
       "projectName": "MyWebAPI",
-      "projectPath": "C:\\Projects\\Guitar-Lavka\\MyWebAPI\\MyWebAPI.csproj",
-      "packagesPath": "C:\\Users\\anon1.JASPERMAGLOT\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Guitar-Lavka\\MyWebAPI\\obj\\",
+      "projectPath": "D:\\Projects\\Guitar-Lavka\\MyWebAPI\\MyWebAPI.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\Guitar-Lavka\\MyWebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\anon1.JASPERMAGLOT\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2895,6 +2893,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2941,7 +2944,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

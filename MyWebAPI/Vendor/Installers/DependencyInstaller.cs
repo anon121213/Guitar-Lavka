@@ -11,5 +11,6 @@ public class DependencyInstaller(WebApplicationBuilder _builder)
         _builder.Services.AddTransient<IGetAllProducts, GetAllProducts>();
         _builder.Services.AddTransient<IGetProductsByDiapasonePrice, GetProductsByRangePrice>();
         _builder.Services.AddTransient<IGetAllProductsByPrice, GetAllProductsByPrice>();
+        _builder.Services.AddTransient<IGetProductsBySearch, GetProductsBySearch>();
     }
 }
