@@ -13,7 +13,7 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
             bool isStock, string search)
         {
             var sql = $@"
-                SELECT * FROM Products
+                SELECT * FROM productdetails
                 WHERE LOWER(name) LIKE LOWER(@searchParameter)
                   AND price >= @minPrice 
                   AND price <= @maxPrice 

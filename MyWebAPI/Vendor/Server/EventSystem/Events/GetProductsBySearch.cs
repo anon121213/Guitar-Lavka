@@ -14,7 +14,7 @@ public class GetProductsBySearch(ApplicationDbContext _context)
         int minPrice, int maxPrice, bool isStock)
     {
         string sql = @"
-            SELECT * FROM products
+            SELECT * FROM productdetails
             WHERE LOWER(name) LIKE LOWER(@searchParameter)
               AND price >= @minPrice
               AND price <= @maxPrice

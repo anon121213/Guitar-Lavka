@@ -5,6 +5,8 @@ const IncreaseID = "GetIncreseProducts";
 const GetDataById = "GetDataById";
 const GetStringsCountId = "GetStringsCount";
 const GetSearchProducts = "GetProductsBySearch";
+const GetAcusticGuitarsId = "GetAcusticGuitars";
+const GetElectricGuitarsId = "GetElectricGuitars";
 
 const reducePriceButton = document.getElementById("RedusePriceButton");
 const increasePriceButton = document.getElementById("IncreasePriceButton");
@@ -18,7 +20,22 @@ const isStock = document.getElementById("isStock");
 const searchButton = document.getElementById("Search_button");
 const serchInput = document.getElementById("Search_input");
 
+const electricGuitarFilter = document.getElementById("ElectricGuitar");
+const acusticGuitarFilter = document.getElementById("AcusticGuitar");
+
 let lastEvent = GetAllProdictsId;
+
+electricGuitarFilter.onclick = async () => {
+    lastEvent = GetElectricGuitarsId;
+    await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
+        isStock.checked, GetElectricGuitarsId, serchInput.value);
+}
+
+acusticGuitarFilter.onclick = async () => {
+    lastEvent = GetAcusticGuitarsId;
+    await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
+        isStock.checked, GetAcusticGuitarsId, serchInput.value);
+}
 
 searchButton.onclick = async () => {
     lastEvent = GetSearchProducts;

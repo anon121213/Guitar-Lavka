@@ -395,7 +395,7 @@ button {
   margin-top: 5px;
   margin-left: 5px;
 }
-.sec2 .sec2-container__leftSide .filters .guitar-list__name__guitars li a {
+.sec2 .sec2-container__leftSide .filters .guitar-list__name__guitars li button {
   color: rgb(196, 196, 196);
   font-family: "ABeeZee";
   font-size: 0.88rem;

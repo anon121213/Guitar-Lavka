@@ -5,15 +5,16 @@ using Npgsql;
 
 namespace MyWebAPI.Vendor.Server.EventSystem.Events
 {
-    public class GetAllProducts(ApplicationDbContext _context, ILogger<GetAllProducts> _logger) : IGetAllProducts
+    public class GetAllProducts(ApplicationDbContext _context, 
+        ILogger<GetAllProducts> _logger) : IGetAllProducts
     {
         private const string EVENTID = "GetAllProducts";
 
         public async Task<List<EventData>> GetProducts(bool isStock)
         {
-            const string sqlAll = "SELECT * FROM products";
+            const string sqlAll = "SELECT * FROM productdetails";
             const string sqlStock = @"
-                SELECT * FROM products 
+                SELECT * FROM productdetails 
                 WHERE is_stock = @isStockParameter";
             
             var isStockParameter = new NpgsqlParameter("@isStockParameter", isStock);
@@ -28,9 +29,11 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
 
         public async Task<EventData?> OnEvent(string eventId, ClientData data = default)
         {
-            if (eventId != EVENTID) return null;
-
+            if (eventId != EVENTID) 
+                return null;
+            
             var products = await GetProducts(data.IsStock);
+            _logger.LogInformation($"{products[1]}");
             return new EventData { AllProducts = products };
         }
     }

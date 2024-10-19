@@ -26,6 +26,8 @@
 
         gridDiv.innerHTML = '';
         
+        console.log(products.allProducts[0]);
+        
         products.allProducts.forEach(product => {
             gridDiv.innerHTML += createProductHTML(product);
         })
