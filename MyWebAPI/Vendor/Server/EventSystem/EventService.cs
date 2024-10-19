@@ -17,7 +17,8 @@ namespace MyWebAPI.Vendor.Server.EventSystem
             IGetStringsCount getStringsCount,
             IGetAllProductsByPrice getAllProductsByPrice,
             IGetProductsByDiapasonePrice getProductsByDiapasonePrice,
-            IGetProductsBySearch getProductsBySearch)
+            IGetProductsBySearch getProductsBySearch,
+            IGetProductByType getProductByType)
         {
             _logger = logger;
             _eventCallbacks.Add(getDataById);
@@ -26,6 +27,7 @@ namespace MyWebAPI.Vendor.Server.EventSystem
             _eventCallbacks.Add(getAllProductsByPrice);
             _eventCallbacks.Add(getProductsByDiapasonePrice);
             _eventCallbacks.Add(getProductsBySearch);
+            _eventCallbacks.Add(getProductByType);
         }
         
         private async Task<EventData?> RaiseEventFromClient(string id, ClientData data)
