@@ -10,20 +10,22 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
     {
         private const string EVENTID = "GetAllProducts";
 
-        public async Task<List<EventData>> GetProducts(bool isStock)
+        public async Task<List<EventData>> GetProducts(bool isStock, int type)
         {
-            const string sqlAll = "SELECT * FROM productdetails";
-            const string sqlStock = @"
+            string sql = $@"
                 SELECT * FROM productdetails 
-                WHERE is_stock = @isStockParameter";
+                WHERE type = @typeParameter
+                  {(isStock ? "AND is_stock = @isStockParameter" : "")}";
             
-            var isStockParameter = new NpgsqlParameter("@isStockParameter", isStock);
-
-            var sql = isStock ? sqlStock : sqlAll;
-            var parameters = isStock ? [isStockParameter] : Array.Empty<object>();
-
-            _logger.LogInformation($"{isStock}");
+            var isStockParameter =
+                new NpgsqlParameter("@isStockParameter", isStock);
             
+            var typeParameter =
+                new NpgsqlParameter("@typeParameter", type);
+
+            var parameters = isStock ? [ isStockParameter, typeParameter ]
+                : new object[] { typeParameter };
+
             return await _context.Products.FromSqlRaw(sql, parameters).ToListAsync();
         }
 
@@ -32,14 +34,13 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
             if (eventId != EVENTID) 
                 return null;
             
-            var products = await GetProducts(data.IsStock);
-            _logger.LogInformation($"{products[1]}");
+            var products = await GetProducts(data.IsStock, data.Type);
             return new EventData { AllProducts = products };
         }
     }
 
     public interface IGetAllProducts : IOnEventCallback
     {
-        Task<List<EventData>> GetProducts(bool isStock);
+        Task<List<EventData>> GetProducts(bool isStock, int type);
     }
 }

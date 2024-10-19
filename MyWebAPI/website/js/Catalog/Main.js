@@ -5,8 +5,7 @@ const IncreaseID = "GetIncreseProducts";
 const GetDataById = "GetDataById";
 const GetStringsCountId = "GetStringsCount";
 const GetSearchProducts = "GetProductsBySearch";
-const GetAcusticGuitarsId = "GetAcusticGuitars";
-const GetElectricGuitarsId = "GetElectricGuitars";
+const GetProductByTypeId = "GetProductByType";
 
 const reducePriceButton = document.getElementById("RedusePriceButton");
 const increasePriceButton = document.getElementById("IncreasePriceButton");
@@ -24,55 +23,58 @@ const electricGuitarFilter = document.getElementById("ElectricGuitar");
 const acusticGuitarFilter = document.getElementById("AcusticGuitar");
 
 let lastEvent = GetAllProdictsId;
+let currentType = 1;
 
 electricGuitarFilter.onclick = async () => {
-    lastEvent = GetElectricGuitarsId;
+    lastEvent = GetProductByTypeId;
+    currentType = 1;
     await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
-        isStock.checked, GetElectricGuitarsId, serchInput.value);
+        isStock.checked, GetProductByTypeId, serchInput.value, 1);
 }
 
 acusticGuitarFilter.onclick = async () => {
-    lastEvent = GetAcusticGuitarsId;
+    lastEvent = GetProductByTypeId;
+    currentType = 2;
     await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
-        isStock.checked, GetAcusticGuitarsId, serchInput.value);
+        isStock.checked, GetProductByTypeId, serchInput.value, 2);
 }
 
 searchButton.onclick = async () => {
     lastEvent = GetSearchProducts;
     await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
-        isStock.checked, GetSearchProducts, serchInput.value);
+        isStock.checked, GetSearchProducts, serchInput.value, currentType);
 }
 
 isStock.onclick = async () => {
     await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
-        isStock.checked, lastEvent, serchInput.value)
+        isStock.checked, lastEvent, serchInput.value, currentType)
 }
 
 applyPriceButton.onclick = async () => {
     lastEvent = GetDiapasonePrice
     await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value, 
-        isStock.checked, GetDiapasonePrice, serchInput.value)
+        isStock.checked, GetDiapasonePrice, serchInput.value, currentType)
 }
 
 reducePriceButton.onclick = async () => {
     lastEvent = ReduseID;
     await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value, 
-        isStock.checked, ReduseID, serchInput.value);
+        isStock.checked, ReduseID, serchInput.value, currentType);
 }
 
 increasePriceButton.onclick = async () => {
     lastEvent = IncreaseID;
     await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value, 
-        isStock.checked, IncreaseID, serchInput.value);
+        isStock.checked, IncreaseID, serchInput.value, currentType);
 }
 
 defaultSortButton.onclick = async () => {
-    await LoadAllProducts(isStock.checked, serchInput.value);
+    await LoadAllProducts(isStock.checked, serchInput.value, currentType);
 }
 
 window.onload = async function() {
     CreateAll();
-    await LoadAllProducts(isStock.checked);
+    await LoadAllProducts(isStock.checked, serchInput.value, 1);
 };
 
 function CreateAll(){
