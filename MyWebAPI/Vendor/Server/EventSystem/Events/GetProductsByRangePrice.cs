@@ -10,14 +10,13 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
         private const string EVENTID = "GetProductsByRangePrice";
 
         public async Task<EventData?> GetDiapasonePrice(int minPrice, int maxPrice,
-            bool isStock, int type, string search)
+            bool isStock, string search)
         {
             var sql = $@"
                 SELECT * FROM productdetails
                 WHERE LOWER(name) LIKE LOWER(@searchParameter)
                   AND price >= @minPrice 
                   AND price <= @maxPrice 
-                  AND type = @typeParameter
                 {(isStock ? "AND is_stock = @isStockParameter" : "")}";
             
             var minPriceParameter = 
@@ -31,13 +30,10 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
             
             var searchParameter =
                 new NpgsqlParameter("@searchParameter", $"%{search}%");
-            
-            var typeParameter =
-                new NpgsqlParameter("@typeParameter", type);
 
             var parameters = isStock
-                ? [minPriceParameter, maxPriceParameter, isStockParameter, searchParameter, typeParameter]
-                : new object[] { minPriceParameter, maxPriceParameter, searchParameter, typeParameter };
+                ? [minPriceParameter, maxPriceParameter, isStockParameter, searchParameter]
+                : new object[] { minPriceParameter, maxPriceParameter, searchParameter };
 
             var products = await _context.Products
                 .FromSqlRaw(sql, parameters)
@@ -51,14 +47,13 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
             if (eventId != EVENTID)
                 return null;
 
-            return await GetDiapasonePrice(data.MinPrice, 
-                data.MaxPrice, data.IsStock, data.Type, data.Search);
+            return await GetDiapasonePrice(data.MinPrice, data.MaxPrice, data.IsStock, data.Search);
         }
     }
 
     public interface IGetProductsByDiapasonePrice : IOnEventCallback
     {
         Task<EventData?> GetDiapasonePrice(int minPrice, int maxPrice, 
-            bool isStock, int type, string search);
+            bool isStock, string search);
     }
 }

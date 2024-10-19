@@ -1,11 +1,10 @@
-﻿async function LoadAllProducts(isStock, searchText, type) {
+﻿async function LoadAllProducts(isStock, searchText) {
     try {
         const nullData = {
             isStock: isStock,
             search: searchText ? searchText : '',
             minPrice: 0,
-            maxPrice: 0,
-            type: type
+            maxPrice: 0
         }
         
         const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/${GetAllProdictsId}`, {
