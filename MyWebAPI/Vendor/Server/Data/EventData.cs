@@ -36,7 +36,7 @@ namespace MyWebAPI.Vendor.Server.Data
         public bool IsStock { get; set; }
 
         [NotMapped]
-        public int StringCount { get; set; }
+        public int ProductsCount { get; set; }
 
         [NotMapped]
         public List<EventData> AllProducts { get; set; } = new();

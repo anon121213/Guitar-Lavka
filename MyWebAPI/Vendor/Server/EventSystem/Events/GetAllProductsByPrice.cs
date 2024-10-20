@@ -8,13 +8,25 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events;
 public class GetAllProductsByPrice(ApplicationDbContext _context)
     : IGetAllProductsByPrice
 {
-    private const string REDUSEID = "GetReduseProducts"; 
-    private const string INCREASEID = "GetIncreseProducts";
+    private const string EVENTID = "GetProductsByPrice"; 
 
-    private async Task<EventData?> GetProductsByPrice(int minPrice, int maxPrice,
-        bool isStock, bool isDescending, int type, string search)
+    public async Task<EventData?> GetProductsByPrice(int minPrice, 
+        int maxPrice,
+        bool isStock,
+        PriceType priceType,
+        int type,
+        string search)
     {
-        var order = isDescending ? "DESC" : "ASC";
+        string order = "";
+
+        order += priceType switch
+        {
+            PriceType.Default => "",
+            PriceType.Ascending => "ASC",
+            PriceType.Descending => "DESC",
+            _ => ""
+        };
+
         var sql = $@"
             SELECT * FROM productdetails
             WHERE LOWER(name) LIKE LOWER(@searchParameter)
@@ -22,52 +34,48 @@ public class GetAllProductsByPrice(ApplicationDbContext _context)
               AND price <= @maxPrice
               {(isStock ? "AND is_stock = @isStockParameter" : "")}
               AND type = @typeParameter
-            ORDER BY price {order}";
+            {(order == "" ? "" : $"ORDER BY price {order}")}";
 
-        var minPriceParameter =
-            new NpgsqlParameter("@minPrice", minPrice);
-        
-        var maxPriceParameter =
-            new NpgsqlParameter("@maxPrice", maxPrice);
-        
-        var isStockParameter =
-            new NpgsqlParameter("@isStockParameter", isStock);
-        
-        var searchParameter =
-            new NpgsqlParameter("@searchParameter", $"%{search}%");
-        
-        var typeParameter =
-            new NpgsqlParameter("@typeParameter", type);
+        var parameters = new List<NpgsqlParameter>
+        {
+            new ("@minPrice", minPrice),
+            new ("@maxPrice", maxPrice),
+            new ("@searchParameter", $"%{search}%"),
+            new ("@typeParameter", type)
+        }.ToArray();
 
-        var parameters = isStock ? [minPriceParameter, maxPriceParameter, isStockParameter, searchParameter, typeParameter]
-            : new object[] { minPriceParameter, maxPriceParameter, searchParameter, typeParameter };
-
+        if (isStock) 
+            parameters = parameters
+                .Append(new NpgsqlParameter("@isStockParameter", isStock))
+                .ToArray();
+        
         var products = await _context.Products
-            .FromSqlRaw(sql, parameters)
+            .FromSqlRaw(sql, parameters.ToArray<object>())
             .ToListAsync();
 
         return new EventData { AllProducts = products };
     }
 
-    public Task<EventData?> GetReducedPrice(int minPrice, int maxPrice, bool isStock, int type, string search) =>
-        GetProductsByPrice(minPrice, maxPrice, isStock, true, type, search);
-
-    public Task<EventData?> GetIncreasePrice(int minPrice, int maxPrice, bool isStock, int type, string search) =>
-        GetProductsByPrice(minPrice, maxPrice, isStock, false, type, search);
-
     public async Task<EventData?> OnEvent(string eventId, ClientData data)
     {
-        return eventId switch
-        {
-            REDUSEID => await GetReducedPrice(data.MinPrice, data.MaxPrice, data.IsStock, data.Type, data.Search),
-            INCREASEID => await GetIncreasePrice(data.MinPrice, data.MaxPrice, data.IsStock, data.Type, data.Search),
-            _ => null
-        };
+        if (eventId != EVENTID)
+            return null;
+        
+        return await GetProductsByPrice(data.MinPrice,
+                data.MaxPrice,
+                data.IsStock,
+                data.PriceType,
+                data.Type,
+                data.Search);
     }
 }
 
 public interface IGetAllProductsByPrice : IOnEventCallback
 {
-    Task<EventData?> GetReducedPrice(int minPrice, int maxPrice, bool isStock, int type, string search);
-    Task<EventData?> GetIncreasePrice(int minPrice, int maxPrice, bool isStock, int type, string search);
+    Task<EventData?> GetProductsByPrice(int minPrice,
+        int maxPrice,
+        bool isStock, 
+        PriceType isDescending,
+        int type, 
+        string search);
 }

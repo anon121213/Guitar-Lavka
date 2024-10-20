@@ -11,7 +11,11 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
     {
         private const string EVENTID = "GetProductByType";
 
-        public async Task<EventData> GetProduct(int minPrice, int maxPrice, bool isStock, int type, string search)
+        public async Task<EventData> GetProduct(int minPrice,
+            int maxPrice,
+            bool isStock,
+            int type, 
+            string search)
         {
             var sql = $@"
                 SELECT * FROM productdetails
@@ -21,27 +25,21 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
                   {(isStock ? "AND is_stock = @isStockParameter" : "")}
                   AND type = @typeParameter";
 
-            var minPriceParameter =
-                new NpgsqlParameter("@minPrice", minPrice);
-            
-            var maxPriceParameter =
-                new NpgsqlParameter("@maxPrice", maxPrice);
-            
-            var isStockParameter =
-                new NpgsqlParameter("@isStockParameter", isStock);
-            
-            var searchParameter =
-                new NpgsqlParameter("@searchParameter", $"%{search}%");
-            
-            var typeParameter =
-                new NpgsqlParameter("@typeParameter", type);
+            var parameters = new List<NpgsqlParameter>
+            {
+                new ("@minPrice", minPrice),
+                new ("@maxPrice", maxPrice),
+                new ("@searchParameter", $"%{search}%"),
+                new ("@typeParameter", type)
+            }.ToArray();
 
-            var parameters = isStock
-                ? [minPriceParameter, maxPriceParameter, isStockParameter, searchParameter, typeParameter]
-                : new object[] { minPriceParameter, maxPriceParameter, searchParameter, typeParameter };
-
+            if (isStock) 
+                parameters = parameters
+                    .Append(new NpgsqlParameter("@isStockParameter", isStock))
+                    .ToArray();
+            
             var products = await context.Products
-                .FromSqlRaw(sql, parameters)
+                .FromSqlRaw(sql, parameters.ToArray<object>())
                 .ToListAsync();
 
             logger.LogInformation($"Found {minPrice} products");
@@ -56,7 +54,11 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
         public async Task<EventData?> OnEvent(string eventId, ClientData data = default)
         {
             if (eventId == EVENTID)
-                return await GetProduct(data.MinPrice, data.MaxPrice, data.IsStock, data.Type, data.Search);
+                return await GetProduct(data.MinPrice,
+                    data.MaxPrice,
+                    data.IsStock, 
+                    data.Type,
+                    data.Search);
 
             return null;
         }
@@ -64,6 +66,10 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
 
     public interface IGetProductByType : IOnEventCallback
     {
-        Task<EventData> GetProduct(int minPrice, int maxPrice, bool isStock, int type, string search);
+        Task<EventData> GetProduct(int minPrice,
+            int maxPrice,
+            bool isStock,
+            int type,
+            string search);
     }
 }

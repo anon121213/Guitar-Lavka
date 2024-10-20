@@ -2,13 +2,14 @@
     try {
         const nullData = {
             isStock: isStock,
+            priceType: 0,
             search: searchText ? searchText : '',
             minPrice: 0,
             maxPrice: 0,
             type: type
         }
         
-        const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/${GetAllProdictsId}`, {
+        const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/${GetAllProductsId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

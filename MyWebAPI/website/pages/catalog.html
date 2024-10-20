@@ -6,11 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="../style/catalogStyle/catalog.css">
     <script src="../js/Catalog/Requests/CreateProduct.js" defer></script>
-    <script src="../js/Catalog/Requests/GetProduct.js" defer></script>
+    <script src="../js/Catalog/Requests/LoadProduct.js" defer></script>
     <script src="../js/Catalog/Requests/LoadProductByPrice.js" defer></script>
+    <script src="../js/Catalog/Requests/GetProductsCount.js" defer></script>
     <script src="../js/Filters/FiltersList.js" defer></script>
     <script src="../js/Filters/MobileFiltersList.js" defer></script>
     <script src="../js/ScrollButton/ScrollButton.js" defer></script>
+    <script src="../js/Burgers/BurgerMenu.js" defer></script>
     <script src="../js/Find/Find.js" defer></script>
     <script src="../js/Catalog/GridVue/VueGrid.js" defer></script>
     <script src="../js/Baskets/Basket.js" defer></script>
@@ -219,14 +221,13 @@
                         <input type="text" placeholder="15">
                     </div>
                     <div class="vue-type">
-                        <button class="grid"><img class="grid_Active active"
-                                                  src="../img/catalogImg/section2/ActiveGrid.svg" alt="grid.svg"><img
-                                class="grid_nonActive hidden" src="../img/catalogImg/section2/nonActiveGrid.svg"
-                                alt="nonActiveGrid.svg"></button>
-                        <button class="list"><img class="list_nonActive"
-                                                  src="../img/catalogImg/section2/nonActiveList.svg" alt="list.svg"><img
-                                class="list_Active hidden" src="../img/catalogImg/section2/ActiveList.svg"
-                                alt="ActiveList.svg"></button>
+                        <button class="grid"><img class="grid_Active active" src="../img/catalogImg/section2/ActiveGrid.svg" alt="grid.svg">
+                            <img class="grid_nonActive hidden" src="../img/catalogImg/section2/nonActiveGrid.svg" alt="nonActiveGrid.svg">
+                        </button>
+                        <button class="list">
+                            <img class="list_nonActive" src="../img/catalogImg/section2/nonActiveList.svg" alt="list.svg">
+                            <img class="list_Active hidden" src="../img/catalogImg/section2/ActiveList.svg" alt="ActiveList.svg">
+                        </button>
                     </div>
                 </div>
                 <div class="mobileSort hidden">

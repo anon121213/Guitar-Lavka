@@ -1,14 +1,15 @@
-﻿async function LoadAllProductPayLoad(minPrice, maxPrice, priceType, isStockValue, id, searchText, type) {
+﻿async function GetProductsCount(minPrice, maxPrice, isStockValue, type, searchText) {
     try {
         minPrice = minPrice == '' ? 0 : minPrice;
-        maxPrice = maxPrice == '' ? 999999 : maxPrice;
-        
+        maxPrice = maxPrice == '' ? 9999999 : maxPrice;
+
         let search = searchText ? searchText : '';
         let isStock = isStockValue;
-     
+        let priceType = 0;
+
         const data = { isStock, priceType, search, minPrice, maxPrice, type}
-        
-        const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/${id}`, {
+
+        const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/GetProductsCount`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -20,17 +21,11 @@
             console.log('Network response was not ok');
 
         const products = await response.json();
-        const gridDiv = document.getElementById('grid');
 
-        if (products.allProducts == null)
-            return;
-
-        gridDiv.innerHTML = '';
+        console.log(products.productsCount)
         
-        products.allProducts.forEach(product => {
-            gridDiv.innerHTML += createProductHTML(product);
-        });
-    } 
+        return products.productsCount;
+    }
     catch (error) {
         console.error('Error:', error);
     }

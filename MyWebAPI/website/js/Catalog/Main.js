@@ -1,95 +1,93 @@
-﻿const GetAllProdictsId = "GetAllProducts"
-const GetDiapasonePrice = "GetProductsByRangePrice"
-const ReduseID = "GetReduseProducts";
-const IncreaseID = "GetIncreseProducts";
+﻿const GetAllProductsId = "GetAllProducts";
+const GetProductsByPriceID = "GetProductsByPrice";
 const GetDataById = "GetDataById";
 const GetStringsCountId = "GetStringsCount";
 const GetSearchProducts = "GetProductsBySearch";
 const GetProductByTypeId = "GetProductByType";
 
-const reducePriceButton = document.getElementById("RedusePriceButton");
-const increasePriceButton = document.getElementById("IncreasePriceButton");
+const descendingPriceButton = document.getElementById("RedusePriceButton");
+const ascendingPriceButton = document.getElementById("IncreasePriceButton");
 const defaultSortButton = document.getElementById("DefaultSortButton");
 const applyPriceButton = document.getElementById("apply-price-range");
 const productsCount = document.getElementById("products-count");
-
 const minPriceInput = document.getElementById("min-price");
 const maxPriceInput = document.getElementById("max-price");
 const isStock = document.getElementById("isStock");
 const searchButton = document.getElementById("Search_button");
-const serchInput = document.getElementById("Search_input");
-
+const searchInput = document.getElementById("Search_input");
 const electricGuitarFilter = document.getElementById("ElectricGuitar");
 const acusticGuitarFilter = document.getElementById("AcusticGuitar");
 
-let lastEvent = GetAllProdictsId;
-let currentType = 1;
+const Default = 0;
+const Ascending = 1;
+const Descending = 2;
+const ElectricGuitar = 1;
+const AcusticGuitar = 2;
 
-electricGuitarFilter.onclick = async () => {
-    lastEvent = GetProductByTypeId;
-    currentType = 1;
-    await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
-        isStock.checked, GetProductByTypeId, serchInput.value, 1);
-}
+let lastEvent = GetAllProductsId;
+let currentProductType = ElectricGuitar;
+let currentPriceType = Default;
 
-acusticGuitarFilter.onclick = async () => {
-    lastEvent = GetProductByTypeId;
-    currentType = 2;
-    await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
-        isStock.checked, GetProductByTypeId, serchInput.value, 2);
-}
+electricGuitarFilter.onclick = async () =>
+    loadProducts(GetProductByTypeId, ElectricGuitar);
 
-searchButton.onclick = async () => {
-    lastEvent = GetSearchProducts;
-    await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
-        isStock.checked, GetSearchProducts, serchInput.value, currentType);
-}
+acusticGuitarFilter.onclick = async () =>
+    loadProducts(GetProductByTypeId, AcusticGuitar);
 
-isStock.onclick = async () => {
-    await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value,
-        isStock.checked, lastEvent, serchInput.value, currentType)
-}
+searchButton.onclick = async () =>
+    loadProducts(GetSearchProducts, currentProductType);
 
-applyPriceButton.onclick = async () => {
-    lastEvent = GetDiapasonePrice
-    await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value, 
-        isStock.checked, GetDiapasonePrice, serchInput.value, currentType)
-}
+isStock.onclick = async () =>
+    loadProducts(lastEvent, currentProductType);
 
-reducePriceButton.onclick = async () => {
-    lastEvent = ReduseID;
-    await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value, 
-        isStock.checked, ReduseID, serchInput.value, currentType);
-}
+applyPriceButton.onclick = async () =>
+    loadProducts(GetProductsByPriceID, currentProductType);
 
-increasePriceButton.onclick = async () => {
-    lastEvent = IncreaseID;
-    await LoadAllProductByPrice(minPriceInput.value, maxPriceInput.value, 
-        isStock.checked, IncreaseID, serchInput.value, currentType);
-}
+descendingPriceButton.onclick = async () =>
+    loadProducts(GetProductsByPriceID, currentProductType, Descending);
 
-defaultSortButton.onclick = async () => {
-    await LoadAllProducts(isStock.checked, serchInput.value, currentType);
-}
+ascendingPriceButton.onclick = async () => 
+    loadProducts(GetProductsByPriceID, currentProductType, Ascending);
+
+defaultSortButton.onclick = async () =>
+    loadProducts(lastEvent, currentProductType, Default);
 
 window.onload = async function() {
     CreateAll();
-    await LoadAllProducts(isStock.checked, serchInput.value, 1);
+    await LoadAllProducts(isStock.checked, searchInput.value, 1);
+    await GetCount();
 };
 
-function CreateAll(){
+function CreateAll() {
     CreateFiltersLogic("listButton", "list_name", "Arrow");
     CreateScrollButton("BackToStartPageButton");
     CreateFinderLogic("loop", "input", "logo");
-  /*  CreateBurgerLogic("burgerButton", "burger",
-        "content", "hideBurgerButton");*/
+    CreateBurgerLogic("burgerButton", "burger", "content", "hideBurgerButton");
     CreateMobileFilters("mobileSort", "filtersButton");
-    CreateNumsLogic("nums", "last", "first",
-        "start", "finish");
-    /*CreateGridLogic("gridActive", "gridNonActive",
-        "listActives", "listNonActive", "list", "grid");*/
-    CreateBasketButton("nonActiveBuscket", "ActiveBuscket",
-        "", "", false);
-    CreateFavoritesLogic( "ActiveHeart", "nonActiveHeart");
+    CreateNumsLogic("nums", "last", "first", "start", "finish");
+    CreateGridLogic("grid_Active", "grid_nonActive", "list_Active", "list_nonActive", "list", "grid");
+    CreateBasketButton("nonActiveBuscket", "ActiveBuscket", '', "", false);
+    CreateFavoritesLogic("ActiveHeart", "nonActiveHeart");
     CreatePlayer("https://www.youtube.com/iframe_api");
+}
+
+async function loadProducts(eventId, type, priceType = currentPriceType) {
+    lastEvent = eventId;
+    currentProductType = type;
+    currentPriceType = priceType;
+    
+    await LoadAllProductPayLoad(minPriceInput.value,
+        maxPriceInput.value,
+        currentPriceType,
+        isStock.checked,
+        lastEvent,
+        searchInput.value,
+        currentProductType);
+
+    await GetCount();
+}
+
+async function GetCount(){
+    productsCount.innerText = await GetProductsCount(minPriceInput.value,
+        maxPriceInput.value, isStock.checked, currentProductType, searchInput.value);
 }

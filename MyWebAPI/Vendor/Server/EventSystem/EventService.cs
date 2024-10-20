@@ -14,18 +14,16 @@ namespace MyWebAPI.Vendor.Server.EventSystem
         public EventService(ILogger<EventService> logger,
             IGetDataByIdService getDataById,
             IGetAllProducts allProducts,
-            IGetStringsCount getStringsCount,
+            IGetProductsCount getProductsCount,
             IGetAllProductsByPrice getAllProductsByPrice,
-            IGetProductsByDiapasonePrice getProductsByDiapasonePrice,
             IGetProductsBySearch getProductsBySearch,
             IGetProductByType getProductByType)
         {
             _logger = logger;
             _eventCallbacks.Add(getDataById);
             _eventCallbacks.Add(allProducts);
-            _eventCallbacks.Add(getStringsCount);
+            _eventCallbacks.Add(getProductsCount);
             _eventCallbacks.Add(getAllProductsByPrice);
-            _eventCallbacks.Add(getProductsByDiapasonePrice);
             _eventCallbacks.Add(getProductsBySearch);
             _eventCallbacks.Add(getProductByType);
         }
