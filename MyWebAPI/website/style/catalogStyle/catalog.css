@@ -530,6 +530,7 @@ button {
 }
 .sec2 .sec2-container__leftSide .filters .price-inputs__label__apply {
   max-width: 220px;
+  margin-bottom: 10px;
   height: 30px;
   width: 100%;
   background-color: #CC7408;

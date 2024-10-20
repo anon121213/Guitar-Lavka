@@ -399,7 +399,7 @@ $white: rgb(196, 196, 196);
                             li{
                                 margin-top: 5px;
                                 margin-left: 5px;
-                                
+
                                 button{
                                     color: $white;
                                     font-family: "ABeeZee";
@@ -559,12 +559,14 @@ $white: rgb(196, 196, 196);
                         
                         &__apply{
                             max-width: 220px;
+                            margin-bottom: 10px;
                             height: 30px;
                             width: 100%;
                             background-color: #CC7408;
                             color: #131218;
                             font-size: 15px;
                             border-radius: 3px;
+                        
                         }
                     }
                 }
