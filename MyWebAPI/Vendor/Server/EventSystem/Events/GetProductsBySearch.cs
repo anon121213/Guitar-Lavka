@@ -13,30 +13,24 @@ public class GetProductsBySearch(ApplicationDbContext _context)
     public async Task<List<EventData>> GetProductsSearch(string search,
         int minPrice, int maxPrice, bool isStock)
     {
-        string sql = @"
+        string sql = $@"
             SELECT * FROM productdetails
             WHERE LOWER(name) LIKE LOWER(@searchParameter)
               AND price >= @minPrice
               AND price <= @maxPrice
+             {(isStock ? "AND is_stock = @isStockParameter" : "")}
         ";
 
-        if (isStock) 
-            sql += " AND is_stock = @isStockParameter";
-    
-        var searchParam =
-            new NpgsqlParameter("@searchParameter", $"%{search}%");
-        
-        var minPriceParam =
-            new NpgsqlParameter("@minPrice", minPrice);
-        
-        var maxPriceParam =
-            new NpgsqlParameter("@maxPrice", maxPrice);
-        
-        var isStockParam =
-            new NpgsqlParameter("@isStockParameter", isStock);
+        var parameters = new List<NpgsqlParameter>
+        {
+            new ("@minPrice", minPrice),
+            new ("@maxPrice", maxPrice),
+            new ("@searchParameter", $"%{search}%"),
+            new ("@isStockParameter", isStock)
+        }.ToArray();
 
         var products = await _context.Products
-            .FromSqlRaw(sql, searchParam, minPriceParam, maxPriceParam, isStockParam)
+            .FromSqlRaw(sql, parameters.ToArray<object>())
             .ToListAsync();
 
         return products;

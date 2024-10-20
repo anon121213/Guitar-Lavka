@@ -1,4 +1,4 @@
-﻿async function GetProductsCount(minPrice, maxPrice, isStockValue, type, searchText) {
+﻿async function GetMaxPrice(minPrice, maxPrice, isStockValue, type, searchText) {
     try {
         minPrice = minPrice == '' ? 0 : minPrice;
         maxPrice = maxPrice == '' ? 9999999 : maxPrice;
@@ -9,7 +9,7 @@
 
         const data = { isStock, priceType, search, minPrice, maxPrice, type}
 
-        const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/${GetProductsCountId}`, {
+        const response = await fetch(`http://localhost:5144/api/eventservice/payload-event/${GetMaxPriceId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +22,7 @@
 
         const products = await response.json();
 
-        return products.productsCount;
+        return products.price;
     }
     catch (error) {
         console.error('Error:', error);

@@ -5,23 +5,26 @@ using Npgsql;
 
 namespace MyWebAPI.Vendor.Server.EventSystem.Events;
 
-public class GetProductsCount(ApplicationDbContext _context) : IGetProductsCount
+public class GetMaxPrice(ApplicationDbContext _context) : IGetMaxPrice
 {
-    private const string EVENTID = "GetProductsCount";
+    private const string EVENTID = "GetMaxPrice";
     
-    public async Task<int> GetStrings(int minPrice, 
+    public async Task<float> GetPrice(int minPrice, 
         int maxPrice, 
         bool isStock,
         int productType,
         string search)
     {
         string sql = $@"
-            SELECT * FROM productdetails
-            WHERE LOWER(name) LIKE LOWER(@searchParameter)
-              AND price >= @minPrice
-              AND price <= @maxPrice
-              {(isStock ? "AND is_stock = @isStockParameter" : "")}
-              AND type = @typeParameter";
+                SELECT *
+                FROM productdetails
+                WHERE LOWER(name) LIKE LOWER(@searchParameter)
+                  AND price >= @minPrice
+                  AND price <= @maxPrice
+                  {(isStock ? "AND is_stock = @isStockParameter" : "")}
+                  AND type = @typeParameter
+                ORDER BY price DESC
+                LIMIT 1";
         
         var parameters = new List<NpgsqlParameter>
         {
@@ -32,35 +35,36 @@ public class GetProductsCount(ApplicationDbContext _context) : IGetProductsCount
             new ("@isStockParameter", isStock)
         }.ToArray();
 
+
         var products = await _context.Products
             .FromSqlRaw(sql, parameters.ToArray<object>())
             .ToListAsync();
-
-        return products.Count;
+    
+        return products[0].Price;
     }
-
-    public async Task<EventData?> OnEvent(string eventid, ClientData data = default)
+    
+    public async Task<EventData?> OnEvent(string eventId, ClientData data = default)
     {
-        if (eventid != EVENTID)
+        if (eventId != EVENTID)
             return null;
-        
-        int count = await GetStrings(data.MinPrice,
+           
+        float count = await GetPrice(data.MinPrice,
             data.MaxPrice,
             data.IsStock,
             data.Type,
             data.Search);
         
         EventData eventData = new EventData
-            { ProductsCount = count };
+            { Price = count };
 
         return eventData;
     }
 }
 
-public interface IGetProductsCount : IOnEventCallback
+public interface IGetMaxPrice : IOnEventCallback
 {
-    Task<int> GetStrings(int minPrice, 
-        int maxPrice, 
+    Task<float> GetPrice(int minPrice,
+        int maxPrice,
         bool isStock,
         int productType,
         string search);

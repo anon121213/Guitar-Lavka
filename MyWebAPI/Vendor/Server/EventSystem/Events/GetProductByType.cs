@@ -5,7 +5,7 @@ using Npgsql;
 
 namespace MyWebAPI.Vendor.Server.EventSystem.Events
 {
-    public class GetProductByType(ApplicationDbContext context,
+    public class GetProductByType(ApplicationDbContext _context,
         ILogger<GetAllProducts> logger)
         : IGetProductByType
     {
@@ -30,23 +30,13 @@ namespace MyWebAPI.Vendor.Server.EventSystem.Events
                 new ("@minPrice", minPrice),
                 new ("@maxPrice", maxPrice),
                 new ("@searchParameter", $"%{search}%"),
-                new ("@typeParameter", type)
+                new ("@typeParameter", type),
+                new NpgsqlParameter("@isStockParameter", isStock)
             }.ToArray();
 
-            if (isStock) 
-                parameters = parameters
-                    .Append(new NpgsqlParameter("@isStockParameter", isStock))
-                    .ToArray();
-            
-            var products = await context.Products
+            var products = await _context.Products
                 .FromSqlRaw(sql, parameters.ToArray<object>())
                 .ToListAsync();
-
-            logger.LogInformation($"Found {minPrice} products");
-            logger.LogInformation($"Found {maxPrice} products");
-            logger.LogInformation($"Found {isStock} products");
-            logger.LogInformation($"Found {type} products");
-            logger.LogInformation($"Found {search} products");
 
             return new EventData { AllProducts = products };
         }

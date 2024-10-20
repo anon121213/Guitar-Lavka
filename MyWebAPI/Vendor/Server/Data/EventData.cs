@@ -18,7 +18,7 @@ namespace MyWebAPI.Vendor.Server.Data
         public string Type { get; set; }
 
         [Column("price")]
-        public int Price { get; set; }
+        public float Price { get; set; }
 
         [Column("sale_price")]
         public int SalePrice { get; set; }

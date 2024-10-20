@@ -41,13 +41,9 @@ public class GetAllProductsByPrice(ApplicationDbContext _context)
             new ("@minPrice", minPrice),
             new ("@maxPrice", maxPrice),
             new ("@searchParameter", $"%{search}%"),
-            new ("@typeParameter", type)
+            new ("@typeParameter", type),
+            new ("@isStockParameter", isStock)
         }.ToArray();
-
-        if (isStock) 
-            parameters = parameters
-                .Append(new NpgsqlParameter("@isStockParameter", isStock))
-                .ToArray();
         
         var products = await _context.Products
             .FromSqlRaw(sql, parameters.ToArray<object>())

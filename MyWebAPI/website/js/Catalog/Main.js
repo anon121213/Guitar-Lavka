@@ -2,8 +2,10 @@
 const GetProductsByPriceID = "GetProductsByPrice";
 const GetDataById = "GetDataById";
 const GetStringsCountId = "GetStringsCount";
-const GetSearchProducts = "GetProductsBySearch";
+const GetSearchProductsId = "GetProductsBySearch";
 const GetProductByTypeId = "GetProductByType";
+const GetProductsCountId = "GetProductsCount";
+const GetMaxPriceId = "GetMaxPrice";
 
 const descendingPriceButton = document.getElementById("RedusePriceButton");
 const ascendingPriceButton = document.getElementById("IncreasePriceButton");
@@ -35,7 +37,7 @@ acusticGuitarFilter.onclick = async () =>
     loadProducts(GetProductByTypeId, AcusticGuitar);
 
 searchButton.onclick = async () =>
-    loadProducts(GetSearchProducts, currentProductType);
+    loadProducts(GetSearchProductsId, currentProductType);
 
 isStock.onclick = async () =>
     loadProducts(lastEvent, currentProductType);
@@ -54,6 +56,7 @@ defaultSortButton.onclick = async () =>
 
 window.onload = async function() {
     CreateAll();
+    await GetPrice(maxPriceInput.value);
     await LoadAllProducts(isStock.checked, searchInput.value, 1);
     await GetCount();
 };
@@ -76,6 +79,11 @@ async function loadProducts(eventId, type, priceType = currentPriceType) {
     currentProductType = type;
     currentPriceType = priceType;
     
+    if(eventId != GetProductByTypeId && eventId != GetProductsByPriceID)
+        await GetPrice(maxPriceInput.value);
+    else if(eventId != GetProductsByPriceID)
+        await GetPrice(9999999);
+    
     await LoadAllProductPayLoad(minPriceInput.value,
         maxPriceInput.value,
         currentPriceType,
@@ -88,6 +96,11 @@ async function loadProducts(eventId, type, priceType = currentPriceType) {
 }
 
 async function GetCount(){
-    productsCount.innerText = await GetProductsCount(minPriceInput.value,
-        maxPriceInput.value, isStock.checked, currentProductType, searchInput.value);
+    productsCount.innerText = `${await GetProductsCount(minPriceInput.value,
+        maxPriceInput.value, isStock.checked, currentProductType, searchInput.value)} товаров`;
+}
+
+async function GetPrice(maxPrice){
+    maxPriceInput.value = await GetMaxPrice(minPriceInput.value,
+        maxPrice, isStock.checked, currentProductType, searchInput.value);
 }
